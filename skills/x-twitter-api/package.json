@@ -1,0 +1,21 @@
+{
+  "name": "x-twitter-api",
+  "version": "1.0.0",
+  "description": "Interact with X (Twitter) API v2.",
+  "repository": "github:tato418/x-twitter-api",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "node --import tsx --test 'src/__tests__/**/*.test.ts'"
+  },
+  "dependencies": {
+    "@xdevplatform/xdk": "^0.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.0"
+  }
+}

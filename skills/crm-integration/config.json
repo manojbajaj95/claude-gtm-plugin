@@ -1,0 +1,20 @@
+{
+  "name": "crm-integration",
+  "version": "1.0.0",
+  "category": "Business",
+  "description": "Unified CRM integration patterns for Close CRM, HubSpot, and Salesforce",
+  "requires": ["close-api-or-hubspot-oauth-or-salesforce-jwt"],
+  "depends_on": [],
+  "integrates_with": [
+    "hubspot-revops-skill",
+    "sales-revenue-skill"
+  ],
+  "activation_triggers": [
+    "Close CRM",
+    "HubSpot",
+    "Salesforce",
+    "CRM API",
+    "lead sync",
+    "deal sync"
+  ]
+}

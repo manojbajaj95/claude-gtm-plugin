@@ -1,0 +1,12 @@
+{
+  "name": "youtube-video-analyst",
+  "version": "1.0.0",
+  "description": "Forensic-level deconstruction of YouTube videos to extract viral formulas, hooks, retention mechanic",
+  "author": {
+    "name": "Ship Shit Dev",
+    "email": "hello@shipshit.dev",
+    "url": "https://github.com/shipshitdev"
+  },
+  "license": "MIT",
+  "skills": "."
+}

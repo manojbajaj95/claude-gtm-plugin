@@ -1,0 +1,15 @@
+{
+  "authors": [
+    "liqiongyu"
+  ],
+  "category": "Marketing",
+  "contributors": [],
+  "origin": "refound",
+  "schema_version": 1,
+  "skill_slug": "launch-marketing",
+  "upstream": {
+    "page_url": "https://refoundai.com/lenny-skills/s/launch-marketing",
+    "skill_md_url": "https://refoundai.com/skills/launch-marketing/SKILL.md"
+  },
+  "version": "0.1.0"
+}

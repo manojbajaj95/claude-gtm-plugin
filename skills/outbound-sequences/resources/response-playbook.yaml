@@ -1,0 +1,263 @@
+# Response Handling Playbook
+
+responses:
+  positive:
+    signals:
+      - "Yes, let's talk"
+      - "Send more info"
+      - "Interesting"
+    actions:
+      - "Reply within 1 hour if possible"
+      - "Send calendar link with 2-3 specific times"
+      - "Include brief agenda for the call"
+    template: |
+      Great - here's my calendar: [link]
+
+      I'll plan to cover:
+      1. [Quick discovery question]
+      2. [How you've helped similar companies]
+      3. [Next steps if there's a fit]
+
+      Talk soon,
+      [Name]
+
+  not_interested:
+    signals:
+      - "No thanks"
+      - "Not a priority"
+      - "We're good"
+    actions:
+      - "Acknowledge gracefully"
+      - "Ask for referral or future timing"
+      - "Don't argue"
+    template: |
+      Appreciate the response, {{first_name}}.
+
+      Quick question - is there someone else at {{company}} who handles [area]? Or would it make sense to reconnect in Q[X] when budgets reset?
+
+      Either way, thanks for letting me know.
+
+  using_competitor:
+    signals:
+      - "Names current solution"
+    actions:
+      - "Acknowledge their choice"
+      - "Position differentiation"
+      - "Offer comparison"
+    template: |
+      Makes sense - [Competitor] is solid for [what they do well].
+
+      Most folks I talk to who switch were looking for [your differentiator]. Not saying that's you, but if you ever want to see the difference, happy to do a quick comparison.
+
+      Worth 15 minutes?
+
+  send_info:
+    signals:
+      - "Polite deflection"
+    actions:
+      - "Send one specific asset (not everything)"
+      - "Include a question to keep dialogue"
+      - "Follow up in 3 days"
+    template: |
+      Here's a 2-minute case study on how [similar company] [achieved result]: [link]
+
+      Curious - are you dealing with [specific problem from case study]?
+
+      Happy to walk through how it'd work for {{company}} if useful.
+
+  bad_timing:
+    signals:
+      - "Reach out later"
+      - "Not right now"
+      - "Maybe next quarter"
+    actions:
+      - "Confirm specific timing"
+      - "Set calendar reminder"
+      - "Add to nurture sequence"
+    template: |
+      Totally understand. When would make sense to reconnect - Q[X]?
+
+      I'll set a reminder and reach back out then. In the meantime, I'll send occasional updates if we publish anything relevant to [their industry].
+
+      Sound good?
+
+  no_response:
+    actions:
+      - "Move to monthly nurture"
+      - "Trigger on new intent signals"
+      - "Re-engage with new angle in 60-90 days"
+
+personalization_tiers:
+  tier_1_basic:
+    name: "Basic (Minimum - Every Email)"
+    elements:
+      - "First name"
+      - "Company name"
+      - "Industry reference"
+    time_per_prospect: "30 seconds"
+
+  tier_2_researched:
+    name: "Researched (High-Value Prospects)"
+    elements:
+      - "Recent company news (funding, launch, hire)"
+      - "LinkedIn post or content reference"
+      - "Specific challenge based on job posting"
+    time_per_prospect: "2-3 minutes"
+
+  tier_3_deep:
+    name: "Deep (Enterprise/Strategic Accounts)"
+    elements:
+      - "Personal detail from podcast/interview"
+      - "Specific metric from their public data"
+      - "Custom video or Loom"
+    time_per_prospect: "10-15 minutes"
+
+research_sources:
+  company_intel:
+    - source: "LinkedIn company page"
+      insight: "recent posts, headcount growth"
+    - source: "Crunchbase"
+      insight: "funding, investors"
+    - source: "G2/Capterra reviews"
+      insight: "pain points"
+    - source: "Job postings"
+      insight: "priorities, tech stack"
+    - source: "Press releases"
+      insight: "strategy shifts"
+
+  personal_intel:
+    - source: "LinkedIn profile"
+      insight: "experience, posts, interests"
+    - source: "Twitter/X"
+      insight: "opinions, content"
+    - source: "Podcasts/interviews"
+      insight: "quotes, perspectives"
+    - source: "Company bio"
+      insight: "background, education"
+
+  trigger_events:
+    - trigger: "Job change"
+      why: "first 90 days = buying mode"
+    - trigger: "Funding round"
+      why: "budget to spend"
+    - trigger: "New executive hire"
+      why: "change mandate"
+    - trigger: "Competitor customer"
+      why: "pain point validated"
+    - trigger: "Expansion/new office"
+      why: "scaling challenges"
+
+timing:
+  email_send_times:
+    - day: "Tuesday"
+      time: "7-8 AM local"
+      rationale: "Before inbox floods"
+    - day: "Wednesday"
+      time: "10-11 AM local"
+      rationale: "Mid-morning focus"
+    - day: "Thursday"
+      time: "2-3 PM local"
+      rationale: "Post-lunch window"
+
+  avoid:
+    - "Monday (catching up from weekend)"
+    - "Friday afternoon (checked out)"
+    - "Weekends (unless specific industries)"
+
+  sequence_spacing:
+    - touch: 1
+      day: 1
+      channel: "Email"
+      purpose: "Initial outreach"
+    - touch: 2
+      day: 3
+      channel: "LinkedIn"
+      purpose: "Multi-channel"
+    - touch: 3
+      day: 4
+      channel: "Email"
+      purpose: "Follow-up"
+    - touch: 4
+      day: 6
+      channel: "LinkedIn"
+      purpose: "Message"
+    - touch: 5
+      day: 8
+      channel: "Email"
+      purpose: "Value add"
+    - touch: 6
+      day: 10
+      channel: "LinkedIn"
+      purpose: "Engage"
+    - touch: 7
+      day: 12
+      channel: "Email"
+      purpose: "Social proof"
+    - touch: 8
+      day: 15
+      channel: "Email"
+      purpose: "Breakup"
+
+  reply_response_time:
+    positive: "<1 hour"
+    objection: "Same day"
+    question: "<4 hours"
+
+metrics:
+  email:
+    - metric: "Open rate"
+      formula: "Opens ÷ Delivered"
+      benchmark: "40-60%"
+      action_if_below: "Fix subject lines"
+    - metric: "Reply rate"
+      formula: "Replies ÷ Delivered"
+      benchmark: "5-15%"
+      action_if_below: "Fix messaging"
+    - metric: "Positive reply rate"
+      formula: "Positive ÷ Replies"
+      benchmark: "30-50%"
+      action_if_below: "Fix targeting"
+    - metric: "Meeting book rate"
+      formula: "Meetings ÷ Sent"
+      benchmark: "1-3%"
+      action_if_below: "Full funnel review"
+    - metric: "Bounce rate"
+      formula: "Bounces ÷ Sent"
+      benchmark: "<3%"
+      action_if_below: "Clean list"
+
+  linkedin:
+    - metric: "Connection accept rate"
+      benchmark: "30-50%"
+      action_if_below: "Fix connection note"
+    - metric: "Message response rate"
+      benchmark: "15-25%"
+      action_if_below: "Fix messaging"
+    - metric: "InMail response rate"
+      benchmark: "10-20%"
+      action_if_below: "Fix targeting"
+
+  weekly_review:
+    - "Review reply rate by sequence step"
+    - "Identify highest-performing subject lines"
+    - "A/B test one element"
+    - "Remove low-performing emails"
+    - "Refresh stale sequences (>60 days)"
+
+  health_indicators:
+    - indicator: "Open rate"
+      healthy: ">50%"
+      warning: "30-50%"
+      critical: "<30%"
+    - indicator: "Reply rate"
+      healthy: ">10%"
+      warning: "5-10%"
+      critical: "<5%"
+    - indicator: "Unsubscribe"
+      healthy: "<0.5%"
+      warning: "0.5-1%"
+      critical: ">1%"
+    - indicator: "Bounce"
+      healthy: "<2%"
+      warning: "2-5%"
+      critical: ">5%"

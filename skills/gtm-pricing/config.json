@@ -1,0 +1,20 @@
+{
+  "name": "gtm-pricing",
+  "version": "1.0.0",
+  "category": "Business",
+  "description": "Comprehensive GTM strategy, pricing models, and opportunity evaluation",
+  "requires": [],
+  "depends_on": [
+    "research-skill"
+  ],
+  "integrates_with": [
+    "sales-revenue-skill",
+    "miro-skill"
+  ],
+  "activation_triggers": [
+    "GTM strategy",
+    "pricing",
+    "ICP",
+    "evaluate opportunity"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "landing-page-vercel",
+  "version": "1.0.0",
+  "description": "Scaffold a production-ready static landing page with working email capture form, analytics, and resp",
+  "author": {
+    "name": "Ship Shit Dev",
+    "email": "hello@shipshit.dev",
+    "url": "https://github.com/shipshitdev"
+  },
+  "license": "MIT",
+  "skills": "."
+}

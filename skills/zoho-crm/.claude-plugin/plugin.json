@@ -1,0 +1,60 @@
+{
+  "name": "zoho-crm",
+  "displayName": "Zoho CRM",
+  "version": "1.0.0",
+  "description": "Manage customer relationships with Zoho's CRM platform",
+  "author": "Canifi",
+  "repository": "https://github.com/canifi/life-os-skills",
+  "category": "business-crm",
+  "keywords": ["crm", "sales", "leads", "contacts", "automation"],
+  "capabilities": [
+    "lead_contact_management",
+    "deal_tracking",
+    "workflow_automation",
+    "analytics_reports",
+    "multichannel_communication"
+  ],
+  "authentication": {
+    "type": "oauth2",
+    "provider": "zoho",
+    "scopes": ["ZohoCRM.modules.ALL", "ZohoCRM.settings.ALL"],
+    "authUrl": "https://accounts.zoho.com/oauth/v2/auth",
+    "tokenUrl": "https://accounts.zoho.com/oauth/v2/token"
+  },
+  "endpoints": {
+    "baseUrl": "https://www.zohoapis.{domain}/crm/v3",
+    "leads": "/Leads",
+    "contacts": "/Contacts",
+    "deals": "/Deals",
+    "accounts": "/Accounts"
+  },
+  "rateLimit": {
+    "requests": 2000,
+    "period": "day"
+  },
+  "environmentVariables": [
+    {
+      "name": "ZOHO_CLIENT_ID",
+      "description": "Zoho OAuth client ID",
+      "required": true
+    },
+    {
+      "name": "ZOHO_CLIENT_SECRET",
+      "description": "Zoho OAuth client secret",
+      "required": true
+    },
+    {
+      "name": "ZOHO_REFRESH_TOKEN",
+      "description": "Zoho OAuth refresh token",
+      "required": true
+    },
+    {
+      "name": "ZOHO_DOMAIN",
+      "description": "Zoho domain (com, eu, in, com.au)",
+      "required": true
+    }
+  ],
+  "dependencies": [],
+  "platforms": ["web", "ios", "android"],
+  "documentationUrl": "https://www.zoho.com/crm/developer/docs/"
+}

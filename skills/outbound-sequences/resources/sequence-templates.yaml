@@ -1,0 +1,171 @@
+# Sequence Templates
+
+email_template:
+  structure:
+    email_number: "[#]"
+    name: "[Name]"
+    send_timing: "Day [X]"
+    goal: "[Specific goal]"
+    subject_lines:
+      - option: "[Option 1]"
+        rationale: "[Rationale]"
+      - option: "[Option 2]"
+        rationale: "[Rationale]"
+      - option: "[Option 3]"
+        rationale: "[Rationale]"
+    body: "[Complete email copy - ready to send]"
+    personalization_variables:
+      - var: "{{first_name}}"
+        desc: "First name"
+      - var: "{{company}}"
+        desc: "Company name"
+      - var: "{{trigger}}"
+        desc: "Personalized trigger (job change, funding, news)"
+      - var: "{{mutual_connection}}"
+        desc: "Shared connection or interest"
+      - var: "{{competitor}}"
+        desc: "Known competitor they use"
+    ab_test_ideas:
+      - "Subject: [A] vs [B]"
+      - "Opening line: Direct vs Question"
+      - "CTA: Specific time vs 'interested?'"
+
+linkedin_sequence:
+  touch_1_connection:
+    timing: "Day 3 (after Email #1)"
+    char_limit: 300
+    note: "[Copy - personalized, no pitch]"
+
+  touch_2_message:
+    timing: "Day 6 (after connection accepted, or Day 8 if not)"
+    if_connected: "[Message copy - value-first, soft CTA]"
+    if_not_connected: "[Follow request or InMail alternative]"
+
+  touch_3_engagement:
+    timing: "Day 10"
+    action: "Comment on their recent post OR share relevant content"
+
+  touch_4_direct:
+    timing: "Day 14"
+    content: "[Final LinkedIn message with clear ask]"
+
+  touch_5_voice:
+    timing: "Day 17"
+    optional: true
+    script: "[30-second voice note script - personal, specific]"
+
+subject_line_library:
+  pattern_interrupt:
+    note: "Highest Open Rates"
+    examples:
+      - "{{first_name}}, quick question"
+      - "Thoughts on [specific thing about their company]?"
+      - "[Mutual connection] suggested I reach out"
+
+  trigger_based:
+    examples:
+      - "Congrats on [recent news/funding/hire]"
+      - "Saw your [LinkedIn post/podcast/article]"
+      - "[Competitor] → [Your solution]?"
+
+  value_focused:
+    examples:
+      - "[Result] for [similar company]"
+      - "Idea for [their specific challenge]"
+      - "[Number]% [improvement] at [similar company]"
+
+  curiosity:
+    examples:
+      - "{{company}} + [Your company]"
+      - "Quick idea"
+      - "Noticed something about {{company}}"
+
+  hyper_specific_pain:
+    note: "Subject + opener combos (under 100 words total)"
+    examples:
+      - "Saw your Q3 report—churn up 15%? We've cut that in half for [similar firm]"
+      - "Noticed {{company}} hiring 3 SDRs—most teams that size waste 40% on bad data"
+      - "Your G2 reviews mention [specific complaint]—we solved that for [competitor] in 30 days"
+
+  avoid:
+    - line: "Quick call?"
+      reason: "Overused"
+    - line: "Touching base"
+      reason: "Corporate speak"
+    - line: "Following up"
+      reason: "In subject (save for body)"
+    - line: "ALL CAPS"
+      reason: "Spam filter"
+    - line: "FREE or DEAL"
+      reason: "Commercial triggers"
+
+opening_line_library:
+  observation_based:
+    - "I noticed {{company}} just [specific observation] - congrats on that."
+    - "Saw your post about [topic] - [brief insight/agreement]."
+    - "Your approach to [specific thing] caught my attention."
+
+  trigger_based:
+    - "Congrats on the [funding round/new role/expansion]."
+    - "Noticed you're hiring for [role] - usually means [inference]."
+    - "Saw {{company}} launched [product/feature] last week."
+
+  mutual_connection:
+    - "[Name] mentioned you're the person to talk to about [topic]."
+    - "We both know [mutual connection] - they speak highly of you."
+    - "Saw we're both connected to [name] - small world."
+
+  problem_focused:
+    - "Most [their role]s I talk to are struggling with [problem]."
+    - "After talking to 50+ [their role]s, I keep hearing about [pain]."
+    - "[Stat about their industry problem] - curious if that resonates."
+
+  avoid:
+    - line: "I hope this email finds you well"
+      reason: "Instant delete"
+    - line: "My name is..."
+      reason: "They can see your name"
+    - line: "I'm reaching out because..."
+      reason: "Obvious"
+    - line: "I wanted to..."
+      reason: "Self-focused"
+    - line: "Long intros about your company"
+      reason: "No one cares yet"
+
+cta_library:
+  low_friction:
+    note: "Highest Response"
+    examples:
+      - "Worth a conversation?"
+      - "Is this on your radar?"
+      - "Open to learning more?"
+      - "Does this resonate?"
+
+  specific_time:
+    note: "Higher Conversion"
+    examples:
+      - "Do you have 15 minutes Thursday or Friday?"
+      - "Can you do a quick call Tuesday at 2pm?"
+      - "Would Wednesday morning work for a 15-min chat?"
+
+  binary_choice:
+    examples:
+      - "Worth exploring, or not a priority right now?"
+      - "Should I send more info, or jump on a quick call?"
+      - "Is this something you'd want to fix this quarter?"
+
+  value_first:
+    examples:
+      - "Want me to send the case study?"
+      - "Can I share what worked for [similar company]?"
+      - "Worth showing you how [competitor] does this?"
+
+  avoid:
+    - line: "Let me know your thoughts"
+      reason: "Too vague"
+    - line: "I'd love to..."
+      reason: "Self-focused"
+    - line: "Please let me know..."
+      reason: "Desperate"
+    - line: "Multiple CTAs in one email"
+      reason: "Confusing"

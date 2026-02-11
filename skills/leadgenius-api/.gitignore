@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Logs and debug files
+*.json
+*.txt
+*.log
+!package.json
+!openapi.json
+!references/*.json
+
+# macOS
+.DS_Store

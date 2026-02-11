@@ -1,0 +1,15 @@
+{
+  "authors": [
+    "liqiongyu"
+  ],
+  "category": "Marketing",
+  "contributors": [],
+  "origin": "refound",
+  "schema_version": 1,
+  "skill_slug": "positioning-messaging",
+  "upstream": {
+    "page_url": "https://refoundai.com/lenny-skills/s/positioning-messaging",
+    "skill_md_url": "https://refoundai.com/skills/positioning-messaging/SKILL.md"
+  },
+  "version": "0.1.0"
+}

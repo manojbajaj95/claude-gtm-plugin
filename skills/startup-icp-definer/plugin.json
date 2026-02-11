@@ -1,0 +1,12 @@
+{
+  "name": "startup-icp-definer",
+  "version": "1.0.0",
+  "description": "Use this skill when users need to define their ideal customer profile, identify target personas, map",
+  "author": {
+    "name": "Ship Shit Dev",
+    "email": "hello@shipshit.dev",
+    "url": "https://github.com/shipshitdev"
+  },
+  "license": "MIT",
+  "skills": "."
+}

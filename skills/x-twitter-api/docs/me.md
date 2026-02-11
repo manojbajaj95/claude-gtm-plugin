@@ -1,0 +1,7 @@
+Retrieves the authenticated user's own account data from the X API v2 endpoint GET /2/users/me. Invoke via `node <base_directory>/x.js me [flags]`. Output is JSON to stdout.
+
+[!FLAGS] a) no flags — returns a sensible default set of profile fields (identity, bio, metrics, verification, avatar, dates), outputting ONLY the user object. b) `--fields <comma-separated-list>` — request ONLY the specified fields instead of defaults. c) `--pinned-tweet` — expands the pinned tweet via the API expansions mechanism; output switches to the full response envelope (data + includes) so the expanded tweet is visible. d) `--raw` — outputs the full API response envelope (data, includes, errors) regardless of other flags.
+
+[!AVAILABLE-FIELDS] The `--fields` flag accepts any combination of: `id`, `name`, `username`, `description`, `created_at`, `location`, `url`, `profile_image_url`, `protected`, `public_metrics`, `verified_type`, `pinned_tweet_id`, `most_recent_tweet_id`, `entities`, `withheld`. The default set (when no `--fields` is given) includes all of the above EXCEPT `most_recent_tweet_id`, `entities`, and `withheld`.
+
+[!OUTPUT-SHAPE] Default and `--fields` produce the user object directly (flat JSON with the requested fields). When `--pinned-tweet` or `--raw` is used, output wraps into the API envelope with a `data` key containing the user object and an `includes` key containing expanded entities.

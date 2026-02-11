@@ -1,0 +1,16 @@
+{
+  "name": "content-marketing",
+  "version": "1.0.0",
+  "category": "Business",
+  "description": "B2B content strategy for demand generation and thought leadership",
+  "requires": [],
+  "depends_on": [],
+  "integrates_with": [],
+  "activation_triggers": [
+    "content strategy",
+    "LinkedIn post",
+    "blog SEO",
+    "case study",
+    "thought leadership"
+  ]
+}

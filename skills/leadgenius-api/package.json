@@ -1,0 +1,30 @@
+{
+    "name": "@thierryteisseire/leadgenius-skill",
+    "version": "2.0.0",
+    "description": "LeadGenius Pro API Skill \u2014 B2B lead and client management with Cognito JWT auth (cookies + Bearer + API key). Includes E2E test suite.",
+    "main": "SKILL.md",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thierryteisseire/leadgenius-skill.git"
+    },
+    "keywords": [
+        "agent-skill",
+        "leadgenius",
+        "ai-agent",
+        "abm",
+        "lead-generation"
+    ],
+    "author": "Thierry Teisseire",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/thierryteisseire/leadgenius-skill/issues"
+    },
+    "homepage": "https://github.com/thierryteisseire/leadgenius-skill#readme",
+    "files": [
+        "SKILL.md",
+        "references/",
+        "scripts/",
+        "LICENSE.txt",
+        "README.md"
+    ]
+}

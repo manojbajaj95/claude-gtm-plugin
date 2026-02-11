@@ -1,0 +1,12 @@
+{
+  "name": "retention-engine",
+  "version": "1.0.0",
+  "description": "Use this skill when users need to reduce churn, increase customer lifetime value (LTV), build recurr",
+  "author": {
+    "name": "Ship Shit Dev",
+    "email": "hello@shipshit.dev",
+    "url": "https://github.com/shipshitdev"
+  },
+  "license": "MIT",
+  "skills": "."
+}

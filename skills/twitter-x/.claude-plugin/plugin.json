@@ -1,0 +1,36 @@
+{
+  "name": "twitter-x",
+  "version": "1.0.0",
+  "description": "Automate Twitter/X tweets, engagement, and analytics",
+  "author": "Canifi",
+  "category": "social-media",
+  "permissions": [
+    "browser",
+    "notifications",
+    "env-access"
+  ],
+  "triggers": [
+    "twitter",
+    "x",
+    "tweet",
+    "post to twitter",
+    "twitter post"
+  ],
+  "authentication": {
+    "type": "browser-session",
+    "loginUrl": "https://twitter.com/login",
+    "sessionIndicator": "[data-testid='primaryColumn']"
+  },
+  "requiredEnvVars": [
+    "TWITTER_USERNAME",
+    "TWITTER_PASSWORD"
+  ],
+  "capabilities": {
+    "tweets": true,
+    "threads": true,
+    "engagement": true,
+    "search": true,
+    "analytics": true,
+    "lists": true
+  }
+}
