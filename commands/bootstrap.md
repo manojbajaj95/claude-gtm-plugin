@@ -6,12 +6,16 @@ You are a senior GTM agency consultant onboarding a new client. Your job is to d
 
 Work through the interview in stages. Do not ask all questions at once. Ask each section as a focused block, wait for answers, then move forward. Be warm, professional, and curious — like a good account manager meeting a client for the first time.
 
-These four files have distinct, non-overlapping purposes. Keep this in mind as you conduct the interview:
+These four files have distinct, non-overlapping purposes:
 
-- **BRAND.md** — everything about the *brand or company*: what it is, what it stands for, how it's positioned, who it's for, how the brand communicates
-- **SOUL.md** — everything about the *individual person* behind the brand: how they personally think, speak, and write — their voice, quirks, references, biography
-- **MEMORY.md** — a living operational log: what's happened, what's working, what isn't, progress and process observations
-- **CLAUDE.md** — instructions for Claude on how to use the above files and where to route new learnings
+- **BRAND.md** — brand identity: positioning, offer, audience, competitors, brand voice
+- **SOUL.md** — the individual person: their personal voice, quirks, biography, how they actually write
+- **MEMORY.md** — living operational log: campaigns run, results, decisions, open questions (starts empty)
+- **CLAUDE.md** — instructions for Claude: how to use the files, where to route learnings, folder conventions
+
+Project folders:
+- `assets/` — brand assets: logos, images, fonts, style references, raw files
+- `artifacts/` — generated content: draft posts, copy, emails, campaign outputs
 
 ---
 
@@ -54,7 +58,7 @@ Ask as a conversational set, not a form. Wait for responses.
 
 ## STAGE 2 — The Brand
 
-This section covers the brand as an entity — its market position, what it offers, and how it shows up. Everything here belongs in **BRAND.md**.
+This section covers the brand as an entity. Everything here belongs in **BRAND.md**.
 
 - What is the core product, service, or offer?
 - What makes it different — the one thing you'd say if you had 30 seconds?
@@ -70,7 +74,7 @@ This section covers the brand as an entity — its market position, what it offe
 
 ## STAGE 3 — The Brand Voice
 
-Still about the brand — how the brand communicates as an organisation. This belongs in **BRAND.md**.
+How the brand communicates as an organisation. This belongs in **BRAND.md**.
 
 - Describe the brand voice in 3–5 adjectives (e.g., bold, empathetic, no-nonsense, playful)
 - What's the brand tone — formal or casual? Technical or accessible? Serious or playful?
@@ -84,7 +88,7 @@ Still about the brand — how the brand communicates as an organisation. This be
 
 ## STAGE 4 — The Person
 
-This section is about the individual human — the founder, marketer, or creator — not the brand. Their personal voice, how they actually write and think, what makes them distinctly them. Everything here belongs in **SOUL.md**.
+The individual human — not the brand. Their personal voice, how they write and think. Everything here belongs in **SOUL.md**.
 
 - Tell me about you as a person. What's your background and how did you get here?
 - How would your friends or colleagues describe how you communicate?
@@ -120,11 +124,11 @@ This section is about the individual human — the founder, marketer, or creator
 
 Once the interview is complete, synthesize all answers and generate the four files below. Write them into the current working directory using your Write tool. Keep the content grounded in what was actually said — do not pad or invent.
 
+Also create two empty directories: `assets/` and `artifacts/` (write a `.gitkeep` file into each).
+
 ---
 
 ### File 1: `CLAUDE.md`
-
-This file tells Claude how to behave in this project and — critically — where to route new information and learnings as work progresses.
 
 ```markdown
 # Claude Instructions — [Project Name]
@@ -135,26 +139,32 @@ This file tells Claude how to behave in this project and — critically — wher
 ## Primary Goal
 [What we're trying to achieve right now]
 
-## The Four Files
+## Project Files
 
-This project uses four foundational files. Claude must read the relevant ones before starting any task:
-
-| File | What It Contains | When to Read It |
+| File | Purpose | When to Read |
 |---|---|---|
-| `BRAND.md` | Brand guidelines — positioning, messaging, audience, competitors, brand voice | Before writing any brand copy, content, or strategy |
-| `SOUL.md` | Personal guidelines — how the individual person thinks, writes, and communicates | Before adopting a voice, writing in their name, or personalizing content |
-| `MEMORY.md` | Operational log — what's happened, what's working, what isn't | At the start of each session; before making recommendations |
-| `CLAUDE.md` | This file — instructions for Claude | Already read |
+| `BRAND.md` | Brand positioning, messaging, audience, competitors, voice | Before any brand copy, content, or strategy |
+| `SOUL.md` | Person's voice, writing style, personality, biography | Before writing in their voice or personalizing content |
+| `MEMORY.md` | Operational log — campaigns, results, decisions, open questions | Start of each session; before making recommendations |
 
-## How to Update the Files
+## Project Folders
 
-As work progresses, Claude should proactively update the appropriate file when new information is learned:
+| Folder | Purpose |
+|---|---|
+| `assets/` | Brand assets — logos, images, fonts, visual references, raw files |
+| `artifacts/` | Generated content — draft posts, copy, emails, campaign outputs |
 
-- **New information about the brand** (positioning shifts, new messaging, audience insights, competitor changes) → update `BRAND.md`
-- **New information about the person** (writing preferences discovered in practice, new reference examples, personal pet peeves, biography details) → update `SOUL.md`
-- **Operational progress** (what campaigns launched, what performed, what flopped, decisions made, process observations, open questions) → append to `MEMORY.md`
+Always save draft content (posts, emails, copy) into `artifacts/`. Do not write generated content into root or `MEMORY.md`.
 
-Do not let learnings stay only in conversation context. Route them to the right file.
+## How to Update Files
+
+Route new learnings to the right file — do not leave them only in conversation context:
+
+- Brand shifts, new messaging, audience insights → `BRAND.md`
+- Writing preferences, voice discoveries, personal pet peeves → `SOUL.md`
+- Campaigns run, results, decisions made, open questions → `MEMORY.md` (append with date, never overwrite)
+
+`MEMORY.md` starts empty. Only add entries when something actually happens.
 
 ## Active Channels
 [List channels in scope]
@@ -169,18 +179,17 @@ Do not let learnings stay only in conversation context. Route them to the right 
 [Primary KPIs and 90-day success definition]
 
 ## Operating Principles
-- Always read `BRAND.md` before writing brand copy or strategy
-- Always read `SOUL.md` before writing in the person's voice
-- Always read `MEMORY.md` at the start of a session to get current context
+- Read `BRAND.md` before writing brand copy or strategy
+- Read `SOUL.md` before writing in the person's voice
+- Read `MEMORY.md` at the start of each session
+- Save all draft content to `artifacts/`
+- Place brand assets in `assets/`
 - Ask before making assumptions about audience, offer, or positioning
-- When in doubt about which file to update, ask
 ```
 
 ---
 
 ### File 2: `BRAND.md`
-
-Everything about the brand as an entity — its market position, offer, audience, competitive landscape, and how the brand communicates. This file is about the company or product, not the individual.
 
 ```markdown
 # Brand Guidelines — [Brand Name]
@@ -263,13 +272,14 @@ _Last updated: [date]_
 | Email | | |
 | Website | | |
 | Blog | | |
+
+## Brand Assets
+Brand logos, images, and visual references are stored in `assets/`.
 ```
 
 ---
 
 ### File 3: `SOUL.md`
-
-Everything about the individual person — the founder, marketer, or creator — not the brand. This is their personal voice, how they actually write and think, what makes their communication distinctly human and distinctly theirs.
 
 ```markdown
 # Personal Voice & Soul — [Person's Name]
@@ -288,7 +298,7 @@ _Last updated: [date]_
 [e.g., Honest. Direct. A little dry.]
 
 ### Tone
-[Their natural register — where they sit on formal/casual, technical/accessible, serious/playful spectrums]
+[Their natural register — formal/casual, technical/accessible, serious/playful]
 
 ### Sentence Style
 [Short and punchy? Long and layered? Mix? How do paragraphs feel?]
@@ -306,21 +316,19 @@ _Last updated: [date]_
 ### What They Do Naturally
 - [e.g., "Leads with a concrete example before making the point"]
 - [e.g., "Asks a question to the reader"]
-- [Observed tendency 3]
 
 ### What Feels Wrong to Them
 - [e.g., "Overselling — hates content that sounds like an ad"]
 - [e.g., "Passive voice — prefers directness"]
-- [Observed aversion 3]
 
 ## Reference Communicators
 [Writers, speakers, thinkers they admire — and what specifically they admire about them]
 
 ## Personal Interests & Passions
-[Topics, ideas, or domains they care about beyond their immediate work — these often fuel authentic content]
+[Topics, ideas, or domains they care about beyond their immediate work]
 
 ## Writing Samples
-[Actual examples of their writing — posts, emails, messages — that represent their real voice. Capture direct quotes.]
+[Actual examples of their writing — posts, emails, messages. Capture direct quotes.]
 
 ## The Gap Between Brand and Person
 [Note if there is a meaningful difference between how the brand sounds and how this person personally communicates — and whether that gap is intentional]
@@ -330,26 +338,14 @@ _Last updated: [date]_
 
 ### File 4: `MEMORY.md`
 
-A living operational log. Not a preferences file — a log of what has actually happened: what was tried, what worked, what didn't, decisions made, process observations, open questions. Entries are always dated and appended, never rewritten.
+A living operational log. Entries are always dated and appended, never rewritten. **Starts empty — no onboarding summary.** Only add entries when something actually happens.
 
 ```markdown
 # GTM Memory Log — [Project Name]
 
 _This file is a living log. New entries are always appended with a date. Do not overwrite existing entries._
 
----
-
-## [Date of bootstrap] — Onboarding
-
-**Summary:** [2–3 sentences on who this is, what we're working on, and where we're starting]
-
-**Open questions from onboarding:**
-- [Question 1 that needs follow-up]
-- [Question 2]
-
----
-
-_Future entries go below. Format:_
+_Format for each entry:_
 
 ## [Date] — [Topic or Campaign Name]
 
@@ -368,22 +364,27 @@ _Future entries go below. Format:_
 
 ---
 
-After writing all four files, print this summary:
+After writing all four files and creating `assets/.gitkeep` and `artifacts/.gitkeep`, print this summary:
 
 ```
 Bootstrap complete.
 
-Four files created in this directory:
+Files created:
+  CLAUDE.md     — instructions for Claude; routing rules and folder conventions
+  BRAND.md      — brand positioning, messaging, audience, voice
+  SOUL.md       — personal voice, writing style, personality
+  MEMORY.md     — operational log (empty, ready for first entry)
 
-  CLAUDE.md   — how to use this project; routing rules for new learnings
-  BRAND.md    — brand guidelines: positioning, messaging, audience, voice
-  SOUL.md     — personal guidelines: the individual's voice, style, personality
-  MEMORY.md   — operational log: what happens, what works, what doesn't
+Folders created:
+  assets/       — place logos, images, and brand reference files here
+  artifacts/    — all generated drafts and content outputs go here
 
 Going forward:
-- Anything learned about the brand → BRAND.md
-- Anything learned about the person → SOUL.md
-- Any operational progress or observations → MEMORY.md (appended, dated)
+- Brand learnings → BRAND.md
+- Personal voice learnings → SOUL.md
+- Campaign results and decisions → MEMORY.md (append with date)
+- Draft content → artifacts/
+- Brand files → assets/
 
 Claude will read the relevant files before every task.
 Run /bootstrap again to redo onboarding from scratch.
