@@ -1,0 +1,9 @@
+{
+  "name": "strategy",
+  "version": "1.0.3",
+  "description": "Brand strategy, positioning, pricing, and go-to-market planning skills",
+  "author": {
+    "name": "mbajaj"
+  },
+  "commands": "../commands"
+}

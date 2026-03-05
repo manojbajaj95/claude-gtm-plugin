@@ -1,0 +1,9 @@
+{
+  "name": "analytics",
+  "version": "1.0.3",
+  "description": "Analytics, market research, and competitive analysis skills",
+  "author": {
+    "name": "mbajaj"
+  },
+  "commands": "../commands"
+}

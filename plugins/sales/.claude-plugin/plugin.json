@@ -1,0 +1,9 @@
+{
+  "name": "sales",
+  "version": "1.0.3",
+  "description": "Sales skills including qualification, enterprise sales, and sales team building",
+  "author": {
+    "name": "mbajaj"
+  },
+  "commands": "../commands"
+}

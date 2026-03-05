@@ -1,0 +1,9 @@
+{
+  "name": "ai-search",
+  "version": "1.0.3",
+  "description": "AI search optimization and generative engine optimization for visibility in ChatGPT, Perplexity, and Claude",
+  "author": {
+    "name": "mbajaj"
+  },
+  "commands": "../commands"
+}

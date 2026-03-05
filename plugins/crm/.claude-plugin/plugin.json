@@ -1,0 +1,9 @@
+{
+  "name": "crm",
+  "version": "1.0.3",
+  "description": "CRM integration, automation, and customer relationship management skills",
+  "author": {
+    "name": "mbajaj"
+  },
+  "commands": "../commands"
+}

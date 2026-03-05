@@ -1,0 +1,9 @@
+{
+  "name": "seo",
+  "version": "1.0.3",
+  "description": "SEO skills for search engine optimization, keyword research, and organic growth",
+  "author": {
+    "name": "mbajaj"
+  },
+  "commands": "../commands"
+}
