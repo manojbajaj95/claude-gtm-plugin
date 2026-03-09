@@ -1,6 +1,6 @@
 # GTM Skills
 
-Go-to-market skills that turn Claude into a GTM specialist. 166 skills across SEO, content, outbound, sales, growth, analytics, strategy, ads, social, CRM, and AI search — plus a `/bootstrap` command that onboards Claude to your brand, voice, and goals. Built for [Claude Code](https://claude.com/product/claude-code), also compatible with [Claude Cowork](https://claude.com/product/cowork) and any agent that supports the [Agent Skills spec](https://agentskills.io).
+Go-to-market skills that turn Claude into a GTM specialist. 184 skills across SEO & AI search, content, outbound, sales, growth, analytics, strategy, ads, social, and CRM — plus a `/bootstrap` command that onboards Claude to your brand, voice, and goals. Built for [Claude Code](https://claude.com/product/claude-code), also compatible with [Claude Cowork](https://claude.com/product/cowork) and any agent that supports the [Agent Skills spec](https://agentskills.io).
 
 ## Why This Plugin
 
@@ -37,7 +37,6 @@ claude plugin install strategy@gtm-plugins
 claude plugin install ads@gtm-plugins
 claude plugin install social@gtm-plugins
 claude plugin install crm@gtm-plugins
-claude plugin install ai-search@gtm-plugins
 ```
 
 ### Skills CLI
@@ -120,16 +119,15 @@ gtm-plugin/
 ├── commands/
 │   └── bootstrap.md         # /bootstrap onboarding command
 └── plugins/
-    ├── seo/                 # 10 skills
-    ├── ai-search/           # 5 skills
-    ├── content/             # 14 skills
-    ├── social/              # 19 skills
-    ├── outbound/            # 14 skills
-    ├── sales/               # 7 skills
-    ├── growth/              # 47 skills
-    ├── analytics/           # 21 skills
-    ├── strategy/            # 15 skills
-    ├── ads/                 # 9 skills
+    ├── seo/                 # 20 skills (includes AI search & GEO)
+    ├── content/             # 19 skills
+    ├── social/              # 24 skills
+    ├── outbound/            # 12 skills
+    ├── sales/               # 9 skills
+    ├── growth/              # 45 skills
+    ├── analytics/           # 14 skills
+    ├── strategy/            # 29 skills
+    ├── ads/                 # 7 skills
     └── crm/                 # 5 skills
 ```
 
@@ -141,45 +139,41 @@ Skills reference each other and build on the context files created by `/bootstra
 
 ## Skills
 
-### SEO & Search (10)
+### SEO & AI Search (20)
 
-`seo` · `seo-audit` · `seo-geo` · `seo-optimizer` · `keyword-research` · `keyword-expansion` · `programmatic-seo` · `backlink-analyzer` · `seo-backlink-strategy` · `serp-analysis`
+`seo` · `seo-audit` · `seo-geo` · `seo-optimizer` · `keyword-research` · `keyword-expansion` · `keyword-cluster-builder` · `programmatic-seo` · `backlink-analyzer` · `seo-backlink-strategy` · `serp-analysis` · `competitor-alternatives` · `schema-markup` · `site-architecture` · `aeo-optimization` · `aeo-scorecard` · `ai-search-optimization` · `ai-seo` · `geo-aeo-optimization` · `project-aeo-monitoring-tools`
 
-### AI Search & GEO (5)
+### Content & Copywriting (19)
 
-`aeo-optimization` · `aeo-scorecard` · `ai-search-optimization` · `geo-aeo-optimization` · `project-aeo-monitoring-tools`
+`copywriting` · `copy` · `copy-editing` · `content-strategy` · `content-marketing` · `content-research` · `content-marketer` · `content-brief` · `content-optimizer` · `marketing-content-strategy` · `blog-writer` · `blog-writing` · `blog-post-writer` · `technical-blog-writing` · `webinar-to-content-multiplier` · `newsletter` · `newsletter-curation` · `ph-content-recycling` · `webinar-content-repurposer`
 
-### Content & Copywriting (14)
+### Social Media (24)
 
-`copywriting` · `copy` · `content-strategy` · `content-marketing` · `content-research` · `content-marketer` · `content-brief` · `content-optimizer` · `marketing-content-strategy` · `blog-writer` · `blog-writing` · `blog-post-writer` · `technical-blog-writing` · `webinar-to-content-multiplier`
+`social-media` · `social-content` · `social-graphics` · `social-media-analyzer` · `social-community` · `social-repurposer` · `ai-social-media-content` · `linkedin` · `linkedin-content` · `linkedin-automation` · `linkedin-personal-branding` · `linkedin-post-optimizer` · `writing-linkedin-posts` · `twitter-x` · `youtube` · `youtube-video-analyst` · `youtube-video-hook` · `youtube-plan-new-video` · `youtube-research-video-topic` · `community-architect` · `community-builder` · `community-building` · `community-building-strategist` · `x-impact-checker`
 
-### Social Media (19)
+### Email & Outbound (12)
 
-`social-media` · `social-content` · `social-graphics` · `social-media-analyzer` · `social-community` · `social-repurposer` · `ai-social-media-content` · `linkedin` · `linkedin-content` · `linkedin-automation` · `linkedin-personal-branding` · `linkedin-post-optimizer` · `writing-linkedin-posts` · `twitter-x` · `youtube` · `youtube-video-analyst` · `youtube-video-hook` · `youtube-plan-new-video` · `youtube-research-video-topic`
+`cold_email` · `cold-email` · `cold-email-sequence-generator` · `cold-outreach-generator` · `email-sequence` · `email-template-generator` · `email-design` · `outbound-sequences` · `outbound-plays` · `outbound-optimizer` · `gtm-outbound` · `bd-email`
 
-### Email & Outbound (14)
+### Sales (9)
 
-`cold_email` · `cold-email-sequence-generator` · `cold-outreach-generator` · `email-sequence` · `email-template-generator` · `email-design` · `outbound-sequences` · `outbound-plays` · `outbound-optimizer` · `gtm-outbound` · `bd-email` · `newsletter` · `newsletter-curation` · `events-webinars`
+`founder-sales` · `enterprise-sales` · `sales-qualification` · `product-led-sales` · `sales-enablement` · `building-sales-team` · `sales-compensation` · `startup-icp-definer` · `revops`
 
-### Sales (7)
+### Growth & Conversion (45)
 
-`founder-sales` · `enterprise-sales` · `sales-qualification` · `product-led-sales` · `building-sales-team` · `sales-compensation` · `startup-icp-definer`
+`growth` · `growth-strategy` · `growth-loops` · `product-market-fit` · `measuring-product-market-fit` · `launch-gtm-execution` · `launch-marketing` · `product-hunt-launch` · `producthunt` · `ph-community-outreach` · `lead-generation` · `lead-magnet` · `lead-research-assistant` · `leadgenius-api` · `marketing-leads-generation` · `marketing` · `marketing-demand-acquisition` · `marketing-ideas` · `marketing-psychology` · `running-marketing-campaigns` · `referral-program` · `funnel-analysis` · `funnel-validator` · `challenge-funnel` · `ab-test-setup` · `form-cro` · `page-cro` · `onboarding-cro` · `signup-flow-cro` · `paywall-upgrade-cro` · `popup-cro` · `cro-methodology` · `churn-prevention` · `retain` · `retention-engine` · `customer-success` · `customer-success-manager` · `free-tool-strategy` · `events-webinars` · `executive-dashboard-generator` · `personalization-at-scale` · `pr-specialist` · `skill-navigator` · `ui-ux-audit` · `user-onboarding`
 
-### Growth & Product (47)
+### Analytics & Data (14)
 
-`growth` · `growth-strategy` · `growth-loops` · `growth-product-manager` · `product-market-fit` · `measuring-product-market-fit` · `launch-gtm-execution` · `launch-marketing` · `product-hunt-launch` · `producthunt` · `ph-community-outreach` · `ph-content-recycling` · `lead-generation` · `lead-magnet` · `lead-research-assistant` · `leadgenius-api` · `marketing-leads-generation` · `marketing` · `marketing-demand-acquisition` · `marketing-ideas` · `marketing-strategy-pmm` · `running-marketing-campaigns` · `referral-program` · `funnel-analysis` · `funnel-validator` · `challenge-funnel` · `buyer-persona-generator` · `ab-test-setup` · `onboarding-cro` · `personalization-at-scale` · `retain` · `retention-engine` · `customer-success` · `customer-success-manager` · `community-builder` · `community-building` · `community-building-strategist` · `community-architect` · `free-tool-strategy` · `gtm-pricing` · `executive-dashboard-generator` · `webinar-content-repurposer` · `pr-specialist` · `skill-navigator` · `ui-ux-audit` · `user-onboarding` · `x-impact-checker`
+`analytics-tracking` · `analytics-interpretation` · `google-analytics` · `posthog-analytics` · `product-analytics` · `competitive-ads-extractor` · `apify-market-research` · `apify-content-analytics` · `apify-lead-generation` · `app-store-optimization` · `dataforseo-backlinks-api` · `roi-analyzer` · `utm-builder` · `qr-code-generator`
 
-### Analytics & Research (21)
+### Strategy & Positioning (29)
 
-`analytics-tracking` · `analytics-interpretation` · `google-analytics` · `posthog-analytics` · `product-analytics` · `competitor-analysis` · `competitor-teardown` · `competitor-price-tracker` · `business-competitor-analysis` · `competitive-ads-extractor` · `market-researcher` · `market-research-reports` · `apify-market-research` · `apify-content-analytics` · `apify-lead-generation` · `app-store-optimization` · `dataforseo-backlinks-api` · `keyword-cluster-builder` · `roi-analyzer` · `utm-builder` · `qr-code-generator`
+`startup-go-to-market` · `Go-to-Market-Planner` · `launch-strategy` · `positioning-messaging` · `brand-messaging-architecture` · `storybrand-messaging` · `branding` · `design-branding` · `webconsulting-branding` · `pricing-strategy` · `pricing-strategist` · `gtm-pricing` · `product-strategy` · `product-strategist` · `product-marketing-context` · `prd-v09-gtm-strategy` · `technical-launch-planner` · `working-backwards` · `buyer-persona-generator` · `growth-product-manager` · `marketing-strategy-pmm` · `business-competitor-analysis` · `competitor-analysis` · `competitor-price-tracker` · `competitor-teardown` · `market-researcher` · `market-research-reports` · `pitch-deck` · `pitch-deck-visuals`
 
-### Strategy & Positioning (15)
+### Ads & Paid (7)
 
-`startup-go-to-market` · `Go-to-Market-Planner` · `positioning-messaging` · `brand-messaging-architecture` · `storybrand-messaging` · `branding` · `design-branding` · `webconsulting-branding` · `pricing-strategy` · `pricing-strategist` · `product-strategy` · `product-strategist` · `prd-v09-gtm-strategy` · `technical-launch-planner` · `working-backwards`
-
-### Ads & Paid (9)
-
-`paid-ads` · `ad-copy-generator` · `landing-page` · `landing-page-copywriter` · `landing-page-guide-v2` · `landing-page-vercel` · `pitch-deck` · `pitch-deck-visuals` · `cro-methodology`
+`paid-ads` · `ad-creative` · `ad-copy-generator` · `landing-page` · `landing-page-copywriter` · `landing-page-guide-v2` · `landing-page-vercel`
 
 ### CRM & Automation (5)
 
