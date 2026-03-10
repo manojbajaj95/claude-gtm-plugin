@@ -1,6 +1,6 @@
 {
   "name": "youtube-video-analyst",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Forensic-level deconstruction of YouTube videos to extract viral formulas, hooks, retention mechanic",
   "author": {
     "name": "Ship Shit Dev",
