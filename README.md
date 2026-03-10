@@ -139,45 +139,173 @@ Skills reference each other and build on the context files created by `/bootstra
 
 ## Skills
 
-### SEO & AI Search (20)
+### Ads & Paid (7)
 
-`seo` · `seo-audit` · `seo-geo` · `seo-optimizer` · `keyword-research` · `keyword-expansion` · `keyword-cluster-builder` · `programmatic-seo` · `backlink-analyzer` · `seo-backlink-strategy` · `serp-analysis` · `competitor-alternatives` · `schema-markup` · `site-architecture` · `aeo-optimization` · `aeo-scorecard` · `ai-search-optimization` · `ai-seo` · `geo-aeo-optimization` · `project-aeo-monitoring-tools`
+├── `ad-copy-generator`
+├── `ad-creative`
+├── `landing-page-copywriter`
+├── `landing-page-guide-v2`
+├── `landing-page-vercel`
+├── `landing-page`
+└── `paid-ads`
+
+### Analytics & Data (8)
+
+├── `analytics-interpretation`
+├── `analytics-tracking`
+├── `app-store-optimization`
+├── `competitive-ads-extractor`
+├── `product-analytics`
+├── `qr-code-generator`
+├── `roi-analyzer`
+└── `utm-builder`
 
 ### Content & Copywriting (19)
 
-`copywriting` · `copy` · `copy-editing` · `content-strategy` · `content-marketing` · `content-research` · `content-marketer` · `content-brief` · `content-optimizer` · `marketing-content-strategy` · `blog-writer` · `blog-writing` · `blog-post-writer` · `technical-blog-writing` · `webinar-to-content-multiplier` · `newsletter` · `newsletter-curation` · `ph-content-recycling` · `webinar-content-repurposer`
+├── `blog-post-writer`
+├── `blog-writer`
+├── `blog-writing-specialist`
+├── `blog-writing`
+├── `content-brief`
+├── `content-creation-and-marketing`
+├── `content-optimizer`
+├── `content-research`
+├── `content-strategy-and-planning`
+├── `copy-editing`
+├── `copy`
+├── `copywriting`
+├── `newsletter-curation`
+├── `newsletter`
+├── `ph-content-recycling`
+├── `technical-blog-writing`
+├── `twitter-algorithm-optimizer`
+├── `webinar-content-and-events`
+└── `writing-linkedin-posts`
+
+### CRM & Automation (2)
+
+├── `crm-integration`
+└── `marketing-automation`
+
+### Growth & Conversion (22)
+
+├── `ab-test-setup`
+├── `challenge-funnel`
+├── `conversion-rate-optimization`
+├── `customer-success-and-retention`
+├── `executive-dashboard-generator`
+├── `free-tool-strategy`
+├── `funnel-analysis`
+├── `funnel-validator`
+├── `growth-strategy`
+├── `launch-gtm-execution`
+├── `launch-marketing`
+├── `lead-generation-and-demand`
+├── `marketing-campaign-management`
+├── `personalization-at-scale`
+├── `ph-community-outreach`
+├── `pr-specialist`
+├── `product-hunt-launch`
+├── `product-market-fit-analysis`
+├── `producthunt`
+├── `referral-program`
+├── `skill-navigator`
+└── `user-onboarding`
+
+### Email & Outbound (3)
+
+├── `cold-outreach-generator`
+├── `email-design`
+└── `outbound-email-strategy`
+
+### Sales (4)
+
+├── `revops`
+├── `sales-compensation`
+├── `sales-strategy-and-enablement`
+└── `startup-icp-definer`
+
+### SEO & AI Search (20)
+
+├── `aeo-optimization`
+├── `aeo-scorecard`
+├── `ai-search-optimization`
+├── `ai-seo`
+├── `backlink-analyzer`
+├── `competitor-alternatives`
+├── `geo-aeo-optimization`
+├── `keyword-cluster-builder`
+├── `keyword-expansion`
+├── `keyword-research`
+├── `programmatic-seo`
+├── `project-aeo-monitoring-tools`
+├── `schema-markup`
+├── `seo-audit`
+├── `seo-backlink-strategy`
+├── `seo-geo`
+├── `seo-optimizer`
+├── `seo`
+├── `serp-analysis`
+└── `site-architecture`
 
 ### Social Media (24)
 
-`social-media` · `social-content` · `social-graphics` · `social-media-analyzer` · `social-community` · `social-repurposer` · `ai-social-media-content` · `linkedin` · `linkedin-content` · `linkedin-automation` · `linkedin-personal-branding` · `linkedin-post-optimizer` · `writing-linkedin-posts` · `twitter-x` · `youtube` · `youtube-video-analyst` · `youtube-video-hook` · `youtube-plan-new-video` · `youtube-research-video-topic` · `community-architect` · `community-builder` · `community-building` · `community-building-strategist` · `x-impact-checker`
-
-### Email & Outbound (12)
-
-`cold_email` · `cold-email` · `cold-email-sequence-generator` · `cold-outreach-generator` · `email-sequence` · `email-template-generator` · `email-design` · `outbound-sequences` · `outbound-plays` · `outbound-optimizer` · `gtm-outbound` · `bd-email`
-
-### Sales (9)
-
-`founder-sales` · `enterprise-sales` · `sales-qualification` · `product-led-sales` · `sales-enablement` · `building-sales-team` · `sales-compensation` · `startup-icp-definer` · `revops`
-
-### Growth & Conversion (45)
-
-`growth` · `growth-strategy` · `growth-loops` · `product-market-fit` · `measuring-product-market-fit` · `launch-gtm-execution` · `launch-marketing` · `product-hunt-launch` · `producthunt` · `ph-community-outreach` · `lead-generation` · `lead-magnet` · `lead-research-assistant` · `leadgenius-api` · `marketing-leads-generation` · `marketing` · `marketing-demand-acquisition` · `marketing-ideas` · `marketing-psychology` · `running-marketing-campaigns` · `referral-program` · `funnel-analysis` · `funnel-validator` · `challenge-funnel` · `ab-test-setup` · `form-cro` · `page-cro` · `onboarding-cro` · `signup-flow-cro` · `paywall-upgrade-cro` · `popup-cro` · `cro-methodology` · `churn-prevention` · `retain` · `retention-engine` · `customer-success` · `customer-success-manager` · `free-tool-strategy` · `events-webinars` · `executive-dashboard-generator` · `personalization-at-scale` · `pr-specialist` · `skill-navigator` · `ui-ux-audit` · `user-onboarding`
-
-### Analytics & Data (14)
-
-`analytics-tracking` · `analytics-interpretation` · `google-analytics` · `posthog-analytics` · `product-analytics` · `competitive-ads-extractor` · `apify-market-research` · `apify-content-analytics` · `apify-lead-generation` · `app-store-optimization` · `dataforseo-backlinks-api` · `roi-analyzer` · `utm-builder` · `qr-code-generator`
+├── `ai-social-media-content`
+├── `community-architect`
+├── `community-builder`
+├── `community-building-strategist`
+├── `community-building`
+├── `linkedin-automation`
+├── `linkedin-content`
+├── `linkedin-personal-branding`
+├── `linkedin-post-optimizer`
+├── `linkedin`
+├── `social-community`
+├── `social-content`
+├── `social-graphics`
+├── `social-media-analyzer`
+├── `social-media`
+├── `social-repurposer`
+├── `twitter-x`
+├── `writing-linkedin-posts`
+├── `x-impact-checker`
+├── `youtube-plan-new-video`
+├── `youtube-research-video-topic`
+├── `youtube-video-analyst`
+├── `youtube-video-hook`
+└── `youtube`
 
 ### Strategy & Positioning (29)
 
-`startup-go-to-market` · `go-to-market-planner` · `launch-strategy` · `positioning-messaging` · `brand-messaging-architecture` · `storybrand-messaging` · `branding` · `design-branding` · `webconsulting-branding` · `pricing-strategy` · `pricing-strategist` · `gtm-pricing` · `product-strategy` · `product-strategist` · `product-marketing-context` · `prd-v09-gtm-strategy` · `technical-launch-planner` · `working-backwards` · `buyer-persona-generator` · `growth-product-manager` · `marketing-strategy-pmm` · `business-competitor-analysis` · `competitor-analysis` · `competitor-price-tracker` · `competitor-teardown` · `market-researcher` · `market-research-reports` · `pitch-deck` · `pitch-deck-visuals`
-
-### Ads & Paid (7)
-
-`paid-ads` · `ad-creative` · `ad-copy-generator` · `landing-page` · `landing-page-copywriter` · `landing-page-guide-v2` · `landing-page-vercel`
-
-### CRM & Automation (5)
-
-`crm-integration` · `hubspot-crm` · `intercom-crm` · `espocrm-development` · `marketing-automation`
+├── `brand-messaging-architecture`
+├── `branding`
+├── `business-competitor-analysis`
+├── `buyer-persona-generator`
+├── `competitor-analysis`
+├── `competitor-price-tracker`
+├── `competitor-teardown`
+├── `design-branding`
+├── `go-to-market-planner`
+├── `growth-product-manager`
+├── `gtm-pricing`
+├── `launch-strategy`
+├── `market-research-reports`
+├── `market-researcher`
+├── `marketing-strategy-pmm`
+├── `pitch-deck-visuals`
+├── `pitch-deck`
+├── `positioning-messaging`
+├── `prd-v09-gtm-strategy`
+├── `pricing-strategist`
+├── `pricing-strategy`
+├── `product-marketing-context`
+├── `product-strategist`
+├── `product-strategy`
+├── `startup-go-to-market`
+├── `storybrand-messaging`
+├── `technical-launch-planner`
+├── `webconsulting-branding`
+└── `working-backwards`
 
 ## Routing Rules
 
