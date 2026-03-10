@@ -1,0 +1,4 @@
+ls: cannot access 'plugins/content/skills/blog-post-writer': No such file or directory
+ls: cannot access 'plugins/content/skills/blog-writer': No such file or directory
+ls: cannot access 'plugins/content/skills/blog-writing': No such file or directory
+ls: cannot access 'plugins/content/skills/technical-blog-writing': No such file or directory
