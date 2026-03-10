@@ -1,0 +1,40 @@
+Task 3: content-strategy-and-planning consolidation
+Date: 2026-03-10
+
+== Validation ==
+./validate-skills.sh plugins/content/skills/content-strategy-and-planning
+  ✓ content-strategy-and-planning — PASSED (exit 0)
+
+== Line count ==
+408 plugins/content/skills/content-strategy-and-planning/SKILL.md
+(limit: 500 — 92 lines of headroom remaining)
+
+== Aliases check ==
+grep "aliases" → no aliases found - good
+
+== Frontmatter fields ==
+Only: name, description (aliases removed)
+
+== Description trigger keywords added ==
+From content-brief:    content briefs, SEO briefs, content outlines for writers
+From content-optimizer: on-page SEO optimization, meta descriptions, title tags, keyword density
+From content-research:  content research, source discovery, expert sourcing, information gathering
+Alias values folded in: "content strategy", "marketing content strategy" (in description text)
+
+== Deleted directories ==
+plugins/content/skills/content-brief/       (SKILL.md only)
+plugins/content/skills/content-optimizer/   (SKILL.md only)
+plugins/content/skills/content-research/    (SKILL.md + 4 reference files)
+
+== Migrated reference files ==
+content-research/references/ai-search-optimization.md → content-strategy-and-planning/references/
+content-research/references/blog-posts.md             → content-strategy-and-planning/references/
+content-research/references/press-releases.md         → content-strategy-and-planning/references/
+content-research/references/social-media.md           → content-strategy-and-planning/references/
+
+== New sections added to SKILL.md ==
+Part 7: Content Brief Framework (methodology + template)
+Part 8: On-Page SEO Optimization (keyword density, meta tags, checklists)
+Part 9: Content Research Workflow (4-phase research → authentic writing workflow)
+Decision tree updated with 3 new entries
+Related Skills table replaced with Related Content & References table

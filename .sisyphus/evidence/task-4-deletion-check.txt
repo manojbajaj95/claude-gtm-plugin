@@ -1,0 +1,4 @@
+ls: cannot access 'plugins/outbound/skills/cold-outreach-generator': No such file or directory
+✓ cold-outreach-generator deleted
+ls: cannot access 'plugins/outbound/skills/email-design': No such file or directory
+✓ email-design deleted

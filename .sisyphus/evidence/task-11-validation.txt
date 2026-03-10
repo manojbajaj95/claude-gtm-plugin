@@ -1,0 +1,22 @@
+=== Task 11: sales-and-revenue-operations ===
+Validation:
+
+[1mValidating Skills Against Agent Skills Specification[0m
+========================================================
+Reference: https://agentskills.io/specification
+Scanning:  plugins/sales/skills/sales-and-revenue-operations/
+
+[0;32m✓  sales-and-revenue-operations[0m
+
+========================================================
+[1mSummary[0m: 1 skills validated
+  [0;32m✓  Passed:   1[0m
+
+[0;32mAll skills passed validation![0m
+Lines: 232
+References: automation-playbooks.md
+full-guide.md
+guest-insights.md
+lifecycle-definitions.md
+routing-rules.md
+scoring-models.md

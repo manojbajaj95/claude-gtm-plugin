@@ -1,0 +1,56 @@
+Task 5: Merge pricing-strategist and gtm-pricing into pricing-strategy
+======================================================================
+Date: 2026-03-10
+
+## Source Skills Merged
+- plugins/strategy/skills/pricing-strategist/SKILL.md (161 lines) → DELETED
+- plugins/strategy/skills/gtm-pricing/SKILL.md (156 lines) → DELETED
+
+## Target Skill Updated
+- plugins/strategy/skills/pricing-strategy/SKILL.md
+  - Before: 148 lines
+  - After: 264 lines (well under 500 limit)
+
+## Frontmatter
+- Fields: name, description ONLY (no aliases, no invalid fields)
+- Description: updated with trigger keywords from both deleted skills
+  Added: pricing model, pricing experiments, price anchoring, enterprise pricing,
+         GTM pricing, price setting, value-based pricing, revenue optimization
+  Description length: ~538 chars (under 1024 limit)
+  Contains "when"/"use" trigger phrases: YES
+
+## Reference Files Evaluated (3 files from gtm-pricing/reference/)
+- reference/gtm.md (360 lines): ICP templates, channel strategy → SKIPPED (out of scope)
+- reference/opportunity.md (452 lines): Opportunity scoring → SKIPPED (out of scope)
+- reference/pricing.md (336 lines): Pricing models deep-dive, discount framework → MIGRATED
+  → plugins/strategy/skills/pricing-strategy/references/pricing.md
+
+## Content Merged into SKILL.md (unique additions)
+From pricing-strategist:
+  + Pricing Models table (Flat Rate / Tiered / Usage-Based / Hybrid)
+  + Core principle: McKinsey 1% pricing = 11% profit stat
+  + Rule of 3 for tier distribution (50-60% / 30-40% / 5-10%)
+  + Feature gating "never gate" list
+  + Pricing Experiments section (A/B test, sample sizes, metrics)
+  + Revenue Expansion section (upsell triggers + add-ons structure)
+  + Pricing by Segment table (SMB / Mid-Market / Enterprise)
+  + Key Metrics table with benchmarks
+  + Checklists (launching + optimizing pricing)
+From gtm-pricing SKILL.md (Part 5):
+  + Value calculation template (time savings + revenue impact + cost avoidance)
+From pricing.md reference (condensed into body):
+  + Discount Framework table with types, triggers, ranges
+  + Never-discount guidelines and alternatives
+
+## Source Directories Deleted
+- plugins/strategy/skills/pricing-strategist/ → DELETED
+- plugins/strategy/skills/gtm-pricing/ → DELETED
+
+## Validation
+./validate-skills.sh plugins/strategy/skills/pricing-strategy → EXIT 0 ✓
+wc -l SKILL.md → 264 lines ✓ (< 500)
+
+## Git Commit
+SHA: 1fb3f64
+Message: "refactor(strategy): merge pricing-strategist and gtm-pricing into pricing-strategy"
+Files changed: 8 (6 deleted, 1 renamed/migrated, 1 updated)

@@ -1,0 +1,55 @@
+VALIDATOR AUDIT: validate-skills.sh
+====================================
+
+ALLOWED_FIELDS (line 22):
+  - name
+  - description
+  - license
+  - allowed-tools
+  - metadata
+  - compatibility
+
+REQUIRED_FIELDS (inferred from validation logic):
+  - name (required, line 152)
+  - description (required, line 184)
+
+OPTIONAL_FIELDS:
+  - license (optional)
+  - allowed-tools (optional)
+  - metadata (optional)
+  - compatibility (optional)
+
+VALIDATION RULES:
+  1. Frontmatter presence: Must have opening and closing --- markers (line 113-121)
+  2. Frontmatter not empty: Must contain content between markers (line 125-132)
+  3. Unknown fields: Any top-level key not in ALLOWED_FIELDS triggers warning (line 135-146)
+  4. Name validation (line 149-178):
+     - Must be present
+     - Must match directory name
+     - Must be lowercase
+     - Cannot start/end with hyphen
+     - Cannot contain consecutive hyphens
+     - Only lowercase letters, digits, hyphens allowed
+     - Max 64 characters
+  5. Description validation (line 181-195):
+     - Must be present
+     - Max 1024 characters
+     - Should contain trigger phrases: 'when', 'use', or 'mention' (warning if missing)
+  6. Compatibility validation (line 198-201):
+     - Optional field
+     - Max 500 characters if present
+  7. File length recommendation (line 204-207):
+     - Warning if SKILL.md > 500 lines (should move details to references/)
+
+FIELDS FLAGGED IN SPEC:
+  - aliases: NOT in ALLOWED_FIELDS (would trigger warning)
+  - metadata: ALLOWED (line 22)
+  - allowed-tools: ALLOWED (line 22)
+
+SPEC REFERENCE:
+  https://agentskills.io/specification
+  Official validator: https://github.com/agentskills/agentskills/blob/main/skills-ref/src/skills_ref/validator.py
+
+CURRENT VALIDATION STATUS:
+  Total skills: 105
+  Validator command: ./validate-skills.sh plugins

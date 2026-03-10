@@ -1,0 +1,13 @@
+
+[1mValidating Skills Against Agent Skills Specification[0m
+========================================================
+Reference: https://agentskills.io/specification
+Scanning:  plugins/outbound/skills/outbound-email-strategy/
+
+[0;32m✓  outbound-email-strategy[0m
+
+========================================================
+[1mSummary[0m: 1 skills validated
+  [0;32m✓  Passed:   1[0m
+
+[0;32mAll skills passed validation![0m

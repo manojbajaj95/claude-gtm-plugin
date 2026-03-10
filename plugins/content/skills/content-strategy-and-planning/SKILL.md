@@ -1,9 +1,6 @@
 ---
 name: content-strategy-and-planning
-description: Content strategy, positioning, messaging hierarchy, content pillars, editorial calendars, keyword research by buyer stage, trust-building, GEO/AI search optimization, and ROI measurement. Use for planning what content to create, content pillar strategy, editorial ops, messaging matrices, or content attribution.
-aliases:
-  - content-strategy
-  - marketing-content-strategy
+description: Unified skill for content strategy and marketing content strategy: content pillars, editorial calendars, keyword research by buyer stage, positioning, messaging hierarchy, trust-building, GEO/AI search optimization, and ROI measurement. Also handles content briefs, SEO briefs, content outlines for writers, on-page SEO optimization, meta descriptions, title tags, keyword density, content research, source discovery, expert sourcing, and information gathering. Use when planning content strategy, creating content briefs for writers, optimizing existing content for SEO, researching topics and sources, or managing editorial operations.
 ---
 
 # Content Strategy & Planning
@@ -258,17 +255,154 @@ CONTENT STRATEGY QUESTION
     +-> "How do I show up in AI search?" ------> GEO/AIO PLANNING
     |
     +-> "When do I publish what?" --------------> EDITORIAL CALENDAR
+    |
+    +-> "How do I create a content brief?" -----> CONTENT BRIEF (Part 7)
+    |
+    +-> "How do I optimize existing content?" --> ON-PAGE SEO (Part 8)
+    |
+    +-> "How do I research a topic?" -----------> CONTENT RESEARCH (Part 9)
 ```
 
 ---
 
-## Related Skills
+## Part 7: Content Brief Framework
 
-| Need | Skill |
-|------|-------|
-| Writing individual pieces | copywriting |
-| Brief creation | content-brief |
-| SEO optimization | content-optimizer |
-| AI search optimization | content-research |
-| LinkedIn content | linkedin-content |
-| Blog writing | blog-writing |
+Use when preparing briefs for content writers, documenting SEO requirements, or aligning content with keyword research.
+
+### Brief Creation Steps
+
+1. **Keyword Research** — Primary + 3-5 secondary; extract People Also Ask questions; note search intent (informational/commercial/transactional)
+2. **SERP Analysis** — Review top 10 pages; note average word count; identify content format (listicle/guide); find content gaps competitors miss
+3. **Outline Creation** — H1 with primary keyword; plan H2s for required topics; map keywords to specific sections
+4. **Requirements** — Word count target (competitor avg +20%); E-E-A-T specs; internal linking targets; readability target (Flesch 60-70)
+
+### Content Brief Template
+
+```markdown
+# Content Brief: {Title}
+
+## Target Keyword
+- **Primary**: {keyword}
+- **Secondary**: {keyword2}, {keyword3}, {keyword4}
+- **Questions to Answer**: {PAA questions}
+
+## Search Intent
+- **Type**: Informational | Commercial | Transactional
+- **User Goal**: {what user wants to accomplish}
+
+## Content Specs
+- **Word Count**: {min}-{max} | **Format**: {article/listicle/guide} | **Tone**: {professional/conversational}
+- **Target Audience**: {description}
+
+## Required Sections
+1. **{H2 Topic}** — {what to cover}
+2. **{H2 Topic}** — {what to cover}
+3. **{H2 Topic}** — {what to cover}
+
+## E-E-A-T Requirements
+- **Experience**: {first-hand examples to include}
+- **Expertise**: {depth of coverage, technical accuracy needed}
+- **Authority**: {sources to cite, data to include}
+- **Trust**: {claims to verify, transparency requirements}
+
+## SEO Checklist
+- [ ] Keyword in H1 and first 100 words
+- [ ] Meta title: 50-60 chars | Meta description: 150-160 chars with CTA
+- [ ] Keyword density 1-2% | Flesch score 60-70
+- [ ] 3+ internal links | 1+ external authoritative link
+```
+
+---
+
+## Part 8: On-Page SEO Optimization
+
+Use when optimizing existing content or validating new content against SEO requirements.
+
+### Keyword Density
+
+- **Target**: 1-2% (`Density = keyword count / total words × 100`)
+- **Placement**: H1/title (required), first 100 words (required), at least one H2, conclusion
+- **Warning**: >3% = stuffing risk; <0.5% = under-optimized
+
+### Meta Tag Optimization
+
+| Element | Length | Key Rule |
+|---------|--------|----------|
+| Title tag | 50-60 chars | Keyword near start; format: `{Keyword} - {Benefit} \| {Brand}` |
+| Meta description | 150-160 chars | Include keyword naturally; end with CTA |
+| URL slug | 3-5 words | Keyword included; hyphens; lowercase |
+
+### Heading Hierarchy
+
+```
+H1: Page Title (exactly 1)
++-- H2: Main Section (keyword in at least one H2)
+|   +-- H3: Subsection
++-- H2: Main Section
++-- H2: Conclusion
+```
+
+### Readability (Flesch Target: 60-70)
+
+- Sentences <20 words average | Paragraphs 2-3 sentences max
+- Active voice | Subheadings every 200-300 words
+- Replace jargon with plain language | Use bullet points for lists
+
+### Optimization Checklist
+
+- [ ] Keyword in title/H1 and first 100 words
+- [ ] Keyword density 1-2%
+- [ ] Meta title 50-60 chars | Meta description 150-160 chars with CTA
+- [ ] Valid heading hierarchy (H1→H2→H3, no level skips)
+- [ ] 3+ internal links | 1+ external authoritative link
+- [ ] Flesch 60-70 | No paragraphs >3 sentences
+
+---
+
+## Part 9: Content Research Workflow
+
+Use when creating authentic, research-backed content or sourcing experts for quotes and citations.
+
+```
+RESEARCH → EXPERTS → IDEATION → CREATION → AIO
+   ↓          ↓          ↓          ↓        ↓
+ Trends    Real       Unique    Authentic  AI-Citable
+ & Data    People     Angles    Content    Structure
+```
+
+### Phase 1: Research
+
+Search for recent news (30-90 days), industry reports, emerging trends, and contrarian viewpoints. Use patterns like `"[topic] trends 2025"`, `"[topic] statistics report"`, `"[topic] expert predictions"`. Collect 10-15 key findings, statistics, and trend insights.
+
+### Phase 2: Expert Discovery
+
+Find real, verifiable experts from Twitter/X, LinkedIn, publications, podcasts, and academic sources. Validate each: real online presence, actual domain expertise, public statements available, recent activity.
+
+Format quotes: `"[Direct quote]" — [Full Name], [Title] at [Company], [Source context]`
+
+### Phase 3: Ideation
+
+Generate 3-5 content angles incorporating discovered trends and expert perspectives. Evaluate each on: trend relevance, expert fit, uniqueness, actionability. Select the angle with the highest combined score.
+
+### Phase 4: Authentic Writing
+
+- Use specific details (names, dates, numbers) — avoid vague claims
+- Integrate expert quotes naturally into the narrative, not as filler blocks
+- Avoid AI-typical phrases: "In today's world", "It's worth noting", "Let's dive in", "Game-changer"
+- Verify all quotes have traceable public sources before publishing
+
+For format-specific guidance, see reference files below.
+
+---
+
+## Related Content & References
+
+| Need | Resource |
+|------|----------|
+| Writing individual pieces | copywriting skill |
+| LinkedIn content | linkedin-content skill |
+| Blog writing | blog-writing skill |
+| Deep AIO tactics | references/ai-search-optimization.md |
+| Long-form blog patterns | references/blog-posts.md |
+| Social media formats | references/social-media.md |
+| Press releases & PR | references/press-releases.md |

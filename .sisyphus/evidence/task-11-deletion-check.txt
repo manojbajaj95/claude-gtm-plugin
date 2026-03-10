@@ -1,0 +1,6 @@
+=== Task 11: Source Deletion Check ===
+plugins/sales/skills/revops: ls: cannot access 'plugins/sales/skills/revops': No such file or directory
+plugins/sales/skills/sales-compensation: ls: cannot access 'plugins/sales/skills/sales-compensation': No such file or directory
+plugins/sales/skills/startup-icp-definer: ls: cannot access 'plugins/sales/skills/startup-icp-definer': No such file or directory
+plugins/sales/skills/sales-strategy-and-enablement: ls: cannot access 'plugins/sales/skills/sales-strategy-and-enablement': No such file or directory
+plugins/strategy/skills/buyer-persona-generator: ls: cannot access 'plugins/strategy/skills/buyer-persona-generator': No such file or directory
