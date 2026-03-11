@@ -206,6 +206,65 @@ while IFS= read -r skill_file; do
         warnings+=("SKILL.md is ${line_count} lines (recommended <500; move details to references/)")
     fi
 
+    # ── 7. Security: remote code execution (curl/wget piped to shell) ────────
+    if grep -qE 'curl\s.*\|\s*(ba)?sh' "$skill_file" || grep -qE 'wget\s.*\|\s*(ba)?sh' "$skill_file"; then
+        errors+=("E005: Suspicious download URL — curl/wget piped to shell (remote code execution risk)")
+    fi
+
+    # ── 8. Security: third-party package manager commands ─────────────────────
+    if grep -qE '^\s*(pip|pip3) install' "$skill_file"; then
+        warnings+=("W011: Third-party dependency — 'pip install' command detected")
+    fi
+    if grep -qE '^\s*npm install|^\s*npm i ' "$skill_file"; then
+        warnings+=("W011: Third-party dependency — 'npm install' command detected")
+    fi
+    if grep -qE 'npx\s' "$skill_file"; then
+        warnings+=("W011: Third-party dependency — 'npx' command detected")
+    fi
+    if grep -qE '^\s*brew install' "$skill_file"; then
+        warnings+=("W011: Third-party dependency — 'brew install' command detected")
+    fi
+    if grep -qE '^\s*(apt-get|apt) install' "$skill_file"; then
+        warnings+=("W011: Third-party dependency — 'apt install' command detected")
+    fi
+    if grep -qE '^\s*gem install' "$skill_file"; then
+        warnings+=("W011: Third-party dependency — 'gem install' command detected")
+    fi
+    if grep -qE '^\s*cargo install' "$skill_file"; then
+        warnings+=("W011: Third-party dependency — 'cargo install' command detected")
+    fi
+
+    # ── 9. Security: third-party CLI / service dependencies ───────────────────
+    if grep -qE 'infsh\s|inference\.sh|cli\.inference\.sh' "$skill_file"; then
+        errors+=("Third-party CLI dependency detected (inference.sh) — remove or replace with tool-agnostic guidance")
+    fi
+    if grep -qE 'canifi\.com|canifi-env' "$skill_file"; then
+        errors+=("Third-party CLI dependency detected (canifi.com) — remove or replace with tool-agnostic guidance")
+    fi
+
+    # ── 10. Security: credential exposure ─────────────────────────────────────
+    # Plaintext password storage instructions
+    if grep -qiE 'set\s+\S*(PASSWORD|SECRET)\s+"' "$skill_file"; then
+        errors+=("CREDENTIALS_UNSAFE: Plaintext password/secret storage instructions detected")
+    fi
+    # API keys with real-looking prefixes (Google AIza, AWS AKIA, GitHub ghp_, etc.)
+    if grep -qE '(AIzaSy|AKIA[0-9A-Z]|ghp_[a-zA-Z0-9]|sk-[a-zA-Z0-9]{20,}|xox[bpas]-[a-zA-Z0-9])' "$skill_file"; then
+        warnings+=("CREDENTIALS_UNSAFE: Possible real API key prefix detected — use 'your-api-key-here' in examples")
+    fi
+
+    # ── 11. Security: non-standard secret-handling frontmatter fields ─────────
+    if echo "$frontmatter" | grep -qiE '^(vm0_secrets|secrets|credentials):'; then
+        errors+=("Non-standard secret-handling field in frontmatter — may expose credentials to unknown systems")
+    fi
+
+    # ── 12. Security: overly permissive allowed-tools ─────────────────────────
+    allowed_tools=$(extract_field "$frontmatter" "allowed-tools")
+    if [[ -n "$allowed_tools" ]]; then
+        if echo "$allowed_tools" | grep -qE 'Bash\(\*\)|Bash\(.*\*.*\)'; then
+            warnings+=("Broad shell access in allowed-tools: '${allowed_tools}' — consider restricting to specific commands")
+        fi
+    fi
+
     # ── Report ────────────────────────────────────────────────────────────────
     if [[ ${#errors[@]} -gt 0 ]]; then
         echo -e "${RED}❌ ${dir_name}${NC}  ${BLUE}${relative_path}${NC}"

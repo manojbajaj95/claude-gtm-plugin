@@ -1,7 +1,6 @@
 ---
 name: blog-writing-specialist
 description: "Comprehensive blog writing skill that handles technical blog posts, personal voice writing, brain dump transformation, and category-aware AEO-optimized content. Use when: (1) writing, editing, or proofreading a blog article or post, (2) transforming unstructured brain dumps into polished posts, (3) writing in specific personal voices (Jarad, Nick Nisi), (4) creating category-aware technology/company/product posts, (5) building tutorials, deep dives, postmortems, benchmarks, or architecture posts, (6) writing engineering blogs, dev blogs, programming blogs, coding tutorials, or documentation posts. Triggers: blog post, blog writing, technical blog, dev tutorial, brain dump, article, content writing, developer article, engineering blog, programming blog, coding tutorial, documentation post, technical writing, blog editing, proofreading, developer content"
-allowed-tools: Bash(infsh *)
 ---
 
 # Blog Writing Specialist
@@ -417,17 +416,9 @@ Every draft MUST include:
 | Performance comparison | Bar/line chart |
 | Before/after | Side-by-side |
 
-```bash
-# Generate architecture diagram
-infsh app run infsh/html-to-image --input '{
-  "html": "<div style=\"width:1200px;height:600px;background:#0f172a;display:flex;align-items:center;justify-content:center;padding:40px;font-family:system-ui;color:white\"><div style=\"display:flex;gap:40px;align-items:center\"><div style=\"background:#1e293b;border:2px solid #334155;border-radius:8px;padding:24px;text-align:center;width:160px\"><p style=\"font-size:14px;color:#94a3b8;margin:0\">Client</p><p style=\"font-size:18px;font-weight:bold;margin:8px 0 0\">React App</p></div><div style=\"color:#64748b;font-size:32px\">→</div><div style=\"background:#1e293b;border:2px solid #3b82f6;border-radius:8px;padding:24px;text-align:center;width:160px\"><p style=\"font-size:14px;color:#94a3b8;margin:0\">Edge</p><p style=\"font-size:18px;font-weight:bold;margin:8px 0 0\">CDN Cache</p></div></div></div>"
-}'
+**For architecture diagrams and benchmark visualizations:**
 
-# Generate benchmark chart
-infsh app run infsh/python-executor --input '{
-  "code": "import matplotlib.pyplot as plt\nimport matplotlib\nmatplotlib.use(\"Agg\")\n\nfig, ax = plt.subplots(figsize=(12, 6))\nfig.patch.set_facecolor(\"#0f172a\")\nax.set_facecolor(\"#0f172a\")\n\ntools = [\"Express\", \"Fastify\", \"Hono\", \"Elysia\"]\nrps = [15000, 45000, 62000, 78000]\ncolors = [\"#64748b\", \"#64748b\", \"#3b82f6\", \"#64748b\"]\n\nax.barh(tools, rps, color=colors, height=0.5)\nfor i, v in enumerate(rps):\n    ax.text(v + 1000, i, f\"{v:,} req/s\", va=\"center\", color=\"white\", fontsize=14)\n\nax.set_xlabel(\"Requests per second\", color=\"white\", fontsize=14)\nax.set_title(\"HTTP Framework Benchmark (Hello World)\", color=\"white\", fontsize=18, fontweight=\"bold\")\nax.tick_params(colors=\"white\", labelsize=12)\nax.spines[\"top\"].set_visible(False)\nax.spines[\"right\"].set_visible(False)\nax.spines[\"bottom\"].set_color(\"#334155\")\nax.spines[\"left\"].set_color(\"#334155\")\nplt.tight_layout()\nplt.savefig(\"benchmark.png\", dpi=150, facecolor=\"#0f172a\")\nprint(\"Saved\")"
-}'
-```
+Use diagramming tools (Mermaid, Excalidraw, draw.io) for architecture diagrams and charting libraries (matplotlib, Chart.js) for benchmark visualizations. These tools provide better control, are self-hosted, and avoid third-party execution risks.
 
 ---
 

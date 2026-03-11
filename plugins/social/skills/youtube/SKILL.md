@@ -1,8 +1,6 @@
 ---
 name: youtube
 description: YouTube Data API v3 via curl. Use this skill to search videos, get video/channel info, list playlists, and fetch comments.
-vm0_secrets:
-  - YOUTUBE_API_KEY
 ---
 
 # YouTube Data API
@@ -42,7 +40,7 @@ Use this skill when you need to:
 3. Copy the API key
 
 ```bash
-export YOUTUBE_API_KEY="AIzaSy..."
+export YOUTUBE_API_KEY="your-api-key-here"
 ```
 
 ### 3. (Optional) Restrict API Key

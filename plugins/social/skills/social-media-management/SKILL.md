@@ -348,42 +348,38 @@ bold text area on right, attention-grabbing, high contrast, professional, 1280x7
 
 ## AI-Powered Content Generation
 
-Use AI tools (via inference.sh CLI or similar) for scalable content creation:
+Use AI tools for scalable content creation across platforms:
 
 ### Video Content (TikTok/Reels/Shorts)
-```bash
-# Generate trending-style video
-infsh app run google/veo-3-1-fast --input '{
-  "prompt": "POV walking through a neon-lit Tokyo street at night, vertical format 9:16, cinematic"
-}'
-```
+
+Generate short-form video content with AI video tools. Focus on trending styles, vertical 9:16 format, and platform-specific aesthetics. Examples: POV walking scenes, trending transitions, before/after transformations, educational breakdowns with text overlays.
 
 ### Image Generation
-```bash
-# Instagram carousel images
-infsh app run falai/flux-dev --input '{
-  "prompt": "Minimalist lifestyle flat lay photo, morning coffee routine, neutral tones, Instagram aesthetic"
-}'
-```
+
+Create platform-optimized images using AI image generators. Match each platform's preferred dimensions and aesthetic:
+- **Instagram**: Minimalist, lifestyle, high-quality photography
+- **Twitter/X**: Bold, high-contrast designs with clear messaging
+- **LinkedIn**: Professional, corporate, authoritative imagery
+- **Pinterest**: Vertical, inspiring, lifestyle-focused pins
+- **TikTok/Reels**: Trendy, energetic, authentic-feeling visuals
 
 ### Caption & Hook Generation
-```bash
-# Generate engaging caption
-infsh app run openrouter/claude-haiku-45 --input '{
-  "prompt": "Write an engaging Instagram caption for a sunset beach photo. Hook, value, CTA, 10 hashtags."
-}'
-```
+
+Use AI writing assistants to draft engaging captions. Structure:
+1. **Hook line** — Curiosity, story, or value statement (first 1–2 lines)
+2. **Value/story** — Main message or narrative (2–4 sentences)
+3. **CTA** — Clear call-to-action (question, link, or engagement request)
+4. **Hashtags** — Relevant, platform-specific tags (3–20 depending on platform)
 
 ### Batch Content Creation
-```bash
-# Generate a week of content
-TOPICS=("morning routine" "productivity tips" "workspace tour")
-for topic in "${TOPICS[@]}"; do
-  infsh app run google/veo-3-1-fast --input "{
-    \"prompt\": \"$topic content for social media, aesthetic, vertical 9:16, engaging\"
-  }" > "content_${topic// /_}.json"
-done
-```
+
+Plan a week of content in advance:
+1. Define 3–5 content topics aligned with your pillars
+2. Generate assets for each topic (video, image, caption)
+3. Schedule across platforms for consistent posting
+4. Leave room for real-time engagement and trending topics
+
+Example workflow: Pick topics (morning routine, productivity tips, workspace tour), generate visuals and captions for each, then schedule 1–2 posts per day across your platforms.
 
 ---
 

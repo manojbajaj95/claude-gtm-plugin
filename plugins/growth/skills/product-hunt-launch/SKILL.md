@@ -1,30 +1,11 @@
 ---
 name: product-hunt-launch
 description: "Product Hunt launch optimization with specific specs, timing, and gallery strategy. Covers taglines, gallery images, maker comments, and launch day tactics. Use for: product launches, startup launches, side project launches, Product Hunt optimization. Triggers: product hunt, ph launch, product hunt launch, launch strategy, product launch, startup launch, product hunt tips, product hunt gallery, ph optimization, launch day, product hunt maker"
-allowed-tools: Bash(infsh *)
 ---
 
 # Product Hunt Launch
 
-Optimize your Product Hunt launch with research and visuals via [inference.sh](https://inference.sh) CLI.
-
-## Quick Start
-
-```bash
-curl -fsSL https://cli.inference.sh | sh && infsh login
-
-# Generate gallery hero image
-infsh app run falai/flux-dev-lora --input '{
-  "prompt": "clean product showcase, modern SaaS dashboard interface on laptop screen, floating UI elements around it, soft gradient background from blue to purple, professional marketing hero shot, minimal clean design",
-  "width": 1248,
-  "height": 832
-}'
-
-# Research competitor launches
-infsh app run tavily/search-assistant --input '{
-  "query": "Product Hunt top launches this week SaaS tools"
-}'
-```
+Optimize your Product Hunt launch with research and visuals.
 
 ## Listing Specifications
 
@@ -60,34 +41,25 @@ The first gallery image shows in the feed, email digest, and social shares. It I
 
 ### Generating Gallery Images
 
-```bash
-# Image 1: Hero product shot
-infsh app run falai/flux-dev-lora --input '{
-  "prompt": "modern SaaS product showcase, clean dashboard interface floating above gradient background, UI showing analytics charts and metrics, professional product marketing style, soft shadows, blue and white color scheme, wide format",
-  "width": 1248,
-  "height": 832
-}'
+Use your preferred image generation tool to create gallery images matching these specs:
 
-# Image 2: Feature demo
-infsh app run falai/flux-dev-lora --input '{
-  "prompt": "product feature showcase, split screen showing drag-and-drop interface on left and generated output on right, clean UI design, modern SaaS aesthetic, subtle grid background, professional marketing",
-  "width": 1248,
-  "height": 832
-}'
+**Image 1: Hero product shot**
+- Prompt: "modern SaaS product showcase, clean dashboard interface floating above gradient background, UI showing analytics charts and metrics, professional product marketing style, soft shadows, blue and white color scheme, wide format"
+- Dimensions: 1248 x 832 px
 
-# Image 3: Before/after
-infsh app run infsh/stitch-images --input '{
-  "images": ["before-state.png", "after-state.png"],
-  "direction": "horizontal"
-}'
+**Image 2: Feature demo**
+- Prompt: "product feature showcase, split screen showing drag-and-drop interface on left and generated output on right, clean UI design, modern SaaS aesthetic, subtle grid background, professional marketing"
+- Dimensions: 1248 x 832 px
 
-# Image 4: Social proof / metrics
-infsh app run falai/flux-dev-lora --input '{
-  "prompt": "clean infographic style image showing upward growth metrics, large numbers and charts on dark background, professional data visualization, startup metrics dashboard style, modern minimal design",
-  "width": 1248,
-  "height": 832
-}'
-```
+**Image 3: Before/after**
+- Create a side-by-side comparison showing the problem state and solution state
+- Use design tools like Figma or image editing software
+
+**Image 4: Social proof / metrics**
+- Prompt: "clean infographic style image showing upward growth metrics, large numbers and charts on dark background, professional data visualization, startup metrics dashboard style, modern minimal design"
+- Dimensions: 1248 x 832 px
+
+**Recommended tools:** Midjourney, DALL-E, Figma, Adobe Express, or your preferred design/image generation platform.
 
 ## Tagline
 
@@ -206,22 +178,12 @@ your feedback — what reporting pain points do you have?
 
 ## Research for Preparation
 
-```bash
-# Study similar product launches
-infsh app run tavily/search-assistant --input '{
-  "query": "Product Hunt top launches analytics tools best practices"
-}'
+Research competitor launches and community sentiment using web search tools:
 
-# Competitive landscape
-infsh app run exa/search --input '{
-  "query": "Product Hunt analytics dashboard tools launched 2024 2025"
-}'
-
-# Community sentiment
-infsh app run tavily/search-assistant --input '{
-  "query": "Product Hunt launch tips what works 2024 maker advice"
-}'
-```
+- Study similar product launches on Product Hunt
+- Analyze the competitive landscape for your category
+- Review community sentiment and maker advice from recent launches
+- Look for patterns in what works and what doesn't
 
 ## Post-Launch
 
@@ -244,13 +206,3 @@ infsh app run tavily/search-assistant --input '{
 | Not replying to comments | Low engagement signal | Reply to every single comment |
 | Too many topics | Dilutes discoverability | Max 3, pick the most specific |
 | Tagline with buzzwords | Nobody knows what you do | Clear, specific, benefit-focused |
-
-## Related Skills
-
-```bash
-npx skills add inferencesh/skills@ai-image-generation
-npx skills add inferencesh/skills@web-search
-npx skills add inferencesh/skills@prompt-engineering
-```
-
-Browse all apps: `infsh app list`

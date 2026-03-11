@@ -1,27 +1,11 @@
 ---
 name: newsletter-management
-description: Create, curate, and grow email newsletters across all formats and strategies. Use when working on newsletters, email newsletters, weekly digests, link roundups, curated content, audience building, subscriber engagement, or content distribution. Covers 6 newsletter formats (curated/link roundup, story-driven, educational, interview, data-driven, personal update), editorial issue structure, content sourcing via inference.sh CLI, commentary writing, sending cadence, subject line optimization, subscriber growth, and engagement metrics. Trigger keywords: newsletter curation, curated newsletter, newsletter writing, newsletter format, newsletter strategy, newsletter template, content curation, subscriber growth.
+description: Create, curate, and grow email newsletters across all formats and strategies. Use when working on newsletters, email newsletters, weekly digests, link roundups, curated content, audience building, subscriber engagement, or content distribution. Covers 6 newsletter formats (curated/link roundup, story-driven, educational, interview, data-driven, personal update), editorial issue structure, content sourcing workflows, commentary writing, sending cadence, subject line optimization, subscriber growth, and engagement metrics. Trigger keywords: newsletter curation, curated newsletter, newsletter writing, newsletter format, newsletter strategy, newsletter template, content curation, subscriber growth.
 ---
 
 # Newsletter Management
 
 Build, curate, and grow recurring newsletters that create genuine value for subscribers.
-
-## Quick Start (inference.sh CLI)
-
-```bash
-curl -fsSL https://cli.inference.sh | sh && infsh login
-
-# Find content to curate
-infsh app run tavily/search-assistant --input '{
-  "query": "[your niche] most important developments this week"
-}'
-
-# Generate newsletter header image
-infsh app run infsh/html-to-image --input '{
-  "html": "<div style=\"width:600px;height:200px;background:linear-gradient(135deg,#1e293b,#334155);display:flex;align-items:center;padding:40px;font-family:system-ui;color:white\"><div><h1 style=\"font-size:32px;margin:0;font-weight:800\">The Weekly Signal</h1><p style=\"font-size:16px;opacity:0.7;margin-top:8px\">Issue #47 — January 15, 2025</p></div></div>"
-}'
-```
 
 ## The 6 Newsletter Formats
 
@@ -163,22 +147,7 @@ P.S. [Relevant insight, question, or recommendation]
 
 ## Content Sourcing
 
-```bash
-# Industry news
-infsh app run tavily/search-assistant --input '{
-  "query": "[your niche] news this week latest developments"
-}'
-
-# Research and data
-infsh app run exa/search --input '{
-  "query": "[your niche] research report statistics 2024"
-}'
-
-# Trending discussions
-infsh app run tavily/search-assistant --input '{
-  "query": "site:reddit.com [your niche] discussion this week"
-}'
-```
+Use web search tools to find content for your niche: industry news, research reports, and trending discussions on Reddit/HN.
 
 ### Source Categories
 
@@ -256,11 +225,19 @@ Commentary is what makes a newsletter worth reading — not just the links.
 | Lead magnet | "Subscribe and get [free resource]" |
 | Consistent quality | The most reliable long-term growth lever |
 
-```bash
-# Create social teaser for newsletter
-infsh app run x/post-create --input '{
-  "text": "This week in The Weekly Signal:\n\n→ Why edge computing is eating the backend\n→ 5 tools I discovered this month\n\nJoin 2,000+ engineers: [link]\n\nIssue #47 drops tomorrow."
-}'
+### Social Teasers
+
+Create social teasers that highlight 2-3 key items from the newsletter with a subscribe CTA. Example:
+
+```
+This week in The Weekly Signal:
+
+→ Why edge computing is eating the backend
+→ 5 tools I discovered this month
+
+Join 2,000+ engineers: [link]
+
+Issue #47 drops tomorrow.
 ```
 
 ## Metrics That Matter
@@ -285,13 +262,3 @@ infsh app run x/post-create --input '{
 | Only promotional content | 90% value, 10% promotion |
 | No engagement CTA | Ask questions, invite replies |
 | No archive/SEO | Publish issues as web pages |
-
-## Related Skills
-
-```bash
-npx skills add inferencesh/skills@email-design
-npx skills add inferencesh/skills@content-repurposing
-npx skills add inferencesh/skills@seo-content-brief
-```
-
-Browse all apps: `infsh app list`
