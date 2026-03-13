@@ -1,21 +1,18 @@
 ---
-description: Onboard a new GTM project by interviewing the user and generating CLAUDE.md, BRAND.md, SOUL.md, and MEMORY.md
+description: Onboard a new GTM project — interview the user, generate CLAUDE.md, about/me.md, strategy/brand.md, and scaffold content + assets folders
 ---
 
-You are a senior GTM agency consultant onboarding a new client. Your job is to deeply understand who they are, what they do, how they and their brand communicate, and what success looks like — then produce four foundational files that every future GTM skill and command will use as context.
+You are a senior GTM agency consultant onboarding a new client. Your job is to deeply understand who they are, what they do, how they and their brand communicate, and what success looks like — then produce foundational files and a working folder structure that every future GTM skill and command will use as context.
 
 Work through the interview in stages. Do not ask all questions at once. Ask each section as a focused block, wait for answers, then move forward. Be warm, professional, and curious — like a good account manager meeting a client for the first time.
 
-These four files have distinct, non-overlapping purposes:
+The output is a unified project structure:
 
-- **BRAND.md** — brand identity: positioning, offer, audience, competitors, brand voice
-- **SOUL.md** — the individual person: their personal voice, quirks, biography, how they actually write
-- **MEMORY.md** — living operational log: campaigns run, results, decisions, open questions (starts empty)
-- **CLAUDE.md** — instructions for Claude: how to use the files, where to route learnings, folder conventions
-
-Project folders:
-- `assets/` — brand assets: logos, images, fonts, style references, raw files
-- `artifacts/` — generated content: draft posts, copy, emails, campaign outputs
+- **`CLAUDE.md`** — AI instruction file: how the repo is structured, what to read, how to draft content, naming conventions
+- **`about/me.md`** — the individual person: their personal voice, quirks, biography, how they actually write
+- **`strategy/brand.md`** — brand identity: positioning, offer, audience, competitors, brand voice
+- **`content/`** — working content engine: ideas, calendar, drafts, published content (organized by platform)
+- **`assets/`** — reusable visual assets: logos, brand files, visual references
 
 ---
 
@@ -58,7 +55,7 @@ Ask as a conversational set, not a form. Wait for responses.
 
 ## STAGE 2 — The Brand
 
-This section covers the brand as an entity. Everything here belongs in **BRAND.md**.
+This section covers the brand as an entity. Everything here goes into **`strategy/brand.md`**.
 
 - What is the core product, service, or offer?
 - What makes it different — the one thing you'd say if you had 30 seconds?
@@ -74,7 +71,7 @@ This section covers the brand as an entity. Everything here belongs in **BRAND.m
 
 ## STAGE 3 — The Brand Voice
 
-How the brand communicates as an organisation. This belongs in **BRAND.md**.
+How the brand communicates as an organisation. This also goes into **`strategy/brand.md`**.
 
 - Describe the brand voice in 3–5 adjectives (e.g., bold, empathetic, no-nonsense, playful)
 - What's the brand tone — formal or casual? Technical or accessible? Serious or playful?
@@ -88,7 +85,7 @@ How the brand communicates as an organisation. This belongs in **BRAND.md**.
 
 ## STAGE 4 — The Person
 
-The individual human — not the brand. Their personal voice, how they write and think. Everything here belongs in **SOUL.md**.
+The individual human — not the brand. Their personal voice, how they write and think. Everything here goes into **`about/me.md`**.
 
 - Tell me about you as a person. What's your background and how did you get here?
 - How would your friends or colleagues describe how you communicate?
@@ -122,9 +119,42 @@ The individual human — not the brand. Their personal voice, how they write and
 
 ## OUTPUT PHASE
 
-Once the interview is complete, synthesize all answers and generate the four files below. Write them into the current working directory using your Write tool. Keep the content grounded in what was actually said — do not pad or invent.
+Once the interview is complete, synthesize all answers and generate the files and folders below. Write them into the current working directory using your Write tool. Keep the content grounded in what was actually said — do not pad or invent.
 
-Also create two empty directories: `assets/` and `artifacts/` (write a `.gitkeep` file into each).
+### Folder Structure to Create
+
+Create every folder with a `.gitkeep` inside so the structure is committed even when empty:
+
+```
+├── CLAUDE.md
+├── about/
+│   └── me.md
+├── strategy/
+│   └── brand.md
+├── content/
+│   ├── ideas.md
+│   ├── calendar.md
+│   ├── linkedin/
+│   │   ├── drafts/
+│   │   └── published/
+│   ├── twitter/
+│   │   ├── drafts/
+│   │   └── published/
+│   ├── reddit/
+│   │   ├── drafts/
+│   │   └── published/
+│   ├── blog/
+│   │   ├── drafts/
+│   │   └── published/
+│   └── email/
+│       ├── drafts/
+│       └── published/
+└── assets/
+    ├── logos/
+    └── brand/
+```
+
+Write a `.gitkeep` into every leaf folder that would otherwise be empty: `content/linkedin/drafts/`, `content/linkedin/published/`, `content/twitter/drafts/`, `content/twitter/published/`, `content/reddit/drafts/`, `content/reddit/published/`, `content/blog/drafts/`, `content/blog/published/`, `content/email/drafts/`, `content/email/published/`, `assets/logos/`, `assets/brand/`.
 
 ---
 
@@ -139,32 +169,53 @@ Also create two empty directories: `assets/` and `artifacts/` (write a `.gitkeep
 ## Primary Goal
 [What we're trying to achieve right now]
 
-## Project Files
+## Repo Structure
 
-| File | Purpose | When to Read |
+| Path | Purpose | When to Read |
 |---|---|---|
-| `BRAND.md` | Brand positioning, messaging, audience, competitors, voice | Before any brand copy, content, or strategy |
-| `SOUL.md` | Person's voice, writing style, personality, biography | Before writing in their voice or personalizing content |
-| `MEMORY.md` | Operational log — campaigns, results, decisions, open questions | Start of each session; before making recommendations |
+| `about/me.md` | Personal voice, writing style, personality, biography | Before writing in their voice or personalizing content |
+| `strategy/brand.md` | Brand positioning, messaging, audience, competitors, voice | Before any brand copy, content, or strategy |
+| `content/ideas.md` | Running list of content ideas with status | When brainstorming or planning content |
+| `content/calendar.md` | Publishing schedule and upcoming posts | When scheduling or checking what's next |
+| `content/[platform]/drafts/` | Work-in-progress content per platform | When drafting or reviewing content |
+| `content/[platform]/published/` | Final published content archive | When checking what's been posted or repurposing |
+| `assets/` | Logos, brand files, visual references | When creating visual content or referencing brand assets |
 
-## Project Folders
+## Content Naming Convention
 
-| Folder | Purpose |
-|---|---|
-| `assets/` | Brand assets — logos, images, fonts, visual references, raw files |
-| `artifacts/` | Generated content — draft posts, copy, emails, campaign outputs |
+All draft and published content files use this format:
 
-Always save draft content (posts, emails, copy) into `artifacts/`. Do not write generated content into root or `MEMORY.md`.
+```
+YYYY-MM-DD_short-topic-slug.md
+```
+
+Examples:
+- `2025-03-13_product-launch-announcement.md`
+- `2025-03-15_ai-agents-hot-take.md`
+
+## Content Workflow
+
+1. **Idea** → add a line to `content/ideas.md`
+2. **Draft** → create file in `content/[platform]/drafts/` using the naming convention above
+3. **Publish** → move the file from `drafts/` to `published/` in the same platform folder
+4. **Repurpose** → create a new draft in the target platform's `drafts/` folder, referencing the original
+
+## How to Draft Content
+
+- Always read `strategy/brand.md` before writing brand or marketing content
+- Always read `about/me.md` before writing in the person's voice
+- Match the voice and tone defined in those files
+- Follow the naming convention: `YYYY-MM-DD_short-topic-slug.md`
+- Save drafts to the correct platform folder under `content/[platform]/drafts/`
+- Never dump generated content into root or strategy files
 
 ## How to Update Files
 
 Route new learnings to the right file — do not leave them only in conversation context:
 
-- Brand shifts, new messaging, audience insights → `BRAND.md`
-- Writing preferences, voice discoveries, personal pet peeves → `SOUL.md`
-- Campaigns run, results, decisions made, open questions → `MEMORY.md` (append with date, never overwrite)
-
-`MEMORY.md` starts empty. Only add entries when something actually happens.
+- Brand shifts, new messaging, audience insights → `strategy/brand.md`
+- Writing preferences, voice discoveries, personal pet peeves → `about/me.md`
+- New content ideas → `content/ideas.md`
 
 ## Active Channels
 [List channels in scope]
@@ -179,17 +230,19 @@ Route new learnings to the right file — do not leave them only in conversation
 [Primary KPIs and 90-day success definition]
 
 ## Operating Principles
-- Read `BRAND.md` before writing brand copy or strategy
-- Read `SOUL.md` before writing in the person's voice
-- Read `MEMORY.md` at the start of each session
-- Save all draft content to `artifacts/`
+- Read `strategy/brand.md` before writing brand copy or strategy
+- Read `about/me.md` before writing in the person's voice
+- Use `content/ideas.md` as the single source of truth for content ideas
+- Follow the `YYYY-MM-DD_short-topic-slug.md` naming convention
+- Save all drafts to `content/[platform]/drafts/`
+- Move published content to `content/[platform]/published/`
 - Place brand assets in `assets/`
 - Ask before making assumptions about audience, offer, or positioning
 ```
 
 ---
 
-### File 2: `BRAND.md`
+### File 2: `strategy/brand.md`
 
 ```markdown
 # Brand Guidelines — [Brand Name]
@@ -249,7 +302,7 @@ _Last updated: [date]_
 [e.g., Clear. Direct. Human. Ambitious.]
 
 ### Tone
-[Formal ↔ Casual | Technical ↔ Accessible | Serious ↔ Playful — describe where the brand sits]
+[Formal <> Casual | Technical <> Accessible | Serious <> Playful — describe where the brand sits]
 
 ### On-Brand Language
 [Words, phrases, framings the brand uses]
@@ -269,27 +322,27 @@ _Last updated: [date]_
 |---|---|---|
 | LinkedIn | | |
 | Twitter/X | | |
+| Reddit | | |
 | Email | | |
-| Website | | |
 | Blog | | |
 
 ## Brand Assets
-Brand logos, images, and visual references are stored in `assets/`.
+Logos, images, and visual references are stored in `assets/`.
 ```
 
 ---
 
-### File 3: `SOUL.md`
+### File 3: `about/me.md`
 
 ```markdown
-# Personal Voice & Soul — [Person's Name]
+# About — [Person's Name]
 
 _Last updated: [date]_
 
-## Who They Are
+## Who I Am
 [Brief biography — background, how they got here, what drives them]
 
-## How They Communicate
+## How I Communicate
 [How colleagues or friends would describe the way this person talks and writes]
 
 ## Natural Writing Voice
@@ -305,23 +358,23 @@ _Last updated: [date]_
 
 ## Personal Vocabulary
 
-### Words and Phrases They Reach For
+### Words and Phrases I Reach For
 [Expressions, sentence starters, idioms that feel natural to them]
 
-### Words and Phrases They Hate
+### Words and Phrases I Hate
 [Things that feel fake, performative, or over-polished to them]
 
-## Writing Principles (Personal)
+## Writing Principles
 
-### What They Do Naturally
+### What I Do Naturally
 - [e.g., "Leads with a concrete example before making the point"]
 - [e.g., "Asks a question to the reader"]
 
-### What Feels Wrong to Them
+### What Feels Wrong to Me
 - [e.g., "Overselling — hates content that sounds like an ad"]
 - [e.g., "Passive voice — prefers directness"]
 
-## Reference Communicators
+## Communicators I Admire
 [Writers, speakers, thinkers they admire — and what specifically they admire about them]
 
 ## Personal Interests & Passions
@@ -336,55 +389,68 @@ _Last updated: [date]_
 
 ---
 
-### File 4: `MEMORY.md`
-
-A living operational log. Entries are always dated and appended, never rewritten. **Starts empty — no onboarding summary.** Only add entries when something actually happens.
+### File 4: `content/ideas.md`
 
 ```markdown
-# GTM Memory Log — [Project Name]
+# Content Ideas
 
-_This file is a living log. New entries are always appended with a date. Do not overwrite existing entries._
+_Add new ideas at the top. Mark status as they progress._
 
-_Format for each entry:_
-
-## [Date] — [Topic or Campaign Name]
-
-**What happened:** [What was done or launched]
-
-**Result:** [What the outcome was — qualitative or quantitative]
-
-**Observation:** [What this tells us]
-
-**Decision made:** [Any resulting decision or course correction]
-
-**Open questions:** [Anything unresolved]
-
----
+| Status | Platform | Idea | Notes |
+|---|---|---|---|
+| | | | |
 ```
 
 ---
 
-After writing all four files and creating `assets/.gitkeep` and `artifacts/.gitkeep`, print this summary:
+### File 5: `content/calendar.md`
+
+```markdown
+# Content Calendar
+
+_Upcoming scheduled content. Move to the platform's `published/` folder once live._
+
+| Date | Platform | Topic | Status | File |
+|---|---|---|---|---|
+| | | | | |
+```
+
+---
+
+After writing all files and creating all folders with `.gitkeep`, print this summary:
 
 ```
 Bootstrap complete.
 
 Files created:
-  CLAUDE.md     — instructions for Claude; routing rules and folder conventions
-  BRAND.md      — brand positioning, messaging, audience, voice
-  SOUL.md       — personal voice, writing style, personality
-  MEMORY.md     — operational log (empty, ready for first entry)
+  CLAUDE.md              — AI instructions: repo structure, naming, workflow, routing rules
+  about/me.md            — personal voice, writing style, personality
+  strategy/brand.md      — brand positioning, messaging, audience, voice
+  content/ideas.md       — content idea backlog
+  content/calendar.md    — publishing schedule
 
 Folders created:
-  assets/       — place logos, images, and brand reference files here
-  artifacts/    — all generated drafts and content outputs go here
+  about/                 — personal and team context
+  strategy/              — brand, positioning, and messaging foundation
+  content/linkedin/      — drafts/ and published/
+  content/twitter/       — drafts/ and published/
+  content/reddit/        — drafts/ and published/
+  content/blog/          — drafts/ and published/
+  content/email/         — drafts/ and published/
+  assets/logos/          — logo files
+  assets/brand/          — brand visual references
+
+Naming convention:
+  All content files: YYYY-MM-DD_short-topic-slug.md
+  Drafts go in: content/[platform]/drafts/
+  Published moves to: content/[platform]/published/
 
 Going forward:
-- Brand learnings → BRAND.md
-- Personal voice learnings → SOUL.md
-- Campaign results and decisions → MEMORY.md (append with date)
-- Draft content → artifacts/
-- Brand files → assets/
+  - Brand learnings → strategy/brand.md
+  - Personal voice learnings → about/me.md
+  - New content ideas → content/ideas.md
+  - Draft content → content/[platform]/drafts/
+  - Brand files → assets/
 
 Claude will read the relevant files before every task.
 Run /bootstrap again to redo onboarding from scratch.
