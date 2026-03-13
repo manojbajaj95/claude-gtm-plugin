@@ -6,7 +6,7 @@ Go-to-market skills that turn Claude into a GTM specialist. 62 skills across SEO
 
 Most AI assistants give generic marketing advice. This plugin gives Claude the frameworks, workflows, and domain knowledge of an experienced GTM team — so it can write copy in your voice, audit your SEO like a consultant, plan launches like a PMM, and build outbound sequences like an SDR.
 
-The `/bootstrap` command interviews you once about your brand, audience, and voice, then generates four context files that every skill reads before doing anything. The result: Claude doesn't just know marketing — it knows *your* marketing.
+The `/bootstrap` command interviews you once about your brand, audience, and voice, then generates a structured project folder that every skill reads before doing anything. The result: Claude doesn't just know marketing — it knows *your* marketing.
 
 ## Installation
 
@@ -74,16 +74,49 @@ git submodule add https://github.com/manojbajaj95/claude-gtm-plugin.git .agents/
 
 ### Bootstrap Your Project
 
-Run `/bootstrap` in any project directory. Claude runs an agency-style onboarding interview — asking about your brand, audience, voice, and goals — then generates four foundational files:
+Run `/bootstrap` in any project directory. Claude runs an agency-style onboarding interview — asking about your brand, audience, voice, and goals — then generates a structured project:
 
-| File | What it captures |
+```
+your-project/
+├── CLAUDE.md                    # AI instructions: repo structure, naming, workflow, routing
+├── about/
+│   └── me.md                    # Personal voice, writing style, personality, biography
+├── strategy/
+│   └── brand.md                 # Brand positioning, messaging, audience, competitors, voice
+├── content/
+│   ├── ideas.md                 # Content idea backlog
+│   ├── calendar.md              # Publishing schedule
+│   ├── linkedin/
+│   │   ├── drafts/              # Work-in-progress posts
+│   │   └── published/           # Archive of published posts
+│   ├── twitter/
+│   │   ├── drafts/
+│   │   └── published/
+│   ├── reddit/
+│   │   ├── drafts/
+│   │   └── published/
+│   ├── blog/
+│   │   ├── drafts/
+│   │   └── published/
+│   └── email/
+│       ├── drafts/
+│       └── published/
+└── assets/
+    ├── logos/                    # Logo files
+    └── brand/                   # Brand visual references
+```
+
+| Path | What it captures |
 |---|---|
-| `CLAUDE.md` | Instructions for Claude: which files to read before which tasks, routing rules for new learnings |
-| `BRAND.md` | Brand identity — positioning, messaging, audience, competitors, voice guidelines |
-| `SOUL.md` | Personal voice — your writing style, quirks, references, personality |
-| `MEMORY.md` | Operational log — campaigns launched, results, decisions, open questions (append-only) |
+| `CLAUDE.md` | AI instructions — repo structure, what to read first, naming conventions, content workflow |
+| `about/me.md` | Personal voice — your writing style, quirks, references, personality |
+| `strategy/brand.md` | Brand identity — positioning, messaging, audience, competitors, voice guidelines |
+| `content/` | Working content engine — ideas, calendar, drafts and published content per platform |
+| `assets/` | Reusable visual assets — logos, brand files, visual references |
 
-Once these exist, every skill reads the relevant context before doing anything. Claude works in your voice, for your brand, from day one.
+Content files follow the naming convention `YYYY-MM-DD_short-topic-slug.md`. Drafts live in `content/[platform]/drafts/` and move to `published/` once live.
+
+Once bootstrapped, every skill reads the relevant context before doing anything. Claude works in your voice, for your brand, from day one.
 
 ### Using Skills
 
@@ -109,7 +142,7 @@ Skills activate automatically when Claude detects a matching task. Just describe
 → Activates linkedin-content + copywriting
 ```
 
-Skills cross-reference each other. Ask Claude to write a cold email and it pulls from your brand positioning (`BRAND.md`), your personal voice (`SOUL.md`), and your ICP — not from a generic template.
+Skills cross-reference each other. Ask Claude to write a cold email and it pulls from your brand positioning (`strategy/brand.md`), your personal voice (`about/me.md`), and your ICP — not from a generic template.
 
 ## How It Works
 
@@ -135,7 +168,7 @@ claude-gtm-plugin/
 
 **Commands** are explicit actions you trigger. Currently: `/bootstrap`.
 
-Skills reference each other and build on the context files created by `/bootstrap`. Ask Claude to write a cold email and it pulls from your brand positioning, your voice, and your ICP — not from a generic template.
+Skills reference each other and build on the project structure created by `/bootstrap`. Ask Claude to write a cold email and it pulls from your brand positioning, your voice, and your ICP — not from a generic template.
 
 ## Skills
 
@@ -145,9 +178,11 @@ See [ALL_SKILLS.md](ALL_SKILLS.md) for the full 62-skill listing. Regenerate any
 
 As you work with Claude, it routes new information to the right file automatically:
 
-- Brand info (positioning, messaging, audience insights) → `BRAND.md`
-- Personal info (writing preferences, quirks, reference examples) → `SOUL.md`
-- Operational progress (campaigns launched, results, decisions) → `MEMORY.md` (appended, dated)
+- Brand info (positioning, messaging, audience insights) → `strategy/brand.md`
+- Personal info (writing preferences, quirks, reference examples) → `about/me.md`
+- New content ideas → `content/ideas.md`
+- Draft content → `content/[platform]/drafts/`
+- Published content → `content/[platform]/published/`
 
 ## Validation
 
