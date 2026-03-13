@@ -117,9 +117,31 @@ The individual human — not the brand. Their personal voice, how they write and
 
 ---
 
+## MIGRATION PHASE (run before generating files)
+
+Before creating any files, check for old-format files from previous bootstrap versions. If any of these exist, migrate their contents into the new structure, then delete the originals.
+
+| Old File (delete after migrating) | Migrate contents to |
+|---|---|
+| `BRAND.md` | `strategy/brand.md` |
+| `SOUL.md` | `about/me.md` |
+| `MEMORY.md` | _(removed — delete without replacement)_ |
+| `artifacts/` | Move drafts to `content/[platform]/drafts/` based on content type |
+| `archive/` | Move published content to `content/[platform]/published/` based on content type |
+
+**Steps:**
+1. Check if `BRAND.md`, `SOUL.md`, `MEMORY.md`, `artifacts/`, or `archive/` exist in the working directory
+2. If any exist: read their contents, merge into the corresponding new file (or create it), then delete the old file/folder
+3. If none exist: skip this phase entirely — no action needed
+4. If a new-format file already exists (e.g., `strategy/brand.md`), merge the old content into it rather than overwriting
+
+After migration, also regenerate `CLAUDE.md` to ensure it references the new paths — never the old ones.
+
+---
+
 ## OUTPUT PHASE
 
-Once the interview is complete, synthesize all answers and generate the files and folders below. Write them into the current working directory using your Write tool. Keep the content grounded in what was actually said — do not pad or invent.
+Once the interview is complete (or migration is done for a re-run), synthesize all answers and generate the files and folders below. Write them into the current working directory using your Write tool. Keep the content grounded in what was actually said — do not pad or invent.
 
 ### Folder Structure to Create
 
@@ -159,6 +181,19 @@ Write a `.gitkeep` into every leaf folder that would otherwise be empty: `conten
 ---
 
 ### File 1: `CLAUDE.md`
+
+**⚠️ DEPRECATED PATTERNS — DO NOT USE ANY OF THESE IN THE GENERATED CLAUDE.md:**
+
+- `BRAND.md` → use `strategy/brand.md` instead
+- `SOUL.md` → use `about/me.md` instead
+- `MEMORY.md` → removed entirely, do not reference
+- `artifacts/` → use `content/[platform]/drafts/` instead
+- `archive/` → use `content/[platform]/published/` instead
+- "Project Files" / "Project Folders" as section names → use "Repo Structure" instead
+- Any instruction to "read MEMORY.md at start of session" → remove entirely
+- Any instruction to "save drafts to artifacts/" → use `content/[platform]/drafts/`
+
+Follow the template below **exactly**. Do not add, rename, or rearrange sections. Do not reference any deprecated file or folder names.
 
 ```markdown
 # Claude Instructions — [Project Name]
