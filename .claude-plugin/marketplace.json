@@ -8,54 +8,9 @@
   },
   "plugins": [
     {
-      "name": "seo",
-      "source": "./plugins/seo",
-      "description": "SEO skills for search engine optimization, keyword research, and organic growth"
-    },
-    {
-      "name": "content",
-      "source": "./plugins/content",
-      "description": "Content strategy, copywriting, and content creation skills for blogs, articles, and marketing materials"
-    },
-    {
-      "name": "social",
-      "source": "./plugins/social",
-      "description": "Social media management skills for LinkedIn, Twitter/X, YouTube, and cross-platform content"
-    },
-    {
-      "name": "outbound",
-      "source": "./plugins/outbound",
-      "description": "Cold email, outbound sales, and outreach sequence generation skills"
-    },
-    {
-      "name": "sales",
-      "source": "./plugins/sales",
-      "description": "Sales skills including qualification, enterprise sales, and sales team building"
-    },
-    {
-      "name": "growth",
-      "source": "./plugins/growth",
-      "description": "Growth strategy, product-market fit, and retention skills for scaling products"
-    },
-    {
-      "name": "analytics",
-      "source": "./plugins/analytics",
-      "description": "Analytics, market research, and competitive analysis skills"
-    },
-    {
-      "name": "strategy",
-      "source": "./plugins/strategy",
-      "description": "Brand strategy, positioning, pricing, and go-to-market planning skills"
-    },
-    {
-      "name": "ads",
-      "source": "./plugins/ads",
-      "description": "Paid advertising, landing page optimization, and conversion rate optimization skills"
-    },
-    {
-      "name": "crm",
-      "source": "./plugins/crm",
-      "description": "CRM integration, automation, and customer relationship management skills"
+      "name": "gtm-skills",
+      "source": ".",
+      "description": "Go-to-market skills for Claude — 56 skills covering SEO, content, social, outbound, sales, growth, analytics, strategy, ads, and CRM"
     }
   ]
 }

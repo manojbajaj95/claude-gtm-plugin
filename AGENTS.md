@@ -1,6 +1,6 @@
 # Claude Instructions — GTM Plugin Development
 
-This is the GTM Skills plugin repo. These guidelines are for AI assistants working on skills, commands, and plugin code in this repository.
+This is the GTM Skills plugin repo. These guidelines are for AI assistants working on skills and plugin code in this repository.
 
 ## Repo Structure
 
@@ -15,45 +15,33 @@ gtm-plugin/
 │       └── config.yml           # Issue template chooser config
 ├── AGENTS.md                    # This file — dev guidelines (CLAUDE.md symlinks here)
 ├── ALL_SKILLS.md                # Auto-generated skill listing
-├── skills/                      # Core skills (root-level, ships with every install)
-│   └── issue-reporting/
-│       └── SKILL.md
-├── plugins/
-│   ├── seo/                     # Each domain is a sub-plugin
-│   ├── content/
-│   ├── social/
-│   ├── outbound/
-│   ├── sales/
-│   ├── growth/
-│   ├── analytics/
-│   ├── strategy/
-│   ├── ads/
-│   └── crm/
+├── skills/                      # All skills in one flat directory
+│   ├── bootstrap/
+│   │   └── SKILL.md
+│   ├── seo-and-aeo-strategy/
+│   │   └── SKILL.md
+│   ├── linkedin-content/
+│   │   └── SKILL.md
+│   └── ... (56 skills total)
 ├── scripts/                     # Build and validation scripts
 │   ├── bump-version.sh          # Bump semver across all manifests
 │   └── generate-skills-readme.sh # Regenerate ALL_SKILLS.md + README skills section
 └── validate-skills.sh           # Skill spec validator
 ```
 
-Each sub-plugin follows this layout:
+Each skill follows this layout:
 
 ```
-plugins/<domain>/
-├── .claude-plugin/
-│   └── plugin.json              # Sub-plugin manifest with version
-├── commands/
-│   └── bootstrap.md             # /bootstrap onboarding command
-└── skills/
-    └── <skill-name>/
-        ├── SKILL.md             # Skill definition (YAML frontmatter + markdown)
-        ├── references/          # Supporting reference material
-        ├── assets/              # Templates, examples
-        └── rules/               # (optional) Organized guidelines
+skills/<skill-name>/
+├── SKILL.md             # Skill definition (YAML frontmatter + markdown)
+├── references/          # Supporting reference material
+├── assets/              # Templates, examples
+└── rules/               # (optional) Organized guidelines
 ```
 
 ## User Project Structure (the `/bootstrap` convention)
 
-When bootstrap runs in a user's project, it creates this structure. **All skills and commands must reference these paths consistently.**
+When bootstrap runs in a user's project, it creates this structure. **All skills must reference these paths consistently.**
 
 ```
 user-project/
@@ -147,11 +135,9 @@ Skills can bundle their own reference material in `references/`, `assets/`, or `
 See [references/templates.md](references/templates.md) for examples.
 ```
 
-## Writing Commands — Conventions
+### Bootstrap skill
 
-### Bootstrap commands
-
-Each sub-plugin has its own `commands/bootstrap.md`. All bootstrap commands must:
+Bootstrap is a skill at `skills/bootstrap/SKILL.md`. It must:
 
 1. Generate the same unified folder structure (see above)
 2. Create `CLAUDE.md`, `about/me.md`, `strategy/brand.md` as foundational files
@@ -173,8 +159,6 @@ Each sub-plugin has its own `commands/bootstrap.md`. All bootstrap commands must
 ## Versioning
 
 - Root plugin version: `.claude-plugin/plugin.json`
-- Sub-plugin versions: `plugins/<domain>/.claude-plugin/plugin.json`
-- Bump both when making changes that affect a sub-plugin
 - Use semver: patch for fixes, minor for new features/structure changes, major for breaking changes
 
 ## Validation
@@ -187,11 +171,7 @@ Run before committing:
 
 Checks frontmatter fields, naming conventions, description quality, and file structure against the [Agent Skills spec](https://agentskills.io/specification).
 
-The validator scans `plugins/` by default. To validate root-level core skills separately:
-
-```bash
-./validate-skills.sh skills
-```
+The validator scans `skills/` by default.
 
 ## Rollout Flow
 
@@ -201,10 +181,9 @@ Follow this sequence when shipping changes. **Every step must pass before procee
 
 ```bash
 ./validate-skills.sh
-./validate-skills.sh skills   # if core skills were changed
 ```
 
-Both must exit clean (warnings are OK, errors are not).
+Must exit clean (warnings are OK, errors are not).
 
 ### 2. Regenerate skill listings
 
@@ -227,7 +206,7 @@ Use semver — patch for fixes, minor for new skills/features, major for breakin
 ./scripts/bump-version.sh 2.1.0   # explicit version
 ```
 
-This updates `.claude-plugin/plugin.json` (root) and all `plugins/*/.claude-plugin/plugin.json` (sub-plugins) in one pass.
+This updates `.claude-plugin/plugin.json`.
 
 ### 4. Commit and push
 
@@ -242,7 +221,6 @@ git push
 ```bash
 # Full rollout — validate, regenerate, bump, commit, push
 ./validate-skills.sh && \
-./validate-skills.sh skills && \
 ./scripts/generate-skills-readme.sh && \
 ./scripts/bump-version.sh minor && \
 git add -A && \
@@ -265,14 +243,4 @@ Bug reports use a YAML form template at `.github/ISSUE_TEMPLATE/bug_report.yml`.
 
 When updating the template, keep the `context_files` checklist in sync with the actual paths skills read from.
 
-## Core Skills
 
-Core skills live in `skills/` at the repo root (not inside `plugins/`). They ship with every install regardless of which domain sub-plugins are selected.
-
-Current core skills:
-
-| Skill | Purpose |
-|---|---|
-| `issue-reporting` | Guides users through reporting skill bugs with proper detail |
-
-Core skills follow the same SKILL.md format as domain skills (YAML frontmatter + markdown body). They are validated with `./validate-skills.sh skills`.

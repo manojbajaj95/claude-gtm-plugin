@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Bump version across all plugin manifests.
+# Bump version in the plugin manifest.
 #
 # Usage:
 #   ./scripts/bump-version.sh major    # 1.3.0 → 2.0.0
@@ -9,10 +9,7 @@
 #   ./scripts/bump-version.sh 2.1.0    # explicit version
 #
 # Updates:
-#   - .claude-plugin/plugin.json (root)
-#   - plugins/*/.claude-plugin/plugin.json (all sub-plugins)
-#
-# Skips third-party plugin.json files (those not under .claude-plugin/).
+#   - .claude-plugin/plugin.json
 
 set -euo pipefail
 
@@ -41,23 +38,12 @@ case "$1" in
         ;;
 esac
 
-PLUGIN_FILES=()
-PLUGIN_FILES+=("$ROOT_MANIFEST")
-for dir in "$PROJECT_ROOT"/plugins/*/.claude-plugin; do
-    if [ -f "$dir/plugin.json" ]; then
-        PLUGIN_FILES+=("$dir/plugin.json")
-    fi
-done
-
-echo "Bumping v${CURRENT_VERSION} → v${NEW_VERSION} across ${#PLUGIN_FILES[@]} manifests..."
+echo "Bumping v${CURRENT_VERSION} → v${NEW_VERSION}..."
 echo ""
 
-for file in "${PLUGIN_FILES[@]}"; do
-    rel_path="${file#$PROJECT_ROOT/}"
-    old_version=$(grep -o '"version": "[^"]*"' "$file" | head -1 | sed 's/"version": "//;s/"//')
-    sed -i "s/\"version\": \"${old_version}\"/\"version\": \"${NEW_VERSION}\"/" "$file"
-    echo "  ${rel_path}: ${old_version} → ${NEW_VERSION}"
-done
+rel_path="${ROOT_MANIFEST#$PROJECT_ROOT/}"
+sed -i "s/\"version\": \"${CURRENT_VERSION}\"/\"version\": \"${NEW_VERSION}\"/" "$ROOT_MANIFEST"
+echo "  ${rel_path}: ${CURRENT_VERSION} → ${NEW_VERSION}"
 
 echo ""
-echo "Done. All ${#PLUGIN_FILES[@]} manifests at v${NEW_VERSION}."
+echo "Done. Manifest at v${NEW_VERSION}."

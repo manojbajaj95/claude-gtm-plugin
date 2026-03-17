@@ -12,7 +12,7 @@ BLUE='\033[0;34m'
 BOLD='\033[1m'
 NC='\033[0m'
 
-PLUGINS_DIR="${1:-plugins}"
+PLUGINS_DIR="${1:-skills}"
 ERRORS=0
 WARNINGS=0
 PASSED=0
@@ -26,6 +26,7 @@ echo -e "${BOLD}Validating Skills Against Agent Skills Specification${NC}"
 echo "========================================================"
 echo "Reference: https://agentskills.io/specification"
 echo "Scanning:  ${PLUGINS_DIR}/"
+echo ""
 echo ""
 
 extract_frontmatter() {

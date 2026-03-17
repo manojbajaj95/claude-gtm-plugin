@@ -4,19 +4,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 ALL_SKILLS_FILE="$PROJECT_ROOT/ALL_SKILLS.md"
 README_FILE="$PROJECT_ROOT/README.md"
-
-declare -A CATEGORY_NAMES=(
-    ["ads"]="Ads & Paid"
-    ["analytics"]="Analytics & Data"
-    ["content"]="Content & Copywriting"
-    ["crm"]="CRM & Automation"
-    ["growth"]="Growth & Conversion"
-    ["outbound"]="Email & Outbound"
-    ["sales"]="Sales"
-    ["seo"]="SEO & AI Search"
-    ["social"]="Social Media"
-    ["strategy"]="Strategy & Positioning"
-)
+SKILLS_DIR="$PROJECT_ROOT/skills"
 
 extract_frontmatter_field() {
     local file="$1"
@@ -29,87 +17,49 @@ extract_frontmatter_field() {
     fi
 }
 
-echo "Generating skills list from plugins/..."
+echo "Generating skills list from skills/..."
 
-categories=($(ls -d "$PROJECT_ROOT/plugins"/*/ 2>/dev/null | xargs -n1 basename | sort))
-
-declare -A category_skills
-declare -A category_descriptions
+skills=()
 total_skills=0
 
-for category in "${categories[@]}"; do
-    skills=()
-    category_path="$PROJECT_ROOT/plugins/$category/skills"
-
-    if [ -d "$category_path" ]; then
-        for skill_dir in $(ls -d "$category_path"/*/ 2>/dev/null | sort); do
-            skill_file="${skill_dir}SKILL.md"
-            if [ -f "$skill_file" ]; then
-                skill_name=$(extract_frontmatter_field "$skill_file" "name")
-                if [ -n "$skill_name" ]; then
-                    skills+=("$skill_name")
-                    ((total_skills++))
-                fi
-            fi
-        done
+for skill_dir in $(ls -d "$SKILLS_DIR"/*/ 2>/dev/null | sort); do
+    skill_file="${skill_dir}SKILL.md"
+    if [ -f "$skill_file" ]; then
+        skill_name=$(extract_frontmatter_field "$skill_file" "name")
+        if [ -n "$skill_name" ]; then
+            skills+=("$skill_name")
+            ((total_skills++))
+        fi
     fi
-
-    category_skills[$category]="${skills[*]}"
 done
 
 generate_all_skills_md() {
     echo "# All Skills"
     echo ""
-    echo "Total: **$total_skills skills** across **${#categories[@]} categories**"
+    echo "Total: **$total_skills skills**"
     echo ""
+    echo "\`\`\`"
+    echo "skills/"
 
-    for category in "${categories[@]}"; do
-        display_name="${CATEGORY_NAMES[$category]:-$category}"
-        skills_list=(${category_skills[$category]})
-        skill_count="${#skills_list[@]}"
-
-        echo "## $display_name ($skill_count)"
-        echo ""
-        echo "\`\`\`"
-        echo "plugins/$category/skills/"
-
-        last_idx=$((skill_count - 1))
-        for i in "${!skills_list[@]}"; do
-            skill="${skills_list[$i]}"
-            if [ "$i" -lt "$last_idx" ]; then
-                echo "├── $skill"
-            else
-                echo "└── $skill"
-            fi
-        done
-        echo "\`\`\`"
-        echo ""
+    last_idx=$((total_skills - 1))
+    for i in "${!skills[@]}"; do
+        skill="${skills[$i]}"
+        if [ "$i" -lt "$last_idx" ]; then
+            echo "├── $skill"
+        else
+            echo "└── $skill"
+        fi
     done
+    echo "\`\`\`"
+    echo ""
 }
 
 generate_readme_skills_section() {
     echo "## Skills"
     echo ""
-
-    for category in "${categories[@]}"; do
-        display_name="${CATEGORY_NAMES[$category]:-$category}"
-        skills_list=(${category_skills[$category]})
-        skill_count="${#skills_list[@]}"
-
-        echo "### $display_name ($skill_count)"
-        echo ""
-
-        last_idx=$((skill_count - 1))
-        for i in "${!skills_list[@]}"; do
-            skill="${skills_list[$i]}"
-            if [ "$i" -lt "$last_idx" ]; then
-                echo "├── \`$skill\`"
-            else
-                echo "└── \`$skill\`"
-            fi
-        done
-        echo ""
-    done
+    echo "**$total_skills skills** — all in one plugin, no sub-plugins to juggle."
+    echo ""
+    echo "See [ALL_SKILLS.md](ALL_SKILLS.md) for the complete list."
 }
 
 generate_all_skills_md > "$ALL_SKILLS_FILE"
@@ -143,4 +93,4 @@ else:
 PYTHON_SCRIPT
 fi
 
-echo "Done! $total_skills skills across ${#categories[@]} categories"
+echo "Done! $total_skills skills"

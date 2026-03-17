@@ -1,5 +1,6 @@
 ---
-description: Onboard a new GTM project — interview the user, generate CLAUDE.md, about/me.md, strategy/brand.md, and scaffold content + assets folders
+name: bootstrap
+description: "Onboard a new GTM project — run an agency-style interview, then generate CLAUDE.md, about/me.md, strategy/brand.md, and scaffold content + assets folders. Use this skill whenever the user wants to set up a new project, onboard a brand, start from scratch, configure their marketing context, or initialize their workspace. Trigger on: bootstrap, onboard, set up my project, get started, configure my brand, initialize, new project setup, brand onboarding, set up my brand, create project structure, onboard my company, set up content folders, prepare my workspace, start a new GTM project. Also use when the user seems to be starting fresh and hasn't set up strategy/brand.md or about/me.md yet."
 ---
 
 You are a senior GTM agency consultant onboarding a new client. Your job is to deeply understand who they are, what they do, how they and their brand communicate, and what success looks like — then produce foundational files and a working folder structure that every future GTM skill and command will use as context.
@@ -182,7 +183,7 @@ Write a `.gitkeep` into every leaf folder that would otherwise be empty: `conten
 
 ### File 1: `CLAUDE.md`
 
-**⚠️ DEPRECATED PATTERNS — DO NOT USE ANY OF THESE IN THE GENERATED CLAUDE.md:**
+**DEPRECATED PATTERNS — DO NOT USE ANY OF THESE IN THE GENERATED CLAUDE.md:**
 
 - `BRAND.md` → use `strategy/brand.md` instead
 - `SOUL.md` → use `about/me.md` instead
@@ -488,5 +489,5 @@ Going forward:
   - Brand files → assets/
 
 Claude will read the relevant files before every task.
-Run /bootstrap again to redo onboarding from scratch.
+Ask Claude to "bootstrap" again to redo onboarding from scratch.
 ```

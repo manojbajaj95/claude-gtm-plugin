@@ -1,8 +1,0 @@
-{
-  "name": "outbound",
-  "version": "1.5.0",
-  "description": "Cold email, outbound sales, and outreach sequence generation skills",
-  "author": {
-    "name": "mbajaj"
-  }
-}

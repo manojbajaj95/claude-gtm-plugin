@@ -1,12 +1,12 @@
 # GTM Skills
 
-Go-to-market skills that turn Claude into a GTM specialist. 62 skills across SEO & AI search, content, outbound, sales, growth, analytics, strategy, ads, social, and CRM — plus a `/bootstrap` command that onboards Claude to your brand, voice, and goals. Built for [Claude Code](https://claude.com/product/claude-code), also compatible with [Claude Cowork](https://claude.com/product/cowork) and any agent that supports the [Agent Skills spec](https://agentskills.io).
+Go-to-market skills that turn Claude into a GTM specialist. 56 skills across SEO & AI search, content, outbound, sales, growth, analytics, strategy, ads, social, and CRM. Built for [Claude Code](https://claude.com/product/claude-code), also compatible with [Claude Cowork](https://claude.com/product/cowork) and any agent that supports the [Agent Skills spec](https://agentskills.io).
 
 ## Why This Plugin
 
 Most AI assistants give generic marketing advice. This plugin gives Claude the frameworks, workflows, and domain knowledge of an experienced GTM team — so it can write copy in your voice, audit your SEO like a consultant, plan launches like a PMM, and build outbound sequences like an SDR.
 
-The `/bootstrap` command interviews you once about your brand, audience, and voice, then generates a structured project folder that every skill reads before doing anything. The result: Claude doesn't just know marketing — it knows *your* marketing.
+The bootstrap skill interviews you once about your brand, audience, and voice, then generates a structured project folder that every skill reads before doing anything. The result: Claude doesn't just know marketing — it knows *your* marketing.
 
 ## Installation
 
@@ -22,21 +22,6 @@ claude plugin marketplace add manojbajaj95/claude-gtm-plugins
 
 # Install all GTM skills
 claude plugin install gtm-skills@claude-gtm-plugins
-```
-
-You can also install individual domain plugins if you only need specific skills:
-
-```bash
-claude plugin install seo@claude-gtm-plugins
-claude plugin install content@claude-gtm-plugins
-claude plugin install outbound@claude-gtm-plugins
-claude plugin install sales@claude-gtm-plugins
-claude plugin install growth@claude-gtm-plugins
-claude plugin install analytics@claude-gtm-plugins
-claude plugin install strategy@claude-gtm-plugins
-claude plugin install ads@claude-gtm-plugins
-claude plugin install social@claude-gtm-plugins
-claude plugin install crm@claude-gtm-plugins
 ```
 
 ### Skills CLI
@@ -74,7 +59,7 @@ git submodule add https://github.com/manojbajaj95/claude-gtm-plugin.git .agents/
 
 ### Bootstrap Your Project
 
-Run `/bootstrap` in any project directory. Claude runs an agency-style onboarding interview — asking about your brand, audience, voice, and goals — then generates a structured project:
+Ask Claude to bootstrap your project. Claude runs an agency-style onboarding interview — asking about your brand, audience, voice, and goals — then generates a structured project:
 
 ```
 your-project/
@@ -116,7 +101,7 @@ your-project/
 
 Content files follow the naming convention `YYYY-MM-DD_short-topic-slug.md`. Drafts live in `content/[platform]/drafts/` and move to `published/` once live.
 
-Once bootstrapped, every skill reads the relevant context before doing anything. Claude works in your voice, for your brand, from day one.
+Once bootstrapped, every skill reads the relevant context before doing anything. Claude works in your voice, for your brand, from day one. Ask Claude to bootstrap again to redo onboarding.
 
 ### Using Skills
 
@@ -149,30 +134,24 @@ Skills cross-reference each other. Ask Claude to write a cold email and it pulls
 ```
 claude-gtm-plugin/
 ├── .claude-plugin/          # Plugin manifest
-├── commands/
-│   └── bootstrap.md         # /bootstrap onboarding command
-└── plugins/
-    ├── seo/                 # 2 skills
-    ├── content/             # 9 skills
-    ├── social/              # 15 skills
-    ├── outbound/            # 1 skill
-    ├── sales/               # 1 skill
-    ├── growth/              # 18 skills
-    ├── analytics/           # 4 skills
-    ├── strategy/            # 8 skills
-    ├── ads/                 # 2 skills
-    └── crm/                 # 2 skills
+├── skills/                  # All 56 skills in one flat directory
+│   ├── bootstrap/
+│   ├── seo-and-aeo-strategy/
+│   ├── linkedin-content/
+│   ├── copywriting-core/
+│   └── ... (56 total)
+└── scripts/                 # Build and validation
 ```
 
 **Skills** are markdown files with YAML frontmatter that give Claude specialized knowledge for specific tasks. Claude activates them automatically when it detects a matching task — or you can invoke them directly.
 
-**Commands** are explicit actions you trigger. Currently: `/bootstrap`.
-
-Skills reference each other and build on the project structure created by `/bootstrap`. Ask Claude to write a cold email and it pulls from your brand positioning, your voice, and your ICP — not from a generic template.
+Skills reference each other and build on the project structure created by the bootstrap skill. Ask Claude to write a cold email and it pulls from your brand positioning, your voice, and your ICP — not from a generic template.
 
 ## Skills
 
-See [ALL_SKILLS.md](ALL_SKILLS.md) for the complete list of 62 skills organized by category.
+**56 skills** — all in one plugin, no sub-plugins to juggle.
+
+See [ALL_SKILLS.md](ALL_SKILLS.md) for the complete list.
 
 ## Routing Rules
 
@@ -210,7 +189,7 @@ This checks frontmatter fields, naming conventions, description quality, and fil
 
 1. Fork the repo
 2. Create a branch (`git checkout -b my-skill`)
-3. Make your changes — each skill lives in `plugins/<category>/skills/<skill-name>/SKILL.md`
+3. Make your changes — each skill lives in `skills/<skill-name>/SKILL.md`
 4. Ensure valid YAML frontmatter with at least `name` and `description`
 5. Run `./validate-skills.sh` to catch issues
 6. Submit a PR

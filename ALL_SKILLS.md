@@ -1,118 +1,64 @@
 # All Skills
 
-Total: **54 skills** across **10 categories**
-
-## Ads & Paid (2)
+Total: **56 skills**
 
 ```
-plugins/ads/skills/
+skills/
+├── ab-test-setup
 ├── ad-campaign-management
-└── landing-page-optimization
-```
-
-## Analytics & Data (4)
-
-```
-plugins/analytics/skills/
 ├── app-store-optimization
-├── data-and-funnel-analytics
-├── qr-code-generator
-└── utm-builder
-```
-
-## Content & Copywriting (7)
-
-```
-plugins/content/skills/
 ├── blog-writing-specialist
+├── bootstrap
+├── brand-messaging-and-positioning
+├── challenge-funnel
+├── community-building
+├── competitor-analysis
 ├── content-creation-and-marketing
 ├── content-strategy-and-planning
-├── copywriting-core
-├── newsletter-management
-├── ph-content-recycling
-└── webinar-content-and-events
-```
-
-## CRM & Automation (2)
-
-```
-plugins/crm/skills/
-├── crm-integration
-└── marketing-automation
-```
-
-## Growth & Conversion (17)
-
-```
-plugins/growth/skills/
-├── ab-test-setup
-├── challenge-funnel
 ├── conversion-rate-optimization
+├── copywriting-core
+├── crm-integration
 ├── customer-success-and-retention
+├── data-and-funnel-analytics
 ├── executive-dashboard-generator
 ├── free-tool-strategy
+├── go-to-market-strategy
 ├── growth-strategy
-├── lead-generation-and-demand
-├── marketing-campaign-management
-├── personalization-at-scale
-├── ph-community-outreach
-├── pr-specialist
-├── product-hunt-launch
-├── product-market-fit-analysis
-├── referral-program
-├── skill-navigator
-└── user-onboarding
-```
-
-## Email & Outbound (1)
-
-```
-plugins/outbound/skills/
-└── outbound-email-strategy
-```
-
-## Sales (1)
-
-```
-plugins/sales/skills/
-└── sales-and-revenue-operations
-```
-
-## SEO & AI Search (2)
-
-```
-plugins/seo/skills/
+├── issue-reporting
 ├── keyword-research-and-clustering
-└── seo-and-aeo-strategy
-```
-
-## Social Media (10)
-
-```
-plugins/social/skills/
-├── community-building
+├── landing-page-optimization
+├── lead-generation-and-demand
 ├── linkedin-content
 ├── linkedin-personal-branding
+├── market-research-analysis
+├── marketing-automation
+├── marketing-campaign-management
+├── marketing-strategy-pmm
+├── newsletter-management
+├── outbound-email-strategy
+├── personalization-at-scale
+├── ph-community-outreach
+├── ph-content-recycling
+├── pitch-deck-creation
+├── pr-specialist
+├── pricing-strategy
+├── product-hunt-launch
+├── product-market-fit-analysis
+├── product-strategy-and-marketing
+├── qr-code-generator
+├── referral-program
+├── sales-and-revenue-operations
+├── seo-and-aeo-strategy
+├── skill-navigator
 ├── social-media-management
+├── user-onboarding
+├── utm-builder
+├── webinar-content-and-events
 ├── x-impact-checker
 ├── youtube-plan-new-video
 ├── youtube-research-video-topic
 ├── youtube-video-analyst
 ├── youtube-video-hook
 └── youtube
-```
-
-## Strategy & Positioning (8)
-
-```
-plugins/strategy/skills/
-├── brand-messaging-and-positioning
-├── competitor-analysis
-├── go-to-market-strategy
-├── market-research-analysis
-├── marketing-strategy-pmm
-├── pitch-deck-creation
-├── pricing-strategy
-└── product-strategy-and-marketing
 ```
 
