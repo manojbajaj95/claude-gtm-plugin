@@ -149,7 +149,7 @@ Skills reference each other and build on the project structure created by the bo
 
 ## Skills
 
-**56 skills** — all in one plugin, no sub-plugins to juggle.
+**52 skills** — all in one plugin, no sub-plugins to juggle.
 
 See [ALL_SKILLS.md](ALL_SKILLS.md) for the complete list.
 

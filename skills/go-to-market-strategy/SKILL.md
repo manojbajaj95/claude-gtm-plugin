@@ -39,17 +39,7 @@ Everything else? → Sales-led
 
 ### Phase 1: Market Positioning
 
-Define how your product fits in the market.
-
-**Positioning template:**
-```
-For [target customer]
-Who [need/problem]
-[Product] is a [category]
-That [key benefit]
-Unlike [competitors]
-Our product [unique differentiator]
-```
+Define ICP, positioning, and messaging using the `marketing-strategy` skill before executing launch phases.
 
 Validate: target customer defined, differentiation identified, tested with 5+ customers.
 
@@ -207,4 +197,4 @@ For developer metrics: see `references/metrics_frameworks.md`
 
 - `sales-and-revenue-operations` — Sales team, RevOps, ICP
 - `pricing-strategy` — Pricing decisions
-- `product-strategy-and-marketing` — Product vision and positioning
+- `marketing-strategy` — Product marketing, positioning, and competitive intelligence

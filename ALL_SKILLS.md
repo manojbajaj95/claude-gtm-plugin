@@ -1,6 +1,6 @@
 # All Skills
 
-Total: **56 skills**
+Total: **52 skills**
 
 ```
 skills/
@@ -28,12 +28,11 @@ skills/
 ├── keyword-research-and-clustering
 ├── landing-page-optimization
 ├── lead-generation-and-demand
-├── linkedin-content
-├── linkedin-personal-branding
+├── linkedin
 ├── market-research-analysis
 ├── marketing-automation
 ├── marketing-campaign-management
-├── marketing-strategy-pmm
+├── marketing-strategy
 ├── newsletter-management
 ├── outbound-email-strategy
 ├── personalization-at-scale
@@ -44,21 +43,18 @@ skills/
 ├── pricing-strategy
 ├── product-hunt-launch
 ├── product-market-fit-analysis
-├── product-strategy-and-marketing
 ├── qr-code-generator
 ├── referral-program
 ├── sales-and-revenue-operations
 ├── seo-and-aeo-strategy
 ├── skill-navigator
+├── slide-outline
 ├── social-media-management
 ├── user-onboarding
 ├── utm-builder
 ├── webinar-content-and-events
 ├── x-impact-checker
-├── youtube-plan-new-video
-├── youtube-research-video-topic
-├── youtube-video-analyst
-├── youtube-video-hook
-└── youtube
+├── youtube-content
+└── youtube-research
 ```
 

@@ -317,29 +317,6 @@ Create SWOT for each competitor (and yourself):
 | • International markets untapped | • Key engineer departures (LinkedIn) |
 ```
 
-**Strategy Recommendations:**
-
-**Leverage strengths:**
-- Market mobile-first advantage
-- Highlight superior support in sales
-- Emphasize quick deployment (faster ROI)
-
-**Address weaknesses:**
-- Develop enterprise features roadmap
-- Increase marketing/brand investment
-- Expand partnerships for integrations
-
-**Capitalize opportunities:**
-- Launch enterprise edition (higher ACV)
-- Plan international expansion
-- Build AI feature suite aggressively
-
-**Mitigate threats:**
-- Strengthen customer lock-in (switching costs)
-- Build ecosystem of partners
-- Focus on customer success/retention
-- Invest in differentiation
-
 ## Positioning Map
 
 A 2x2 matrix showing where competitors sit on two meaningful dimensions.
@@ -510,28 +487,3 @@ Before finalizing:
 - [references/comparison-page-templates.md](references/comparison-page-templates.md) - SEO page templates for all 4 formats
 - [references/content-architecture.md](references/content-architecture.md) - Centralized competitor data structure
 
-## Best Practices
-
-**DO:**
-- Analyze current and emerging competitors
-- Monitor competitor activities regularly
-- Understand customer perception of competition
-- Use competitive insights to inform strategy
-- Focus on differentiation, not just comparison
-- Include market trends in analysis
-- Update competitive analysis quarterly
-- Share insights across organization
-- Use data to back up claims
-- Consider indirect competitors
-
-**DON'T:**
-- Obsess over competitor pricing
-- Copy competitor features blindly
-- Ignore emerging threats
-- Use only marketing materials for analysis
-- Focus only on feature comparison
-- Neglect customer feedback on competition
-- Make analysis too complex
-- Hide uncomfortable truths
-- Change strategy based on every competitor move
-- Ignore your competitive advantages

@@ -444,9 +444,8 @@ export SF_PRIVATE_KEY_PATH="./salesforce.key"
 export SF_INSTANCE_URL="https://yourorg.my.salesforce.com"
 ```
 
-```bash
-# Install dependencies
-pip install httpx pyjwt hubspot-api-client python-dotenv
+```
+# Dependencies: httpx pyjwt hubspot-api-client python-dotenv
 ```
 </env_setup>
 

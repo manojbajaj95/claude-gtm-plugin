@@ -42,7 +42,7 @@ echo "Bumping v${CURRENT_VERSION} → v${NEW_VERSION}..."
 echo ""
 
 rel_path="${ROOT_MANIFEST#$PROJECT_ROOT/}"
-sed -i '' "s/\"version\": \"${CURRENT_VERSION}\"/\"version\": \"${NEW_VERSION}\"/" "$ROOT_MANIFEST"
+sed -i "s/\"version\": \"${CURRENT_VERSION}\"/\"version\": \"${NEW_VERSION}\"/" "$ROOT_MANIFEST"
 echo "  ${rel_path}: ${CURRENT_VERSION} → ${NEW_VERSION}"
 
 echo ""

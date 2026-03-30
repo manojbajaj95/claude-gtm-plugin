@@ -1,9 +1,6 @@
 ---
 name: content-creation-and-marketing
 description: B2B content creation, LinkedIn posts, blog writing, case studies, video scripts, email sequences, social media distribution, and content repurposing. Use when writing content, creating social posts, developing demand gen assets, or executing content campaigns.
-aliases:
-  - content-marketer
-  - content-marketing
 ---
 
 # Content Creation & Marketing
