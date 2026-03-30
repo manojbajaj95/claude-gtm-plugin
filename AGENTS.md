@@ -145,6 +145,49 @@ Bootstrap is a skill at `skills/bootstrap/SKILL.md`. It must:
 4. Use the same interview stages (orientation → identity → brand → voice → person → channels → success)
 5. **Not** create `BRAND.md`, `SOUL.md`, or `MEMORY.md` (these are deprecated)
 
+### Adding examples for new skills
+
+When a new skill is added to `skills/`, a corresponding example must be added to `examples/`.
+
+The example demonstrates a realistic multi-step workflow that uses the skill — ideally in combination with 1–2 related skills. It should be written as plain prompts a user can copy and run, not as documentation.
+
+**Naming convention:** `examples/<NN>-<skill-name-slug>.md` where `<NN>` is the next available number in sequence.
+
+**Required structure for each example file:**
+
+```markdown
+# The [Example Name]
+
+One-sentence description of the outcome the workflow produces.
+
+## Workflow
+
+### Step 1 — [What happens]
+
+```
+Plain prompt the user runs. No bullet meta-commentary — just the actual instruction.
+```
+
+### Step 2 — [What happens next]
+
+```
+Next prompt, building on Step 1's output.
+```
+
+## Output
+
+- File paths where outputs are saved, following the content naming convention
+```
+
+After adding an example, add a row for it in `examples/README.md`.
+
+**What makes a good example:**
+- Grounded in a real, recurring marketing or GTM task
+- Each step's prompt is copy-paste ready — no abstract instructions
+- Outputs follow the repo's `content/<platform>/drafts/YYYY-MM-DD_<slug>.md` convention
+- Placeholders like `[Insert Topic]` are self-describing inline — no separate variables table needed
+- Never mention which skill to use — the skill is automatically determined from the prompt
+
 ### Deprecated patterns (do not use)
 
 | Old | New | Notes |
