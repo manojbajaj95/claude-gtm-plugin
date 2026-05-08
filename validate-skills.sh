@@ -266,6 +266,28 @@ while IFS= read -r skill_file; do
         fi
     fi
 
+    # ── 13. Security: curl/wget piped to shell in reference files ─────────────
+    refs_dir="${skill_dir}/references"
+    if [[ -d "$refs_dir" ]]; then
+        while IFS= read -r ref_file; do
+            if grep -qE 'curl\s.*\|\s*(ba)?sh' "$ref_file" || grep -qE 'wget\s.*\|\s*(ba)?sh' "$ref_file"; then
+                rel="${ref_file#"${skill_dir}/"}"
+                errors+=("E005: curl/wget piped to shell in ${rel} — remote code execution risk")
+            fi
+        done < <(find "$refs_dir" -type f -name "*.md")
+    fi
+
+    # ── 14. Description-body tool count consistency ────────────────────────────
+    description=$(extract_description "$frontmatter")
+    if echo "$description" | grep -qE '[0-9]+ tools?'; then
+        claimed=$(echo "$description" | grep -oE '[0-9]+ tools?' | grep -oE '[0-9]+' | head -1)
+        # Count H3 sections in the body (tool documentation convention: ### tool-name)
+        body_h3_count=$(awk '/^---$/{n++} n==2{print}' "$skill_file" | grep -c '^### ' || true)
+        if [[ -n "$claimed" && "$body_h3_count" -lt "$claimed" ]]; then
+            errors+=("E006: Description claims ${claimed} tools but body has only ${body_h3_count} ### sections — document all claimed tools or update the description count")
+        fi
+    fi
+
     # ── Report ────────────────────────────────────────────────────────────────
     if [[ ${#errors[@]} -gt 0 ]]; then
         echo -e "${RED}❌ ${dir_name}${NC}  ${BLUE}${relative_path}${NC}"
