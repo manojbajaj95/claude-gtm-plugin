@@ -66,6 +66,7 @@ Ask Claude to bootstrap your project. Claude runs an agency-style onboarding int
 ```
 your-project/
 ├── CLAUDE.md                    # AI instructions: repo structure, naming, workflow, routing
+├── PROGRESS.md                  # Session progress, blockers, next steps, future opportunities
 ├── about/
 │   └── me.md                    # Personal voice, writing style, personality, biography
 ├── strategy/
@@ -96,6 +97,7 @@ your-project/
 | Path | What it captures |
 |---|---|
 | `CLAUDE.md` | AI instructions — repo structure, what to read first, naming conventions, content workflow |
+| `PROGRESS.md` | Session progress — completed tasks, blocked tasks, next steps, future opportunities |
 | `about/me.md` | Personal voice — your writing style, quirks, references, personality |
 | `strategy/brand.md` | Brand identity — positioning, messaging, audience, competitors, voice guidelines |
 | `content/` | Working content engine — ideas, calendar, drafts and published content per platform |
@@ -103,7 +105,7 @@ your-project/
 
 Content files follow the naming convention `YYYY-MM-DD_short-topic-slug.md`. Drafts live in `content/[platform]/drafts/` and move to `published/` once live.
 
-Once bootstrapped, every skill reads the relevant context before doing anything. Claude works in your voice, for your brand, from day one. Ask Claude to bootstrap again to redo onboarding or refresh the workspace when positioning, channels, or team workflows change.
+Once bootstrapped, every skill reads the relevant context before doing anything and updates `PROGRESS.md` each session. Claude works in your voice, for your brand, from day one. Ask Claude to bootstrap again to redo onboarding or refresh the workspace when positioning, channels, or team workflows change.
 
 ### Using Skills
 

@@ -46,6 +46,7 @@ When bootstrap runs in a user's project, it creates this structure. **All skills
 ```
 user-project/
 ├── CLAUDE.md                    # AI instructions: repo structure, naming, workflow, routing
+├── PROGRESS.md                  # Session progress: completed, blocked, next steps, future opportunities
 ├── about/
 │   └── me.md                    # Personal voice, writing style, personality, biography
 ├── strategy/
@@ -67,6 +68,7 @@ user-project/
 | Path | Purpose | Who writes to it |
 |---|---|---|
 | `CLAUDE.md` | AI instructions — repo structure, what to read first, naming, workflow | Bootstrap creates it; rarely updated |
+| `PROGRESS.md` | Session progress — completed tasks, blocked tasks, next steps, future opportunities | Every skill/agent updates it each session |
 | `about/` | Personal and team context | User provides; skills read before voice-matched content |
 | `strategy/` | Brand foundation — positioning, messaging, voice, audience, competitors | Bootstrap creates; updated when brand evolves |
 | `content/` | Day-to-day content engine — ideas, planning, drafts, published | Skills create drafts; user publishes |
@@ -126,6 +128,11 @@ When a skill discovers new information during execution:
 - Brand shifts, new messaging, audience insights → `strategy/brand.md`
 - Writing preferences, voice discoveries → `about/me.md`
 - New content ideas → `content/ideas.md`
+- Session outcomes, blocked tasks, next steps, future opportunities → `PROGRESS.md`
+
+### Progress tracking
+
+All skills must write to `PROGRESS.md` in each session. Keep it concise and current, with sections for completed tasks, blocked tasks, next steps, and future opportunities.
 
 ### Referencing internal skill files
 
@@ -140,8 +147,8 @@ See [references/templates.md](references/templates.md) for examples.
 Bootstrap is a skill at `skills/bootstrap/SKILL.md`. It must:
 
 1. Generate the same unified folder structure (see above)
-2. Create `CLAUDE.md`, `about/me.md`, `strategy/brand.md` as foundational files
-3. Create all content platform folders with `.gitkeep` in empty leaf directories
+2. Create `CLAUDE.md`, `PROGRESS.md`, `about/me.md`, `strategy/brand.md` as foundational files
+3. Create all content platform folders
 4. Use the same interview stages (orientation → identity → brand → voice → person → channels → success)
 5. **Not** create `BRAND.md`, `SOUL.md`, or `MEMORY.md` (these are deprecated)
 
@@ -285,5 +292,4 @@ Bug reports use a YAML form template at `.github/ISSUE_TEMPLATE/bug_report.yml`.
 - **Impact severity** — Critical / High / Medium / Low
 
 When updating the template, keep the `context_files` checklist in sync with the actual paths skills read from.
-
 

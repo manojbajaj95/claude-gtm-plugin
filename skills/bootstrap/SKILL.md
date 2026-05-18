@@ -1,6 +1,6 @@
 ---
 name: bootstrap
-description: "Onboard a new GTM project — run an agency-style interview, then generate CLAUDE.md, about/me.md, strategy/brand.md, and scaffold content + assets folders. Use this skill whenever the user wants to set up a new project, onboard a brand, start from scratch, configure their marketing context, or initialize their workspace. Trigger on: bootstrap, onboard, set up my project, get started, configure my brand, initialize, new project setup, brand onboarding, set up my brand, create project structure, onboard my company, set up content folders, prepare my workspace, start a new GTM project. Also use when the user seems to be starting fresh and hasn't set up strategy/brand.md or about/me.md yet."
+description: "Onboard a new GTM project — run an agency-style interview, then generate CLAUDE.md, PROGRESS.md, about/me.md, strategy/brand.md, and scaffold content + assets folders. Use this skill whenever the user wants to set up a new project, onboard a brand, start from scratch, configure their marketing context, or initialize their workspace. Trigger on: bootstrap, onboard, set up my project, get started, configure my brand, initialize, new project setup, brand onboarding, set up my brand, create project structure, onboard my company, set up content folders, prepare my workspace, start a new GTM project. Also use when the user seems to be starting fresh and hasn't set up strategy/brand.md or about/me.md yet."
 ---
 
 You are a senior GTM agency consultant onboarding a new client. Your job is to deeply understand who they are, what they do, how they and their brand communicate, how the marketing team works, and what success looks like — then produce foundational files and a working folder structure that every future GTM skill and command will use as context.
@@ -9,7 +9,8 @@ Work through the interview in stages. Do not ask all questions at once. Ask each
 
 The output is a unified project structure:
 
-- **`CLAUDE.md`** — AI instruction file: how the repo is structured, what to read, how to draft content, naming conventions
+- **`CLAUDE.md`** — AI instruction file: how the repo is structured, what to read, how to draft content, naming conventions, and session progress rules
+- **`PROGRESS.md`** — working progress log: completed tasks, blocked tasks, next steps, and future opportunities
 - **`about/me.md`** — the individual person: their personal voice, quirks, biography, how they actually write
 - **`strategy/brand.md`** — brand identity and operating context: positioning, offer, audience, competitors, brand voice, channels, tools, team workflow, success metrics
 - **`content/`** — working content engine: ideas, calendar, drafts, published content (organized by platform)
@@ -152,10 +153,11 @@ Once the interview is complete (or migration is done for a re-run), synthesize a
 
 ### Folder Structure to Create
 
-Create every folder with a `.gitkeep` inside so the structure is committed even when empty:
+Create this structure:
 
 ```
 ├── CLAUDE.md
+├── PROGRESS.md
 ├── about/
 │   └── me.md
 ├── strategy/
@@ -182,10 +184,6 @@ Create every folder with a `.gitkeep` inside so the structure is committed even 
     ├── logos/
     └── brand/
 ```
-
-Write a `.gitkeep` into every leaf folder that would otherwise be empty: `content/linkedin/drafts/`, `content/linkedin/published/`, `content/twitter/drafts/`, `content/twitter/published/`, `content/reddit/drafts/`, `content/reddit/published/`, `content/blog/drafts/`, `content/blog/published/`, `content/email/drafts/`, `content/email/published/`, `assets/logos/`, `assets/brand/`.
-
----
 
 ### File 1: `CLAUDE.md`
 
@@ -217,6 +215,7 @@ Follow the template below **exactly**. Do not add, rename, or rearrange sections
 |---|---|---|
 | `about/me.md` | Personal voice, writing style, personality, biography | Before writing in their voice or personalizing content |
 | `strategy/brand.md` | Brand positioning, messaging, audience, competitors, voice | Before any brand copy, content, or strategy |
+| `PROGRESS.md` | Session progress log: completed tasks, blocked tasks, next steps, future opportunities | At the start and end of every session |
 | `content/ideas.md` | Running list of content ideas with status | When brainstorming or planning content |
 | `content/calendar.md` | Publishing schedule and upcoming posts | When scheduling or checking what's next |
 | `content/[platform]/drafts/` | Work-in-progress content per platform | When drafting or reviewing content |
@@ -258,6 +257,11 @@ Route new learnings to the right file — do not leave them only in conversation
 - Brand shifts, new messaging, audience insights → `strategy/brand.md`
 - Writing preferences, voice discoveries, personal pet peeves → `about/me.md`
 - New content ideas → `content/ideas.md`
+- Session outcomes, blocked tasks, next steps, future opportunities → `PROGRESS.md`
+
+## Progress Tracking
+
+Always update `PROGRESS.md` in every work session. Keep it concise and current, with sections for completed tasks, blocked tasks, next steps, and future opportunities.
 
 ## Active Channels
 [List channels in scope]
@@ -282,12 +286,32 @@ Route new learnings to the right file — do not leave them only in conversation
 - Save all drafts to `content/[platform]/drafts/`
 - Move published content to `content/[platform]/published/`
 - Place brand assets in `assets/`
+- Update `PROGRESS.md` in every session with completed tasks, blocked tasks, next steps, and future opportunities
 - Ask before making assumptions about audience, offer, or positioning
 ```
 
----
+### File 2: `PROGRESS.md`
 
-### File 2: `strategy/brand.md`
+```markdown
+# Progress
+
+_Update this file at the end of every session._
+
+## Completed Tasks
+- [date] Bootstrapped the GTM workspace structure.
+
+## Blocked Tasks
+- None.
+
+## Next Steps
+- Review `strategy/brand.md` and `about/me.md` for accuracy.
+- Add initial ideas to `content/ideas.md`.
+
+## Future Opportunities
+- Capture campaign learnings, reusable angles, and larger initiatives that should be revisited later.
+```
+
+### File 3: `strategy/brand.md`
 
 ```markdown
 # Brand Guidelines — [Brand Name]
@@ -392,9 +416,7 @@ _Last updated: [date]_
 Logos, images, and visual references are stored in `assets/`.
 ```
 
----
-
-### File 3: `about/me.md`
+### File 4: `about/me.md`
 
 ```markdown
 # About — [Person's Name]
@@ -449,9 +471,7 @@ _Last updated: [date]_
 [Note if there is a meaningful difference between how the brand sounds and how this person personally communicates — and whether that gap is intentional]
 ```
 
----
-
-### File 4: `content/ideas.md`
+### File 5: `content/ideas.md`
 
 ```markdown
 # Content Ideas
@@ -463,9 +483,7 @@ _Add new ideas at the top. Mark status as they progress._
 | | | | |
 ```
 
----
-
-### File 5: `content/calendar.md`
+### File 6: `content/calendar.md`
 
 ```markdown
 # Content Calendar
@@ -477,6 +495,4 @@ _Upcoming scheduled content. Move to the platform's `published/` folder once liv
 | | | | | |
 ```
 
----
-
-After writing all files and creating all folders with `.gitkeep`, print a concise summary of created files, created folders, naming convention, routing rules, and the reminder that Claude will read relevant files before future tasks.
+After writing all files and creating all folders, print a concise summary of created files, created folders, naming convention, routing rules, and the reminder that Claude will read relevant files and update `PROGRESS.md` in every future session.
