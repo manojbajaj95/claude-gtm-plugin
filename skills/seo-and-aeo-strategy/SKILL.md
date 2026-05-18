@@ -5,6 +5,16 @@ description: SEO, AEO (Answer Engine Optimization), and GEO strategy for search 
 
 # SEO & AEO Strategy
 
+## Workspace Context
+
+Read bootstrap context before asking questions: `strategy/brand.md` for brand, audience, offer, channels, tools, constraints, and metrics; `about/me.md` for personal voice; `content/ideas.md` and `content/calendar.md` for content planning. Use legacy product-marketing context files only as fallback. Save generated drafts to `content/<platform>/drafts/YYYY-MM-DD_short-topic-slug.md`, and route durable learnings back to `strategy/brand.md`, `about/me.md`, or `content/ideas.md`.
+
+## Operating Contract
+
+This skill is self-contained for its frontmatter scope: use its local instructions, references, scripts, and assets as the playbook; ask only for missing task-specific inputs; hand off to adjacent skills instead of expanding scope; and return an actionable artifact, decision, plan, draft, or diagnostic.
+
+
+
 Traditional SEO gets pages ranked. AI search optimization (AEO/GEO) gets content **cited**. This skill covers both.
 
 ```
@@ -19,7 +29,7 @@ GEO  → Get cited in generative AI responses (ChatGPT, Claude, Perplexity)
 
 ## Initial Assessment
 
-Check for `.claude/product-marketing-context.md` or `.agents/product-marketing-context.md` first. Use existing context; only ask for what's missing.
+Use the Workspace Context above first. Only ask for what is missing.
 
 Before auditing, understand:
 
@@ -358,8 +368,8 @@ See [references/tools-and-apis.md](references/tools-and-apis.md) for API referen
 ## Related Skills
 
 - **keyword-research-and-clustering** — Keyword research, expansion, and topic clustering
-- **schema-markup** — Structured data implementation details
-- **programmatic-seo** — Building SEO pages at scale
-- **competitor-alternatives** — Building comparison pages that get cited
+- **keyword-research-and-clustering** — Keyword expansion and clustering before SEO page planning
+- **competitor-analysis** — Comparison pages and competitor-backed search strategy
+- **content-strategy-and-planning** — Turning SEO opportunities into an editorial roadmap
 - **content-strategy-and-planning** — Planning what content to create
 - **data-and-funnel-analytics** — Measuring SEO/AEO performance

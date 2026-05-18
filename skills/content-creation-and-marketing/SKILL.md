@@ -1,311 +1,71 @@
 ---
 name: content-creation-and-marketing
-description: B2B content creation, LinkedIn posts, blog writing, case studies, video scripts, email sequences, social media distribution, and content repurposing. Use when writing content, creating social posts, developing demand gen assets, or executing content campaigns.
+description: Cross-channel content production from an approved idea, brief, notes, transcript, or existing asset. Use when the user wants a ready-to-review draft or a small set of adaptations saved into the bootstrap content workspace. For content strategy use content-strategy-and-planning; for specialist LinkedIn, blog, email automation, SEO, landing page, or campaign work use the dedicated skill.
 ---
 
 # Content Creation & Marketing
 
-Unified skill for creating and distributing high-converting B2B content across channels.
+## Workspace Context
 
-## When to Use
+Read bootstrap context before asking questions: `strategy/brand.md` for brand, audience, offer, channels, tools, constraints, and metrics; `about/me.md` for personal voice; `content/ideas.md` and `content/calendar.md` for content planning. Use legacy product-marketing context files only as fallback. Save generated drafts to `content/<platform>/drafts/YYYY-MM-DD_short-topic-slug.md`, and route durable learnings back to `strategy/brand.md`, `about/me.md`, or `content/ideas.md`.
 
-- Writing blog posts, LinkedIn posts, case studies
-- Creating video scripts or webinar content
-- Developing email nurture sequences
-- Repurposing content across formats
-- Planning content distribution
+## Operating Contract
 
----
+This skill is self-contained for its frontmatter scope: use its local instructions, references, scripts, and assets as the playbook; ask only for missing task-specific inputs; hand off to adjacent skills instead of expanding scope; and return an actionable artifact, decision, plan, draft, or diagnostic.
 
-## Part 1: LinkedIn Content
 
-### Post Formats That Work
+You are a cross-channel content producer. Your one job is to turn approved strategy, ideas, notes, transcripts, or outlines into ready-to-review draft content saved in the bootstrap workspace. You do not own content strategy, SEO research, social platform growth, email automation, or campaign planning; route those to the specialist skills below.
 
-**The Hook + Story + Lesson**
-```
-[Provocative hook - 1 line]
+## Use This For
 
-[Story - 3-5 lines]
+- Turning an approved idea or brief into a finished draft
+- Adapting one source asset into 2-4 requested formats
+- Creating a case study, article draft, social adaptation, or short script when the user already knows the goal and audience
+- Polishing a content draft so it matches `strategy/brand.md` and, when personal, `about/me.md`
 
-[Lesson/takeaway - 2-3 lines]
+## Do Not Use This For
 
-[Call to action or question]
-```
+| Request | Use Instead |
+|---|---|
+| Decide what topics to create | `content-strategy-and-planning` |
+| Write a specialist LinkedIn post or profile-led content | `linkedin` |
+| Write long-form SEO blog content | `blog-writing-specialist` plus `seo-and-aeo-strategy` |
+| Build email automations or lifecycle sequences | `marketing-automation` |
+| Plan a campaign or launch | `marketing-campaign-management` or `go-to-market-strategy` |
+| Optimize conversion copy | `copywriting-core` or `landing-page-optimization` |
+| Repurpose Product Hunt launch assets | `ph-content-recycling` |
 
-**The List Post**
-```
-[Number] things I learned about [topic]:
+## Required Inputs
 
-1. [Point] - [One line explanation]
-2. [Point] - [One line explanation]
-...
+Ask only for missing items after reading context:
 
-Which resonates most with you?
-```
+1. Source material: idea, notes, transcript, outline, existing post, or brief
+2. Target format and platform
+3. Audience segment and funnel stage
+4. Desired action or CTA
+5. Any required proof points, claims, examples, or links
 
-**The Contrarian Take**
-```
-Unpopular opinion: [Contrarian statement]
+## Workflow
 
-Here's why:
+1. **Read context**: `strategy/brand.md`; `about/me.md` for personal voice; `content/ideas.md` and `content/calendar.md` when planning or scheduling matters.
+2. **Confirm the brief**: restate the audience, promise, format, CTA, and source material in one short paragraph.
+3. **Draft the artifact**: write the content in the requested format with channel-specific structure, clear CTA, and brand voice.
+4. **Save correctly**: create or instruct creation under `content/<platform>/drafts/YYYY-MM-DD_short-topic-slug.md` unless the user asks for inline-only output.
+5. **Route learnings**: add new reusable ideas to `content/ideas.md`; brand or audience discoveries to `strategy/brand.md`; personal voice discoveries to `about/me.md`.
 
-[3-4 supporting points]
+## Quality Bar
 
-Agree or disagree?
-```
+- One primary audience and one CTA per draft
+- Claims are backed by provided evidence or clearly marked as placeholders
+- Format matches the destination platform instead of copying the source verbatim
+- Draft can stand alone without the reader knowing the source material
+- No invented testimonials, statistics, customer names, or compliance-sensitive claims
 
-**Sharing a Win**
-```
-We just [achievement].
+## Output Format
 
-Here's what made the difference:
+Return:
 
-→ [Key factor 1]
-→ [Key factor 2]
-→ [Key factor 3]
-
-The biggest lesson: [Insight]
-
-What's working for you lately?
-```
-
-### LinkedIn Best Practices
-
-| Element | Guideline |
-|---------|-----------|
-| **Frequency** | 3-5x per week |
-| **Best times** | 7-8am, 12pm, 5-6pm (local) |
-| **Best days** | Tuesday-Thursday |
-| **First line** | Hook (shows in preview) |
-| **Formatting** | Use line breaks liberally, 1-2 sentences per paragraph |
-| **Engagement** | Reply to every comment within 1 hour |
-| **Hashtags** | 3-5 max, end of post, mix broad/niche/industry |
-
----
-
-## Part 2: Blog Content
-
-### Blog Post Structure
-
-```markdown
-## [Title - Include primary keyword]
-
-**Meta description**: [150-160 chars with keyword]
-
-### Introduction (100-150 words)
-- Hook: Start with pain point or surprising stat
-- Context: Why this matters now
-- Promise: What reader will learn
-
-### Section 1: [H2 with keyword variation]
-- Key point
-- Supporting evidence
-- Example or data
-
-### Section 2: [H2]
-- Key point
-- Supporting evidence
-
-### Conclusion
-- Summarize key points
-- Call to action
-
-**Word count target**: 1,500-2,500 for SEO
-```
-
-### SEO Checklist
-
-- [ ] Primary keyword in title (front-loaded)
-- [ ] Primary keyword in URL slug
-- [ ] Primary keyword in first 100 words
-- [ ] Primary keyword in H1
-- [ ] Secondary keywords in H2s
-- [ ] Meta description (150-160 chars)
-- [ ] Image alt text with keywords
-- [ ] Internal links (2-3)
-- [ ] External links (1-2 authoritative)
-- [ ] Answers search intent
-- [ ] Better than top 3 results
-
----
-
-## Part 3: Case Studies
-
-### Structure
-
-```markdown
-# [Customer Name]: [Headline Result]
-
-## The Challenge
-- Company background (1-2 sentences)
-- Situation before (pain points)
-- Why they needed to change
-
-## The Solution
-- Why they chose us
-- Implementation overview
-- Key features/services used
-
-## The Results
-- Quantified outcomes (3-5 metrics)
-- Qualitative improvements
-- Timeline to results
-
-## Customer Quote
-> "[Compelling testimonial]"
-> — [Name], [Title] at [Company]
-
-## Key Takeaways
-1. [Lesson others can apply]
-2. [Lesson others can apply]
-```
-
-### Metrics That Convert
-
-| Category | Examples |
-|----------|----------|
-| **Revenue** | "Increased revenue by X%" |
-| **Efficiency** | "Saved X hours per week" |
-| **Performance** | "Improved conversion by X%" |
-| **Scale** | "Scaled from X to Y users" |
-
----
-
-## Part 4: Video Scripts
-
-### Script Structure
-
-```markdown
-## [Video Title]
-**Length**: [Target duration]
-**Goal**: [What viewer should do/learn]
-
-### HOOK (0:00-0:15)
-[Attention-grabbing opening - question, stat, or bold claim]
-
-### INTRO (0:15-0:30)
-"Hey, I'm [Name]. Today I'm going to show you [promise]"
-
-### MAIN CONTENT
-**Point 1** (0:30-2:00)
-[Key insight + example]
-
-**Point 2** (2:00-3:30)
-[Key insight + example]
-
-**Point 3** (3:30-5:00)
-[Key insight + example]
-
-### CTA (5:00-5:30)
-"If this was helpful, [subscribe/follow/download].
-Next video, I'll cover [teaser]"
-```
-
----
-
-## Part 5: Email Sequences
-
-### Sequence Types
-
-| Type | Goal | Length |
-|------|------|--------|
-| Welcome | Onboard, build trust | 3-5 emails |
-| Nurture | Educate, warm up | 5-10 emails |
-| Re-engagement | Win back inactive | 3-5 emails |
-
-### Email Formula
-
-```
-[Subject Line - Specific benefit or curiosity]
-
-[Personal opener]
-
-[Body - 1 pain point + 1 solution + 1 CTA]
-
-[P.S. - Optional second CTA or social proof]
-```
-
-### Best Practices
-
-- Personalize with recipient name/company
-- One clear CTA per email
-- Write short paragraphs (2-3 sentences)
-- Use bullet points for scannability
-- Test subject lines with A/B testing
-
----
-
-## Part 6: Content Repurposing
-
-### One Piece → Many Formats
-
-```
-Original: Long-form blog post (2000 words)
-           ↓
-├── LinkedIn carousel (10 slides)
-├── Twitter/X thread (10 tweets)
-├── Email newsletter summary
-├── Short-form video script (2 min)
-├── Podcast talking points
-├── Infographic
-└── Quote graphics (5-10)
-```
-
-### Repurposing Checklist
-
-- [ ] Extract 3-5 key points
-- [ ] Create quote graphics for each
-- [ ] Write thread version (10 tweets)
-- [ ] Design carousel (8-10 slides)
-- [ ] Record short video (60-90 sec)
-- [ ] Send newsletter adaptation
-
----
-
-## Part 7: Content Distribution
-
-### Channel Selection Matrix
-
-| Channel | Best For | Content Types |
-|---------|----------|---------------|
-| LinkedIn | B2B, thought leadership | Posts, articles, carousels |
-| Twitter/X | Tech, news, real-time | Threads, quick takes |
-| Blog | SEO, long-form | Articles, guides |
-| Newsletter | Retention, authority | Curated content, updates |
-| YouTube | Deep dives, demos | Tutorials, webinars |
-
-### Distribution Checklist
-
-- [ ] Schedule for optimal times per platform
-- [ ] Prepare 3-5 relevant hashtags
-- [ ] Write platform-specific variations
-- [ ] Create visual assets (images, graphics)
-- [ ] Plan engagement responses
-- [ ] Set up tracking/UTMs
-
----
-
-## Quick Reference
-
-| Content Type | Goal | Funnel Stage | Effort |
-|--------------|------|--------------|--------|
-| LinkedIn post | Engagement | Top | Low |
-| Blog post | SEO, awareness | Top | Low |
-| Case study | Social proof | Mid | Medium |
-| Whitepaper | Lead gen | Mid | High |
-| Video | Engagement | All | Medium |
-| Webinar | Demand gen | Mid-Bottom | High |
-| Email sequence | Nurture | All | Medium |
-
----
-
-## Related Skills
-
-| Need | Skill |
-|------|-------|
-| Strategic planning | content-strategy-and-planning |
-| Brief creation | content-brief |
-| SEO optimization | content-optimizer |
-| AI search optimization | content-research |
-| Technical writing | technical-blog-writing |
-| Newsletter creation | newsletter |
+1. Draft path
+2. Finished draft
+3. Assumptions or placeholders to verify
+4. Suggested updates to context files, if any

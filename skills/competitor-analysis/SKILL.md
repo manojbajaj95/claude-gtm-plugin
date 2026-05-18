@@ -5,6 +5,16 @@ description: Comprehensive competitor analysis, competitive intelligence, and co
 
 # Competitor Analysis
 
+## Workspace Context
+
+Read bootstrap context before asking questions: `strategy/brand.md` for brand, audience, offer, channels, tools, constraints, and metrics; `about/me.md` for personal voice; `content/ideas.md` and `content/calendar.md` for content planning. Use legacy product-marketing context files only as fallback. Save generated drafts to `content/<platform>/drafts/YYYY-MM-DD_short-topic-slug.md`, and route durable learnings back to `strategy/brand.md`, `about/me.md`, or `content/ideas.md`.
+
+## Operating Contract
+
+This skill is self-contained for its frontmatter scope: use its local instructions, references, scripts, and assets as the playbook; ask only for missing task-specific inputs; hand off to adjacent skills instead of expanding scope; and return an actionable artifact, decision, plan, draft, or diagnostic.
+
+
+
 Comprehensive competitor analysis, competitive intelligence, and comparison page creation using structured research frameworks and data-grounded methodologies.
 
 ## Overview
@@ -22,9 +32,6 @@ Systematic competitor analysis reveals market positioning, identifies competitiv
 - Competitive intelligence reports
 
 ## Initial Assessment
-
-**Check for product marketing context first:**
-If `.agents/product-marketing-context.md` exists, read it before asking questions. Use that context and only ask for information not already covered.
 
 Before creating competitor analysis or comparison pages, understand:
 

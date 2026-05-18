@@ -1,6 +1,6 @@
 # All Skills
 
-Total: **53 skills**
+Total: **54 skills**
 
 ```
 skills/
@@ -24,6 +24,7 @@ skills/
 ├── free-tool-strategy
 ├── go-to-market-strategy
 ├── growth-strategy
+├── humanizer
 ├── issue-reporting
 ├── keyword-research-and-clustering
 ├── landing-page-optimization

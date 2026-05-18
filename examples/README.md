@@ -29,3 +29,4 @@ Practical multi-skill workflows showing how to combine the GTM plugin skills to 
 | 21 | [The Founder's Story & Free Tool Hook](21-founders-story-free-tool-hook.md) |
 | 22 | [The Competitor-Blindspot YouTube Plan](22-competitor-blindspot-youtube-plan.md) |
 | 23 | [The "Lost Deal" Revenue Revival](23-lost-deal-revenue-revival.md) |
+| 24 | [The Humanized Founder Note](24-humanized-founder-note.md) |

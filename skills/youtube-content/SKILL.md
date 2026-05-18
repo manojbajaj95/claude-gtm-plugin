@@ -5,6 +5,16 @@ description: Plan new YouTube videos with optimized titles, thumbnails, and hook
 
 # YouTube Content Planning
 
+## Workspace Context
+
+Read bootstrap context before asking questions: `strategy/brand.md` for brand, audience, offer, channels, tools, constraints, and metrics; `about/me.md` for personal voice; `content/ideas.md` and `content/calendar.md` for content planning. Use legacy product-marketing context files only as fallback. Save generated drafts to `content/<platform>/drafts/YYYY-MM-DD_short-topic-slug.md`, and route durable learnings back to `strategy/brand.md`, `about/me.md`, or `content/ideas.md`.
+
+## Operating Contract
+
+This skill is self-contained for its frontmatter scope: use its local instructions, references, scripts, and assets as the playbook; ask only for missing task-specific inputs; hand off to adjacent skills instead of expanding scope; and return an actionable artifact, decision, plan, draft, or diagnostic.
+
+
+
 Two modes in one skill:
 
 1. **Hook Creation** — Design or review the opening 5–30 seconds for maximum retention
@@ -109,7 +119,7 @@ Create `./youtube/episode/[episode_number]_[topic_short_name]/plan.md`. If it ex
 
 **Step 2: Generate 3 title options**
 
-Invoke `youtube-title` skill if available; otherwise generate manually. For each title include:
+Generate title options manually from the research findings. For each title include:
 - Title text
 - Rationale (why it's predicted to perform, how it uses research insights)
 - Star rating ⭐ to ⭐⭐⭐ (⭐⭐⭐ = top pick)
@@ -142,15 +152,15 @@ Structure the video into sections (Hook, Intro, Main Content, Outro). List key p
 
 **Step 7: Finalize with AB testing thumbnails**
 
-Generate 3 actual thumbnail images for AB testing (using `thumbkit` or `youtube-thumbnail` skill if available):
+Generate 3 thumbnail image briefs for AB testing, or actual images if an image-generation tool is available:
 - Thumbnail A: Based on user's selected concept
 - Thumbnails B & C: Visual style variations of A
 
 Embed in the plan file:
 ```markdown
-- ![Thumbnail A](/path/to/thumbnail_a.png) — [description]
-- ![Thumbnail B](/path/to/thumbnail_b.png) — [description]
-- ![Thumbnail C](/path/to/thumbnail_c.png) — [description]
+- Thumbnail A: [description or image path]
+- Thumbnail B: [description or image path]
+- Thumbnail C: [description or image path]
 ```
 
 ### Plan File Template
@@ -175,7 +185,7 @@ Embed in the plan file:
 
 ## Final Plan
 **Title**: [Selected]
-**Thumbnails**: [3 AB test images embedded]
+**Thumbnails**: [3 AB test image briefs or embedded image paths]
 **Hook**: [Selected strategy]
 **Rationale**: [Why this combination works]
 ```

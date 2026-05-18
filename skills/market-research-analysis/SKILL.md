@@ -6,6 +6,16 @@ description: |
 
 # Market Research & Analysis
 
+## Workspace Context
+
+Read bootstrap context before asking questions: `strategy/brand.md` for brand, audience, offer, channels, tools, constraints, and metrics; `about/me.md` for personal voice; `content/ideas.md` and `content/calendar.md` for content planning. Use legacy product-marketing context files only as fallback. Save generated drafts to `content/<platform>/drafts/YYYY-MM-DD_short-topic-slug.md`, and route durable learnings back to `strategy/brand.md`, `about/me.md`, or `content/ideas.md`.
+
+## Operating Contract
+
+This skill is self-contained for its frontmatter scope: use its local instructions, references, scripts, and assets as the playbook; ask only for missing task-specific inputs; hand off to adjacent skills instead of expanding scope; and return an actionable artifact, decision, plan, draft, or diagnostic.
+
+
+
 Expert market research skill — from market sizing and competitive analysis through consumer research and professional consulting-grade reports with LaTeX formatting and visual generation.
 
 ---
@@ -254,6 +264,6 @@ See `assets/market_report_template.tex` for the full report template.
 
 ## Related Skills
 
-- `product-strategy-and-marketing` — Market opportunity within product strategy
+- `marketing-strategy` — Market opportunity within product strategy
 - `go-to-market-strategy` — Applying market research to launch planning
 - `pricing-strategy` — Using market research for pricing decisions

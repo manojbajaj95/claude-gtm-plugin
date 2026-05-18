@@ -4,30 +4,46 @@ description: Use this skill when you need guidance on which skill to use for any
 ---
 
 # Skill Navigator
-The 100th skill! Your intelligent guide to all 99 other skills. Recommends the perfect skill for any task, creates skill combinations, and helps you discover capabilities you didn't know you had.
+
+## Workspace Context
+
+Read bootstrap context before asking questions: `strategy/brand.md` for brand, audience, offer, channels, tools, constraints, and metrics; `about/me.md` for personal voice; `content/ideas.md` and `content/calendar.md` for content planning. Use legacy product-marketing context files only as fallback. Save generated drafts to `content/<platform>/drafts/YYYY-MM-DD_short-topic-slug.md`, and route durable learnings back to `strategy/brand.md`, `about/me.md`, or `content/ideas.md`.
+
+## Operating Contract
+
+This skill is self-contained for its frontmatter scope: use its local instructions, references, scripts, and assets as the playbook; ask only for missing task-specific inputs; hand off to adjacent skills instead of expanding scope; and return an actionable artifact, decision, plan, draft, or diagnostic.
+
+
+Guide users to the right GTM plugin skill for the task at hand. Recommend one primary skill, optional supporting skills, and copy-paste prompts that fit this repository's actual skill set.
 
 ## Instructions
 
-You are the master skill navigator and orchestrator. You have knowledge of all 99 Claude skills in the library. When a user describes what they want to accomplish, you: 1) Identify which skill(s) can help, 2) Explain how to trigger them, 3) Suggest skill combinations for complex workflows, 4) Provide example prompts, 5) Recommend related skills they might not have considered. You're the ultimate guide to the skill ecosystem. Available skills: Communication (slack-message-formatter, sms-text-optimizer, internal-email-composer, company-announcement-writer, linkedin-post-optimizer), Sales Intelligence (competitor-price-tracker, deal-momentum-analyzer, objection-pattern-detector, sales-call-prep-assistant, prospect-research-compiler), Marketing (webinar-to-content-multiplier, competitor-content-analyzer, seo-keyword-cluster-builder, email-subject-line-optimizer, utm-parameter-generator), Creative (brand-consistency-checker, presentation-design-enhancer, stock-photo-finder, font-pairing-suggester), Expert Simulation (debate-simulator, expert-panel), Content (content-repurposer, game-builder, podcast-studio, flashcard-generator, quiz-maker), Sports (19 skills including game-recap-generator, fantasy-lineup-optimizer, player-comparison-tool, highlight-reel-scripter, scouting-report-builder, sports-betting-analyzer, practice-plan-creator, play-by-play-generator, injury-report-tracker, trash-talk-generator, sports-trivia-builder, post-game-press-conference-simulator, bracket-predictor, training-log-analyzer, team-chemistry-evaluator, sports-meme-creator, game-strategy-simulator, athlete-social-media-manager, sports-podcast-outline-generator, mvp-case-builder), Finance (portfolio-analyzer, budget-optimizer, financial-goal-planner, tax-strategy-optimizer, raise-negotiation-prep), Sales Leadership (sales-forecast-builder, rep-performance-scorecard, quota-setting-calculator, territory-planning-optimizer, sales-comp-plan-designer, deal-review-framework, sales-coaching-plan-generator, ramping-rep-tracker), Meta-Skills (conversation-archaeologist, weak-signal-synthesizer, hypothesis-testing-engine, cross-conversation-project-manager, skill-composer-studio), Advanced (knowledge-base-builder, itinerary-optimizer, workout-program-designer). Help users unlock the full power of their skill library!
+When a user describes what they want to accomplish:
+
+1. Identify the best primary skill from the local `skills/` directory.
+2. Suggest at most 2 supporting skills for multi-step workflows.
+3. Explain the handoff order in plain language.
+4. Provide one copy-paste prompt for the recommended next step.
+5. Avoid recommending skills that are not present in this plugin.
+
+Use the current plugin vocabulary: `marketing-strategy`, `brand-messaging-and-positioning`, `go-to-market-strategy`, `content-strategy-and-planning`, `content-creation-and-marketing`, `seo-and-aeo-strategy`, `keyword-research-and-clustering`, `copywriting-core`, `linkedin`, `newsletter-management`, `outbound-email-strategy`, `marketing-automation`, `lead-generation-and-demand`, `sales-and-revenue-operations`, `pricing-strategy`, `conversion-rate-optimization`, `ab-test-setup`, `data-and-funnel-analytics`, `customer-success-and-retention`, `community-building`, `product-market-fit-analysis`, `product-hunt-launch`, `ph-community-outreach`, `ph-content-recycling`, `youtube-research`, `youtube-content`, `webinar-content-and-events`, `pitch-deck-creation`, `slide-outline`, `issue-reporting`, and adjacent local skills.
 
 ### Output Format
 
 ```markdown
 # Skill Navigator Output
 
-**Generated**: {timestamp}
+## Recommended Skill
+[primary skill and why]
 
----
+## Supporting Skills
+[0-2 supporting skills and when to use them]
 
-## Results
+## Suggested Workflow
+[ordered steps]
 
-[Your formatted output here]
-
----
-
-## Recommendations
-
-[Actionable next steps]
+## Copy-Paste Prompt
+[one prompt the user can run next]
 
 ```
 

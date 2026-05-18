@@ -5,16 +5,28 @@ description: "Comprehensive blog writing skill that handles technical blog posts
 
 # Blog Writing Specialist
 
+## Workspace Context
+
+Read bootstrap context before asking questions: `strategy/brand.md` for brand, audience, offer, channels, tools, constraints, and metrics; `about/me.md` for personal voice; `content/ideas.md` and `content/calendar.md` for content planning. Use legacy product-marketing context files only as fallback. Save generated drafts to `content/<platform>/drafts/YYYY-MM-DD_short-topic-slug.md`, and route durable learnings back to `strategy/brand.md`, `about/me.md`, or `content/ideas.md`.
+
+## Operating Contract
+
+This skill is self-contained for its frontmatter scope: use its local instructions, references, scripts, and assets as the playbook; ask only for missing task-specific inputs; hand off to adjacent skills instead of expanding scope; and return an actionable artifact, decision, plan, draft, or diagnostic.
+
+
+
 Comprehensive blog writing combining technical depth, personal voice transformation, and AEO optimization.
 
 ## Quick Decision Tree
 
+Default to the user's workspace voice from `about/me.md`. Use the named legacy voices below only when the user explicitly asks for that voice or the bundled reference files clearly apply to the current project.
+
 | Input Type | Use Section |
 |-----------|-------------|
 | Technical tutorial, deep dive, benchmark | Technical Blog Writing |
-| Brain dump → polished post | Nick Nisi Voice |
-| Personal voice (Jarad style) | Jarad's Voice |
-| Company/product/technology category post | Lightfast Category System |
+| Brain dump → polished post | Technical Blog Writing + workspace voice, or Nick Nisi Voice only when requested |
+| Personal voice request | `about/me.md` by default, or Jarad's Voice only when requested |
+| Company/product/technology category post | Category System adapted to `strategy/brand.md` |
 | Not sure | Start here, adapt as needed |
 
 ---
@@ -201,7 +213,7 @@ Structure:
 
 ---
 
-# Part 2: Brain Dump → Polished Post (Nick Nisi Voice)
+# Part 2: Brain Dump → Polished Post
 
 Transform unstructured brain dumps into polished blog posts.
 
@@ -221,7 +233,7 @@ Don't require organization. The mess is the input.
 
 ### 2. Read Voice and Tone
 
-Load `references/voice-tone.md` to understand Nick's writing style.
+Read `about/me.md` first and match that voice. If the user specifically requests Nick Nisi's voice, load `references/voice-tone.md` and use the guidance below.
 
 Key characteristics:
 - Conversational yet substantive
@@ -250,7 +262,7 @@ Structure material into sections:
 - Philosophy → How-to → Reflection
 - Current state → Past → Learning → Future
 
-### 5. Write in Nick's Voice
+### 5. Write in the Selected Voice
 
 **Opening:**
 - Hook with current position or recent event
@@ -282,6 +294,8 @@ Structure material into sections:
 # Part 3: Jarad's Voice
 
 Personal blog writing with distinctive voice.
+
+Use this section only when the user explicitly asks for Jarad's voice or the project context identifies Jarad as the author. Otherwise, use `about/me.md`.
 
 ## Core Voice Patterns
 
@@ -433,8 +447,8 @@ Use diagramming tools (Mermaid, Excalidraw, draw.io) for architecture diagrams a
 | Hashnode | Cross-post (canonical URL) | Markdown import |
 | Hacker News | Link submission | Show HN for projects, tell HN for stories |
 | Reddit (r/programming, r/webdev, etc.) | Link or discussion | Follow subreddit rules |
-| Twitter/X | Thread summary + link | See twitter-thread-creation skill |
-| LinkedIn | Adapted version + link | See linkedin-content skill |
+| Twitter/X | Thread summary + link | See social-media-management skill |
+| LinkedIn | Adapted version + link | See linkedin skill |
 
 ---
 

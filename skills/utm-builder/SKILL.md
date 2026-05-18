@@ -5,6 +5,16 @@ description: Generate UTM-tagged URLs for campaign tracking. Create consistent, 
 
 # UTM Builder
 
+## Workspace Context
+
+Read bootstrap context before asking questions: `strategy/brand.md` for brand, audience, offer, channels, tools, constraints, and metrics; `about/me.md` for personal voice; `content/ideas.md` and `content/calendar.md` for content planning. Use legacy product-marketing context files only as fallback. Save generated drafts to `content/<platform>/drafts/YYYY-MM-DD_short-topic-slug.md`, and route durable learnings back to `strategy/brand.md`, `about/me.md`, or `content/ideas.md`.
+
+## Operating Contract
+
+This skill is self-contained for its frontmatter scope: use its local instructions, references, scripts, and assets as the playbook; ask only for missing task-specific inputs; hand off to adjacent skills instead of expanding scope; and return an actionable artifact, decision, plan, draft, or diagnostic.
+
+
+
 Generate consistent, well-organized UTM tracking links for marketing campaigns.
 
 ## UTM Parameters
@@ -327,7 +337,7 @@ Affiliate:
 ## Integration
 
 Works well with:
-- **analytics-interpretation** - Analyze UTM performance
-- **marketing-demand-acquisition** - Track paid campaign ROI
-- **social-media-analyzer** - Measure social campaign results
-- **email-template-generator** - Add tracking to email campaigns
+- **data-and-funnel-analytics** - Analyze UTM performance
+- **ad-campaign-management** - Track paid campaign ROI
+- **social-media-management** - Measure social campaign results
+- **marketing-automation** - Add tracking to email campaigns

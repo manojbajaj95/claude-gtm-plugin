@@ -5,6 +5,16 @@ description: Comprehensive B2B demand generation and lead acquisition skill. Use
 
 # Lead Generation & Demand
 
+## Workspace Context
+
+Read bootstrap context before asking questions: `strategy/brand.md` for brand, audience, offer, channels, tools, constraints, and metrics; `about/me.md` for personal voice; `content/ideas.md` and `content/calendar.md` for content planning. Use legacy product-marketing context files only as fallback. Save generated drafts to `content/<platform>/drafts/YYYY-MM-DD_short-topic-slug.md`, and route durable learnings back to `strategy/brand.md`, `about/me.md`, or `content/ideas.md`.
+
+## Operating Contract
+
+This skill is self-contained for its frontmatter scope: use its local instructions, references, scripts, and assets as the playbook; ask only for missing task-specific inputs; hand off to adjacent skills instead of expanding scope; and return an actionable artifact, decision, plan, draft, or diagnostic.
+
+
+
 Comprehensive demand generation playbook for B2B SaaS companies focused on pipeline creation, CAC optimization, and multi-channel lead acquisition.
 
 ## Quick Start
@@ -50,7 +60,7 @@ Comprehensive demand generation playbook for B2B SaaS companies focused on pipel
 |-------|------|---------|----------|---------|
 | **TOFU** (Awareness) | Attract visitors | Blog, guides, calculators | SEO, social, content | Traffic, new visitors |
 | **MOFU** (Consideration) | Capture leads | Whitepapers, webinars, case studies | Email, retargeting, gated content | Leads, MQLs |
-| **BOFU** (Decision) |emos, consultations, Convert opportunities | D proposals | Sales outreach, direct | SQLs, opportunities |
+| **BOFU** (Decision) | Convert opportunities | Demos, consultations, proposals | Sales outreach, direct | SQLs, opportunities |
 
 ---
 
@@ -355,4 +365,4 @@ For each lead provide:
 - [conversion-rate-optimization](../conversion-rate-optimization/SKILL.md) - CRO frameworks
 - [growth-strategy](../growth-strategy/SKILL.md) - Growth loops and channels
 - [outbound-email-strategy](../outbound-email-strategy/SKILL.md) - Cold outreach
-- [sales-strategy-and-enablement](../sales-strategy-and-enablement/SKILL.md) - Sales processes
+- [sales-and-revenue-operations](../sales-and-revenue-operations/SKILL.md) - Sales processes

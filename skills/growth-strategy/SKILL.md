@@ -1,6 +1,6 @@
 ---
 name: growth-strategy
-description: Comprehensive growth strategy expertise combining SEO/SMO/CRO implementation, marketplace and network effects frameworks (Andrew Chen), growth loops methodology (Brian Balfour/Reforge), and Silicon Valley growth thinking. Use when building growth strategy, designing growth loops, improving SEO/SMO/CRO, planning acquisition channels, building network effects, or scaling product-led growth. Growth is not marketing — it's systematic application of product, engineering, and data.
+description: Growth strategy for product-led and loop-driven growth systems. Use when building growth strategy, designing growth loops, planning acquisition channels, evaluating network effects, deciding when to scale, or coordinating product, engineering, data, and marketing around growth. For SEO audits use seo-and-aeo-strategy; for page/form CRO use conversion-rate-optimization; for A/B test design use ab-test-setup.
 metadata:
   version: 1.0.0
   merged_from:
@@ -11,13 +11,23 @@ metadata:
 
 # Growth Strategy
 
-Comprehensive growth strategy combining technical SEO/SMO/CRO implementation with strategic growth frameworks.
+## Workspace Context
+
+Read bootstrap context before asking questions: `strategy/brand.md` for brand, audience, offer, channels, tools, constraints, and metrics; `about/me.md` for personal voice; `content/ideas.md` and `content/calendar.md` for content planning. Use legacy product-marketing context files only as fallback. Save generated drafts to `content/<platform>/drafts/YYYY-MM-DD_short-topic-slug.md`, and route durable learnings back to `strategy/brand.md`, `about/me.md`, or `content/ideas.md`.
+
+## Operating Contract
+
+This skill is self-contained for its frontmatter scope: use its local instructions, references, scripts, and assets as the playbook; ask only for missing task-specific inputs; hand off to adjacent skills instead of expanding scope; and return an actionable artifact, decision, plan, draft, or diagnostic.
+
+
+
+Growth strategy for compounding growth systems. Use this skill for growth loops, distribution bets, network effects, PLG strategy, and scaling decisions. Route tactical SEO, page/form CRO, and experiment design to the specialist skills.
 
 ## Quick Reference
 
 | Situation | Use This Skill For |
 |-----------|-------------------|
-| SEO/SMO/CRO implementation | Technical Optimization |
+| SEO, page CRO, or experiment execution | Route to specialist skills |
 | Building growth engines | Growth Loops Framework |
 | Strategic growth planning | Strategy & Frameworks |
 | Distribution strategy | Channel & Platform Strategy |

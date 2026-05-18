@@ -19,21 +19,17 @@ metadata:
 
 # App Store Optimization (ASO)
 
+## Workspace Context
+
+Read bootstrap context before asking questions: `strategy/brand.md` for brand, audience, offer, channels, tools, constraints, and metrics; `about/me.md` for personal voice; `content/ideas.md` and `content/calendar.md` for content planning. Use legacy product-marketing context files only as fallback. Save generated drafts to `content/<platform>/drafts/YYYY-MM-DD_short-topic-slug.md`, and route durable learnings back to `strategy/brand.md`, `about/me.md`, or `content/ideas.md`.
+
+## Operating Contract
+
+This skill is self-contained for its frontmatter scope: use its local instructions, references, scripts, and assets as the playbook; ask only for missing task-specific inputs; hand off to adjacent skills instead of expanding scope; and return an actionable artifact, decision, plan, draft, or diagnostic.
+
+
+
 ASO tools for researching keywords, optimizing metadata, analyzing competitors, and improving app store visibility on Apple App Store and Google Play Store.
-
----
-
-## Table of Contents
-
-- [Keyword Research Workflow](#keyword-research-workflow)
-- [Metadata Optimization Workflow](#metadata-optimization-workflow)
-- [Competitor Analysis Workflow](#competitor-analysis-workflow)
-- [App Launch Workflow](#app-launch-workflow)
-- [A/B Testing Workflow](#ab-testing-workflow)
-- [Before/After Examples](#beforeafter-examples)
-- [Tools and References](#tools-and-references)
-
----
 
 ## Keyword Research Workflow
 
@@ -491,6 +487,6 @@ Trusted by 500,000+ professionals.
 
 | Skill | Integration Point |
 |-------|-------------------|
-| [content-creator](../content-creator/) | App description copywriting |
-| [marketing-demand-acquisition](../marketing-demand-acquisition/) | Launch promotion campaigns |
-| [marketing-strategy-pmm](../marketing-strategy-pmm/) | Go-to-market planning |
+| [copywriting-core](../copywriting-core/) | App description copywriting |
+| [lead-generation-and-demand](../lead-generation-and-demand/) | Launch promotion campaigns |
+| [go-to-market-strategy](../go-to-market-strategy/) | Go-to-market planning |

@@ -35,6 +35,5 @@ Each insight becomes a rule + check + artifact:
 
 ## Notes on boundaries
 - This skill is strictly **product user onboarding** (FTUE), not HR onboarding.
-- If ICP/value prop is unclear, route to `problem-definition` or `measuring-product-market-fit`.
-- If broad retention beyond onboarding is the goal, route to `retention-engagement`.
-
+- If ICP/value prop is unclear, route to `brand-messaging-and-positioning` or `product-market-fit-analysis`.
+- If broad retention beyond onboarding is the goal, route to `customer-success-and-retention`.

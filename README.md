@@ -1,12 +1,14 @@
 # GTM Skills
 
-Go-to-market skills that turn Claude into a GTM specialist. 56 skills across SEO & AI search, content, outbound, sales, growth, analytics, strategy, ads, social, and CRM. Built for [Claude Code](https://claude.com/product/claude-code), also compatible with [Claude Cowork](https://claude.com/product/cowork) and any agent that supports the [Agent Skills spec](https://agentskills.io).
+Go-to-market skills that turn Claude into a GTM specialist. 54 skills across SEO & AI search, content, outbound, sales, growth, analytics, strategy, ads, social, and CRM. Built for [Claude Code](https://claude.com/product/claude-code), also compatible with [Claude Cowork](https://claude.com/product/cowork) and any agent that supports the [Agent Skills spec](https://agentskills.io).
 
 ## Why This Plugin
 
 Most AI assistants give generic marketing advice. This plugin gives Claude the frameworks, workflows, and domain knowledge of an experienced GTM team — so it can write copy in your voice, audit your SEO like a consultant, plan launches like a PMM, and build outbound sequences like an SDR.
 
-The bootstrap skill interviews you once about your brand, audience, and voice, then generates a structured project folder that every skill reads before doing anything. The result: Claude doesn't just know marketing — it knows *your* marketing.
+This repo is designed to become a working **marketing-team workspace**, not just a directory of prompts. The bootstrap skill interviews you once about your brand, audience, voice, channels, operating cadence, and success metrics, then generates a structured project folder that every skill reads before doing anything.
+
+The result: Claude doesn't just know marketing — it knows *your* marketing, keeps context in durable files, routes new learnings to the right place, and helps a team manage strategy, content, campaigns, and assets from one workspace.
 
 ## Installation
 
@@ -59,7 +61,7 @@ git submodule add https://github.com/manojbajaj95/claude-gtm-plugin.git .agents/
 
 ### Bootstrap Your Project
 
-Ask Claude to bootstrap your project. Claude runs an agency-style onboarding interview — asking about your brand, audience, voice, and goals — then generates a structured project:
+Ask Claude to bootstrap your project. Claude runs an agency-style onboarding interview — asking about your brand, audience, voice, channels, team workflow, tools, and goals — then generates a structured project:
 
 ```
 your-project/
@@ -101,7 +103,7 @@ your-project/
 
 Content files follow the naming convention `YYYY-MM-DD_short-topic-slug.md`. Drafts live in `content/[platform]/drafts/` and move to `published/` once live.
 
-Once bootstrapped, every skill reads the relevant context before doing anything. Claude works in your voice, for your brand, from day one. Ask Claude to bootstrap again to redo onboarding.
+Once bootstrapped, every skill reads the relevant context before doing anything. Claude works in your voice, for your brand, from day one. Ask Claude to bootstrap again to redo onboarding or refresh the workspace when positioning, channels, or team workflows change.
 
 ### Using Skills
 
@@ -109,22 +111,22 @@ Skills activate automatically when Claude detects a matching task. Just describe
 
 ```
 "Audit the SEO on my landing page"
-→ Activates seo-audit
+→ Activates seo-and-aeo-strategy
 
 "Write a cold email sequence for enterprise CTOs"
-→ Activates cold-email-sequence-generator + startup-icp-definer
+→ Activates outbound-email-strategy + lead-generation-and-demand
 
 "Plan a Product Hunt launch for next month"
-→ Activates product-hunt-launch + launch-marketing
+→ Activates product-hunt-launch + go-to-market-strategy
 
 "Create a 5-email onboarding sequence"
-→ Activates email-sequence + onboarding-cro
+→ Activates marketing-automation + user-onboarding
 
 "Help me figure out pricing for my SaaS"
 → Activates pricing-strategy
 
 "Write a LinkedIn post about our new feature"
-→ Activates linkedin-content + copywriting
+→ Activates linkedin + copywriting-core
 ```
 
 Skills cross-reference each other. Ask Claude to write a cold email and it pulls from your brand positioning (`strategy/brand.md`), your personal voice (`about/me.md`), and your ICP — not from a generic template.
@@ -134,22 +136,24 @@ Skills cross-reference each other. Ask Claude to write a cold email and it pulls
 ```
 claude-gtm-plugin/
 ├── .claude-plugin/          # Plugin manifest
-├── skills/                  # All 56 skills in one flat directory
+├── skills/                  # All 54 skills in one flat directory
 │   ├── bootstrap/
 │   ├── seo-and-aeo-strategy/
-│   ├── linkedin-content/
+│   ├── linkedin/
 │   ├── copywriting-core/
-│   └── ... (56 total)
+│   └── ... (54 total)
 └── scripts/                 # Build and validation
 ```
 
 **Skills** are markdown files with YAML frontmatter that give Claude specialized knowledge for specific tasks. Claude activates them automatically when it detects a matching task — or you can invoke them directly.
 
-Skills reference each other and build on the project structure created by the bootstrap skill. Ask Claude to write a cold email and it pulls from your brand positioning, your voice, and your ICP — not from a generic template.
+Skills reference each other and build on the project structure created by the bootstrap skill. Each skill checks `strategy/brand.md`, `about/me.md`, `content/ideas.md`, and `content/calendar.md` as appropriate before asking questions. Ask Claude to write a cold email and it pulls from your brand positioning, your voice, and your ICP — not from a generic template.
+
+This repo keeps its existing skill names while adapting best-practice task boundaries from [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills). See [docs/upstream-marketingskills-mapping.md](docs/upstream-marketingskills-mapping.md) for the local mapping and [docs/skill-principles-review.md](docs/skill-principles-review.md) for the one-by-one skill review.
 
 ## Skills
 
-**53 skills** — all in one plugin, no sub-plugins to juggle.
+**54 skills** — all in one plugin, no sub-plugins to juggle.
 
 See [ALL_SKILLS.md](ALL_SKILLS.md) for the complete list.
 

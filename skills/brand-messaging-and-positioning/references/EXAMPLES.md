@@ -1,7 +1,7 @@
 # Examples
 
 ## Example 1 — B2B SaaS (homepage + sales)
-**Prompt:** “Use `positioning-messaging`. Product: an audit-ready AI assistant for SOC2 evidence collection. ICP: security leaders at 200–2,000 employee SaaS companies. Alternative: spreadsheets + GRC consultants. Proof: ‘cut audit prep time by 40%’ + 3 case studies. Surfaces: homepage hero + sales talk track. Output: a Positioning & Messaging Pack.”
+**Prompt:** “Use `brand-messaging-and-positioning`. Product: an audit-ready AI assistant for SOC2 evidence collection. ICP: security leaders at 200–2,000 employee SaaS companies. Alternative: spreadsheets + GRC consultants. Proof: ‘cut audit prep time by 40%’ + 3 case studies. Surfaces: homepage hero + sales talk track. Output: a Positioning & Messaging Pack.”
 
 **What good looks like:**
 - Explicit “against spreadsheets + consultants”
@@ -23,4 +23,3 @@
 **What to do instead:**
 - Ask 5 questions from [INTAKE.md](INTAKE.md) (ICP, use case, alternative, proof, surface)
 - If unanswered, make explicit assumptions and provide 2–3 positioning directions with risks/unknowns
-

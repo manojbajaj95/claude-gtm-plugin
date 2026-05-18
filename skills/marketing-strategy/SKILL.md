@@ -6,6 +6,16 @@ license: MIT
 
 # Marketing Strategy
 
+## Workspace Context
+
+Read bootstrap context before asking questions: `strategy/brand.md` for brand, audience, offer, channels, tools, constraints, and metrics; `about/me.md` for personal voice; `content/ideas.md` and `content/calendar.md` for content planning. Use legacy product-marketing context files only as fallback. Save generated drafts to `content/<platform>/drafts/YYYY-MM-DD_short-topic-slug.md`, and route durable learnings back to `strategy/brand.md`, `about/me.md`, or `content/ideas.md`.
+
+## Operating Contract
+
+This skill is self-contained for its frontmatter scope: use its local instructions, references, scripts, and assets as the playbook; ask only for missing task-specific inputs; hand off to adjacent skills instead of expanding scope; and return an actionable artifact, decision, plan, draft, or diagnostic.
+
+
+
 Strategy and positioning layer for B2B SaaS — from product-market fit through competitive intelligence, sales enablement, and growth loops. For launch execution and channel strategy, see `go-to-market-strategy`.
 
 ---
@@ -194,7 +204,7 @@ Target: LTV > 3x CAC, CAC payback < 18 months
 
 ## Product Marketing Context Document
 
-Create `strategy/brand.md` (or `.agents/product-marketing-context.md`) capturing:
+Create `strategy/brand.md` capturing:
 
 1. **Product Overview** — one-liner, what it does, category, business model
 2. **Target Audience** — company type, decision-makers, use case, jobs to be done

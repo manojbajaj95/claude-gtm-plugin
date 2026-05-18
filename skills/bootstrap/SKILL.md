@@ -3,7 +3,7 @@ name: bootstrap
 description: "Onboard a new GTM project — run an agency-style interview, then generate CLAUDE.md, about/me.md, strategy/brand.md, and scaffold content + assets folders. Use this skill whenever the user wants to set up a new project, onboard a brand, start from scratch, configure their marketing context, or initialize their workspace. Trigger on: bootstrap, onboard, set up my project, get started, configure my brand, initialize, new project setup, brand onboarding, set up my brand, create project structure, onboard my company, set up content folders, prepare my workspace, start a new GTM project. Also use when the user seems to be starting fresh and hasn't set up strategy/brand.md or about/me.md yet."
 ---
 
-You are a senior GTM agency consultant onboarding a new client. Your job is to deeply understand who they are, what they do, how they and their brand communicate, and what success looks like — then produce foundational files and a working folder structure that every future GTM skill and command will use as context.
+You are a senior GTM agency consultant onboarding a new client. Your job is to deeply understand who they are, what they do, how they and their brand communicate, how the marketing team works, and what success looks like — then produce foundational files and a working folder structure that every future GTM skill and command will use as context.
 
 Work through the interview in stages. Do not ask all questions at once. Ask each section as a focused block, wait for answers, then move forward. Be warm, professional, and curious — like a good account manager meeting a client for the first time.
 
@@ -11,7 +11,7 @@ The output is a unified project structure:
 
 - **`CLAUDE.md`** — AI instruction file: how the repo is structured, what to read, how to draft content, naming conventions
 - **`about/me.md`** — the individual person: their personal voice, quirks, biography, how they actually write
-- **`strategy/brand.md`** — brand identity: positioning, offer, audience, competitors, brand voice
+- **`strategy/brand.md`** — brand identity and operating context: positioning, offer, audience, competitors, brand voice, channels, tools, team workflow, success metrics
 - **`content/`** — working content engine: ideas, calendar, drafts, published content (organized by platform)
 - **`assets/`** — reusable visual assets: logos, brand files, visual references
 
@@ -107,6 +107,10 @@ The individual human — not the brand. Their personal voice, how they write and
 - Is there a content calendar, posting frequency, or publishing rhythm?
 - What tools or platforms are in use (CRM, CMS, analytics, ad platforms)?
 - Budget context: scrappy DIY, moderate, or well-resourced?
+- Who owns marketing work today — founder, marketer, agency, sales, CS, product, or a mix?
+- What review or approval process should drafts go through before publishing?
+- Are there source-of-truth docs, dashboards, asset folders, or analytics reports that future skills should know about?
+- What parts of marketing are handled by people vs. what should Claude help with?
 
 ---
 
@@ -115,6 +119,8 @@ The individual human — not the brand. Their personal voice, how they write and
 - How will you know this is working? What does success look like in 90 days?
 - Is there a specific KPI or metric that matters most?
 - What has been tried before that didn't work — and why do you think it didn't?
+- What constraints should future marketing recommendations respect: budget, team bandwidth, compliance, sales capacity, product roadmap, geography, or seasonality?
+- What is the current baseline for key metrics if known: traffic, leads, conversion rate, activation, revenue, CAC, retention, or pipeline?
 
 ---
 
@@ -259,6 +265,9 @@ Route new learnings to the right file — do not leave them only in conversation
 ## Tools & Platforms
 [List known tools]
 
+## Team Workflow
+[Who owns marketing, who reviews drafts, approval process, publishing cadence, and which work Claude should support]
+
 ## Constraints
 [Legal, compliance, tone restrictions, things to avoid]
 
@@ -328,6 +337,23 @@ _Last updated: [date]_
 
 ## Proof Points
 [Stats, testimonials, case studies, credentials that back up claims]
+
+## Marketing Operations
+
+### Active Channels
+[Channels currently active or planned]
+
+### Tools and Platforms
+[CRM, CMS, analytics, ad platforms, email tools, scheduling tools, asset repositories]
+
+### Team and Approval Flow
+[Who owns marketing, who reviews work, how approvals happen, where source-of-truth docs live]
+
+### Budget and Resourcing
+[Scrappy DIY, moderate, well-resourced, agency-supported, or other constraints]
+
+### Baseline Metrics
+[Known traffic, conversion, lead, pipeline, revenue, CAC, activation, or retention baselines]
 
 ## What We Are Not
 [Positioning anti-statements — what we explicitly don't want to be compared to]
@@ -453,41 +479,4 @@ _Upcoming scheduled content. Move to the platform's `published/` folder once liv
 
 ---
 
-After writing all files and creating all folders with `.gitkeep`, print this summary:
-
-```
-Bootstrap complete.
-
-Files created:
-  CLAUDE.md              — AI instructions: repo structure, naming, workflow, routing rules
-  about/me.md            — personal voice, writing style, personality
-  strategy/brand.md      — brand positioning, messaging, audience, voice
-  content/ideas.md       — content idea backlog
-  content/calendar.md    — publishing schedule
-
-Folders created:
-  about/                 — personal and team context
-  strategy/              — brand, positioning, and messaging foundation
-  content/linkedin/      — drafts/ and published/
-  content/twitter/       — drafts/ and published/
-  content/reddit/        — drafts/ and published/
-  content/blog/          — drafts/ and published/
-  content/email/         — drafts/ and published/
-  assets/logos/          — logo files
-  assets/brand/          — brand visual references
-
-Naming convention:
-  All content files: YYYY-MM-DD_short-topic-slug.md
-  Drafts go in: content/[platform]/drafts/
-  Published moves to: content/[platform]/published/
-
-Going forward:
-  - Brand learnings → strategy/brand.md
-  - Personal voice learnings → about/me.md
-  - New content ideas → content/ideas.md
-  - Draft content → content/[platform]/drafts/
-  - Brand files → assets/
-
-Claude will read the relevant files before every task.
-Ask Claude to "bootstrap" again to redo onboarding from scratch.
-```
+After writing all files and creating all folders with `.gitkeep`, print a concise summary of created files, created folders, naming convention, routing rules, and the reminder that Claude will read relevant files before future tasks.

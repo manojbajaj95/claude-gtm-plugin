@@ -10,6 +10,16 @@ metadata:
 
 # Community Building
 
+## Workspace Context
+
+Read bootstrap context before asking questions: `strategy/brand.md` for brand, audience, offer, channels, tools, constraints, and metrics; `about/me.md` for personal voice; `content/ideas.md` and `content/calendar.md` for content planning. Use legacy product-marketing context files only as fallback. Save generated drafts to `content/<platform>/drafts/YYYY-MM-DD_short-topic-slug.md`, and route durable learnings back to `strategy/brand.md`, `about/me.md`, or `content/ideas.md`.
+
+## Operating Contract
+
+This skill is self-contained for its frontmatter scope: use its local instructions, references, scripts, and assets as the playbook; ask only for missing task-specific inputs; hand off to adjacent skills instead of expanding scope; and return an actionable artifact, decision, plan, draft, or diagnostic.
+
+
+
 Build communities that turn members into believers and believers into advocates.
 
 ## Scope
@@ -25,7 +35,7 @@ Build communities that turn members into believers and believers into advocates.
 - Measurement and community health
 
 **When NOT to use**
-- You haven't defined ICP/positioning (use `positioning-messaging` first)
+- You haven't defined ICP/positioning (use `brand-messaging-and-positioning` first)
 - You want paid acquisition (ads/creative) rather than community
 - You want to spam/scrape DMs or manipulate members
 - You need customer support ops overhaul (ticketing/SLAs) more than community

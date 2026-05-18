@@ -1,7 +1,7 @@
 ---
 name: x-impact-checker
 description: >
-  Analyze and optimize X (Twitter) posts for viral potential and maximum reach using the actual open-source recommendation algorithm.
+  Analyze and optimize X (Twitter) posts for viral potential and reach using heuristics inspired by X's published open-source recommendation architecture.
   Use when user wants to: (1) Check if a post will go viral, (2) Score a tweet for engagement potential, (3) Optimize or rewrite a tweet for algorithmic reach, (4) Understand why a tweet underperformed, (5) Build audience in a specific niche.
   Triggers: "Check if this will go viral", "Make this post buzz", "Will this tweet perform well?", "Optimize my tweet", "How can I make this viral?", "rewrite this tweet", "improve my tweet engagement", "twitter algorithm", "tweet reach", "debug underperforming tweet",
   "バズるかチェックして", "Xでバズる投稿にして", "伸びるかチェックして", "この投稿を伸ばして", "投稿を改善して", "ツイートを最適化して"
@@ -10,7 +10,17 @@ license: AGPL-3.0 (referencing Twitter's open-source algorithm)
 
 # X Impact Checker
 
-Analyze X posts for viral potential and optimize them using the open-source recommendation algorithm — both a 19-element scoring system and deep algorithm architecture understanding.
+## Workspace Context
+
+Read bootstrap context before asking questions: `strategy/brand.md` for brand, audience, offer, channels, tools, constraints, and metrics; `about/me.md` for personal voice; `content/ideas.md` and `content/calendar.md` for content planning. Use legacy product-marketing context files only as fallback. Save generated drafts to `content/<platform>/drafts/YYYY-MM-DD_short-topic-slug.md`, and route durable learnings back to `strategy/brand.md`, `about/me.md`, or `content/ideas.md`.
+
+## Operating Contract
+
+This skill is self-contained for its frontmatter scope: use its local instructions, references, scripts, and assets as the playbook; ask only for missing task-specific inputs; hand off to adjacent skills instead of expanding scope; and return an actionable artifact, decision, plan, draft, or diagnostic.
+
+
+
+Analyze X posts for viral potential using a 19-element scoring system and heuristics inspired by X's published recommendation architecture.
 
 ## When to Use
 
@@ -80,7 +90,7 @@ Analyze X posts for viral potential and optimize them using the open-source reco
 
 ### Progress Tracking
 
-Use TodoWrite tool to show analysis progress:
+Show analysis progress when the host environment supports task tracking:
 1. **Analyzing post content** (in_progress → completed)
 2. **Calculating scores across all elements** (in_progress → completed)
 3. **Generating top 5 priority improvements** (in_progress → completed)
