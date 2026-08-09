@@ -1,6 +1,6 @@
 ---
 name: webinar-content-and-events
-description: This skill covers two related use cases: (1) Creating high-converting webinar registration and event landing pages, and (2) Repurposing webinar recordings into multiple content assets including blog posts, social media, email sequences, and sales materials. Use when users need to build webinar pages or convert webinar content into multi-channel marketing materials.
+description: "This skill covers two related use cases: (1) Creating high-converting webinar registration and event landing pages, and (2) Repurposing webinar recordings into multiple content assets including blog posts, social media, email sequences, and sales materials. Use when users need to build webinar pages or convert webinar content into multi-channel marketing materials."
 ---
 
 # Webinar Content & Events

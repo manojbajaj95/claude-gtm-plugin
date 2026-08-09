@@ -1,6 +1,6 @@
 ---
 name: networking-outreach
-description: Relationship-first networking skill for identifying the right people to connect with and drafting value-add outreach — not sales, not referral asks. Use when building a network for a job search, career pivot, partnership, or industry access. Covers target identification by purpose, deep LinkedIn + web research on a specific person, brainstorming 10 value-add angles, and drafting three outreach formats: cold networking email (max 200 words), LinkedIn connection request (max 300 characters), and hiring manager follow-up email (120–160 words). Never drafts generic openers or referral asks — always leads with a specific observation and genuine value.
+description: "Relationship-first networking skill for identifying the right people to connect with and drafting value-add outreach — not sales, not referral asks. Use when building a network for a job search, career pivot, partnership, or industry access. Covers target identification by purpose, deep LinkedIn + web research on a specific person, brainstorming 10 value-add angles, and drafting three outreach formats: cold networking email (max 200 words), LinkedIn connection request (max 300 characters), and hiring manager follow-up email (120–160 words). Never drafts generic openers or referral asks — always leads with a specific observation and genuine value."
 ---
 
 # Networking Outreach

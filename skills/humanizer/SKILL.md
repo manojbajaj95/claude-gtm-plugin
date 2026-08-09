@@ -1,6 +1,6 @@
 ---
 name: humanizer
-description: Humanize AI-sounding writing and remove common AI-generated writing tells while preserving meaning, audience, and brand voice. Use when editing text to sound more natural, less generic, less promotional, less formulaic, or closer to the user's own writing. Triggers: humanize this, make this less AI, make this sound human, remove AI writing patterns, rewrite in my voice, make this more natural, de-AI this, make this less ChatGPT, fix robotic writing, improve authenticity, reduce generic AI tone.
+description: "Humanize AI-sounding writing and remove common AI-generated writing tells while preserving meaning, audience, and brand voice. Use when editing text to sound more natural, less generic, less promotional, less formulaic, or closer to the user's own writing. Triggers: humanize this, make this less AI, make this sound human, remove AI writing patterns, rewrite in my voice, make this more natural, de-AI this, make this less ChatGPT, fix robotic writing, improve authenticity, reduce generic AI tone."
 ---
 
 # Humanizer
