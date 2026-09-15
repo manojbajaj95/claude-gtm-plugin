@@ -1,6 +1,6 @@
 # All Skills
 
-Total: **54 skills**
+Total: **55 skills**
 
 ```
 skills/
@@ -54,6 +54,7 @@ skills/
 ├── social-media-management
 ├── user-onboarding
 ├── utm-builder
+├── vibe-prospecting-enrichment
 ├── webinar-content-and-events
 ├── x-impact-checker
 ├── youtube-content

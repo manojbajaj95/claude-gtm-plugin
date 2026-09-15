@@ -5,13 +5,13 @@
     "name": "mbajaj"
   },
   "metadata": {
-    "description": "Go-to-Market skills for Claude — SEO, content, sales, growth, and more"
+    "description": "Go-to-Market skills for Claude \u2014 SEO, content, sales, growth, and more"
   },
   "plugins": [
     {
       "name": "gtm-skills",
       "source": "./",
-      "description": "Go-to-market skills for Claude — 54 skills covering SEO, content, social, outbound, sales, growth, analytics, strategy, ads, and CRM"
+      "description": "Go-to-market skills for Claude \u2014 55 skills covering SEO, content, social, outbound, sales, growth, analytics, strategy, ads, and CRM"
     }
   ]
 }

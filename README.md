@@ -1,6 +1,6 @@
 # GTM Skills
 
-Go-to-market skills that turn Claude into a GTM specialist. 54 skills across SEO & AI search, content, outbound, sales, growth, analytics, strategy, ads, social, and CRM. Built for [Claude Code](https://claude.com/product/claude-code), also compatible with [Claude Cowork](https://claude.com/product/cowork) and any agent that supports the [Agent Skills spec](https://agentskills.io).
+Go-to-market skills that turn Claude into a GTM specialist. 55 skills across SEO & AI search, content, outbound, sales, growth, analytics, strategy, ads, social, and CRM. Built for [Claude Code](https://claude.com/product/claude-code), also compatible with [Claude Cowork](https://claude.com/product/cowork) and any agent that supports the [Agent Skills spec](https://agentskills.io).
 
 ## Why This Plugin
 
@@ -138,7 +138,7 @@ Skills cross-reference each other. Ask Claude to write a cold email and it pulls
 ```
 claude-gtm-plugin/
 ├── .claude-plugin/          # Plugin manifest
-├── skills/                  # All 54 skills in one flat directory
+├── skills/                  # All 55 skills in one flat directory
 │   ├── bootstrap/
 │   ├── seo-and-aeo-strategy/
 │   ├── linkedin/
@@ -155,7 +155,7 @@ This repo keeps its existing skill names while adapting best-practice task bound
 
 ## Skills
 
-**54 skills** — all in one plugin, no sub-plugins to juggle.
+**55 skills** — all in one plugin, no sub-plugins to juggle.
 
 See [ALL_SKILLS.md](ALL_SKILLS.md) for the complete list.
 
