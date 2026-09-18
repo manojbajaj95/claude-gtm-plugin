@@ -1,6 +1,6 @@
 ---
 name: ad-campaign-management
-description: Use when creating, managing, or optimizing paid advertising campaigns across any platform. Covers ad copy generation, ad creative strategy, campaign management, and competitive intelligence. Triggers on: ad copy, ad creative, paid ads, paid advertising, Facebook ads, LinkedIn ads, Google ads, Meta ads, ad campaign, ad strategy, ad testing, competitive ads, competitor ads, ad library, ad analysis, ad creative generation, campaign management, ROAS, CPC, CTR. Use this skill whenever the user mentions ads, paid channels, ad campaigns, ad copy, ad performance, or wants to analyze competitor advertising.
+description: "Use when creating, managing, or optimizing paid advertising campaigns across any platform. Covers ad copy generation, ad creative strategy, campaign management, and competitive intelligence. Triggers on: ad copy, ad creative, paid ads, paid advertising, Facebook ads, LinkedIn ads, Google ads, Meta ads, ad campaign, ad strategy, ad testing, competitive ads, competitor ads, ad library, ad analysis, ad creative generation, campaign management, ROAS, CPC, CTR. Use this skill whenever the user mentions ads, paid channels, ad campaigns, ad copy, ad performance, or wants to analyze competitor advertising."
 ---
 
 # Ad Campaign Management

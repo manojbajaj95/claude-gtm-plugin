@@ -1,6 +1,6 @@
 ---
 name: newsletter-management
-description: Create, curate, and grow email newsletters across all formats and strategies. Use when working on newsletters, email newsletters, weekly digests, link roundups, curated content, audience building, subscriber engagement, or content distribution. Covers 6 newsletter formats (curated/link roundup, story-driven, educational, interview, data-driven, personal update), editorial issue structure, content sourcing workflows, commentary writing, sending cadence, subject line optimization, subscriber growth, and engagement metrics. Trigger keywords: newsletter curation, curated newsletter, newsletter writing, newsletter format, newsletter strategy, newsletter template, content curation, subscriber growth.
+description: "Create, curate, and grow email newsletters across all formats and strategies. Use when working on newsletters, email newsletters, weekly digests, link roundups, curated content, audience building, subscriber engagement, or content distribution. Covers 6 newsletter formats (curated/link roundup, story-driven, educational, interview, data-driven, personal update), editorial issue structure, content sourcing workflows, commentary writing, sending cadence, subject line optimization, subscriber growth, and engagement metrics. Trigger keywords: newsletter curation, curated newsletter, newsletter writing, newsletter format, newsletter strategy, newsletter template, content curation, subscriber growth."
 ---
 
 # Newsletter Management

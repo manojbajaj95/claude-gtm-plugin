@@ -1,6 +1,6 @@
 ---
 name: pitch-deck-creation
-description: Create professional investor pitch decks with structured content and visual design. Use when users need help with pitch deck, investor deck, fundraising deck, startup pitch, deck design, slide design, pitch presentation, pitch deck visuals, investor presentation, Series A deck, seed deck, or VC deck. Covers the full workflow: gathering company info, structuring narrative, generating a PowerPoint via script, and applying visual best practices.
+description: "Create professional investor pitch decks with structured content and visual design. Use when users need help with pitch deck, investor deck, fundraising deck, startup pitch, deck design, slide design, pitch presentation, pitch deck visuals, investor presentation, Series A deck, seed deck, or VC deck. Covers the full workflow: gathering company info, structuring narrative, generating a PowerPoint via script, and applying visual best practices."
 ---
 
 # Pitch Deck Creation
