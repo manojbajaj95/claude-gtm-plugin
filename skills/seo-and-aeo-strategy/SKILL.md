@@ -51,6 +51,8 @@ Before auditing, understand:
 | **Site architecture** | Important pages within 3 clicks, logical hierarchy, no orphan pages |
 | **Crawl budget** | Parameterized URLs controlled, faceted nav handled, no session IDs in URLs |
 
+If Firecrawl is available, use it to map the site's URLs and scrape key pages, then compare the rendered text with the raw HTML (`curl -s <url>`) to flag content that only appears after JavaScript runs (see [references/ai-crawlers.md](references/ai-crawlers.md)). Otherwise use the built-in tools.
+
 ### Indexation
 
 - `site:domain.com` check vs. Search Console coverage report

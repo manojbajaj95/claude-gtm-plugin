@@ -90,6 +90,8 @@ If top-down SOM / bottom-up > 3x → revisit top-down assumptions
 - LinkedIn (employee count trends, key hires)
 - Gartner Magic Quadrant (market positioning)
 
+If Firecrawl is available, use it for search and scraping (it also reads pages that render with JavaScript); otherwise use the built-in tools.
+
 ### Positioning Map Template
 
 Create a 2D matrix:
