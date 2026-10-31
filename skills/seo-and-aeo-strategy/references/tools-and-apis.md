@@ -107,7 +107,7 @@ Curated list of tools and APIs for SEO and GEO optimization.
 | API | Purpose | Pricing |
 |-----|---------|---------|
 | **Apify Metadata Extractor** | Extract meta, sitemap, robots | $12/mo+ |
-| **Firecrawl** | Website crawling for SEO | Pay-per-use |
+| **[Firecrawl](https://www.firecrawl.dev/?utm_source=claude-gtm-plugin&utm_medium=integration)** | Website crawling for SEO | Free tier, then pay-per-use |
 
 ---
 
